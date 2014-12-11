@@ -1,0 +1,243 @@
+/**
+* @package Component jVoteSystem for Joomla!  1.5 - 3.0 
+* @projectsite www.joomess.de/projects/jvotesystem
+* @authors Johannes Meßmer, Andreas Fischer
+* @copyright (C) 2010 - 2012 Johannes Meßmer
+* @license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+**/
+
+#jvs .submenu-box {
+	float: right;
+	padding: 5px;
+}
+#jvs div#submenu-box div.t div.t {
+    background: url("../images/j_crn_tr_dark.png") no-repeat scroll 100% 0 transparent !important;
+}
+#jvs div#submenu-box div.t div.t div.t {
+    background: url("../images/j_crn_tl_dark.png") no-repeat scroll 0 0 transparent !important;
+}
+#jvs div#submenu-box div.b div.b {
+    background: url("../images/j_crn_br_dark.png") no-repeat scroll 100% 0 transparent !important;
+}
+#jvs div#submenu-box div.b div.b div.b {
+    background: url("../images/j_crn_bl_dark.png") no-repeat scroll 0 0 transparent !important;
+}
+#jvs div#submenu-box div.m {
+    padding: 0 !important;
+}
+form label {
+	min-width: 40px !important;
+	clear: none !important;
+}
+form td.key label {
+	font-weight: bold;
+	float: right;
+	min-width: 190px !important;
+}	
+
+/*Access Table*/
+table.accesstable {
+	border-collapse: collapse;
+    font-size: 1.091em;
+    width: 100%;
+	-moz-box-sizing: border-box;
+    border-spacing: 2px;
+    display: table;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-indent: 0;
+}
+
+table.accesstable tr.row1 {
+    background-color: #F0F0EE;
+}
+
+table.accesstable th.col1 {
+	
+}
+table.accesstable .hidelabeltxt {
+    text-indent: -9999em;
+}
+table.accesstable th.col2 , table.accesstable td.col2{
+    border-left: 1px solid #CBCBCB;
+	text-align: center;
+}
+table.accesstable td.col2 {
+	cursor: pointer;
+}
+table.accesstable td.col1 {
+    font-size: 1.091em;
+    padding: 4px;
+    text-align: left;
+}
+select.accesstable {
+	display: none;
+}
+
+ul.accesstable-legend {
+	font-size: 1.091em;
+    list-style: none outside none;
+    padding-bottom: 10px;
+}
+ul.accesstable-legend li.acl-allowed {
+    background: url("../images/icon-16-allow.png") no-repeat scroll left center transparent;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+ul.accesstable-legend li.acl-denied {
+    background: url("../images/icon-16-deny.png") no-repeat scroll left center transparent;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+ul.accesstable-legend li {
+    display: block;
+    float: left;
+    margin: 15px 0 15px 10px;
+}
+#sb-body {
+	background: none repeat scroll 0 0 transparent !important;
+}
+#sb-wrapper-inner {
+	border: 0 none !important;
+}
+#sb-wrapper {
+	min-width: 820px;
+}
+
+/*Logs*/
+.files {
+	border-bottom: 3px solid #BBBBBB;
+    margin-bottom: 2px;
+    padding: 5px;
+    width: auto;    
+    min-height: 15px;
+    overflow: hidden;    
+    text-align: center;
+}
+.files .file {
+	display: inline-block;
+    font-size: 10pt;
+    margin-right: 5px;
+}
+.files .file + .file {
+	border-left: 3px solid #BBBBBB;
+    padding-left: 5px;
+}
+
+.logs tr td a {
+    font-size: 1em !important;
+}
+
+/*advisor*/
+div.advisor > div {
+position:relative;
+padding:4px;
+margin:8px;
+background:#5a0;
+padding-top:0.01px;
+border-radius:8px;
+border:2px solid #000;
+box-shadow:0 0 5px #000;
+padding-left:96px;
+}
+
+div.advisor > div.fatal {
+background:#f00;
+}
+div.advisor > div.critic {
+background:#f1ce00;
+}
+
+div.advisor > div:before {
+content:'\2714';position:absolute;left:5px;top:5px;color:#000;font-size:96px;height:80px;line-height:88px;width:80px;text-align:center;font-weight:bold;text-shadow: 0px 0px 3px #000;
+}
+div.advisor > div.fatal:before {
+content:'\2715';
+}
+div.advisor > div.critic:before {
+content:'!';
+}
+div.advisortext {padding:3px;border:2px solid #000;border-radius:5px;background:#fff;}
+
+div.advisortext + div.advisortext {margin-top:5px;display:inline-block;}
+
+/* Modern - Template */
+/*#submenu-box div.m {
+	background-color: #FFFFFF;
+    border-radius: 0 0 0 0;
+    padding: 0;
+}
+#submenu li a, #submenu span.nolink {
+	background-color: #EEEEEE;
+    padding: 5px 15px;
+}*/
+
+/* Filter */
+fieldset.filter {
+    border: 0 none;
+    margin: 0;
+    padding: 0 0 5px;
+}
+fieldset.filter ol {
+    border: 0 none;
+    list-style: none outside none;
+    margin: 0;
+    padding: 5px 0 0;
+}
+fieldset.filter ol li {
+    float: left;
+    padding: 0 5px 0 0;
+}
+fieldset.filter ol li fieldset {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+}
+fieldset.filter .left {
+    float: left;
+}
+fieldset.filter .right {
+    float: right;
+}
+fieldset.filter .right select {
+    margin-left: 10px;
+}
+fieldset#filter-bar {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color -moz-use-text-color #D5D5D5;
+    border-image: none;
+    border-style: none none solid;
+    border-width: 0 0 1px;
+    min-height: 35px;
+}
+label.filter-search-lbl {
+    margin-left: 5px;
+}
+label.filter-hide-lbl {
+    clear: none;
+    margin-left: 5px;
+}
+div.filter-select input, div.filter-select select {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+button.filter-go {
+    float: left;
+    margin-right: 15px;
+}
+label.filter-published-lbl {
+    clear: none;
+    margin-left: 10px;
+}
+.fltlft {
+    float: left;
+}
+.fltrt {
+    float: right;
+}
+.fltnone {
+    float: none;
+}

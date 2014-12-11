@@ -1,0 +1,53 @@
+div.rssearch_box div.suggest_link {
+	cursor:pointer;
+	background: #4f4f4f;
+	padding: 2px 6px 2px 6px;
+}
+
+div.rssearch_box div.suggest_link a{
+	color:#fff;
+	opacity:0.7;
+	text-decotarion:none;
+}
+
+div.rssearch_box{
+	height:20px;
+}
+
+div.rssearch_box div.suggest_link_over {
+	background: #4F8BFF;
+	padding: 2px 6px 2px 6px;
+	cursor:pointer;
+}
+
+div.rsfsuggestions{
+	position: absolute;
+	background-color: #4f4f4f;
+	color:#ffffff;
+	opacity:0.8;
+	text-align: left;
+	padding-left:3px;
+	width:230px;
+	z-index:1000;
+}
+
+.rssearch_box{
+	width:240px;
+}
+
+form.rsf_form{
+	position:absolute;
+}
+
+.rssearch_close {
+	float: right;
+	margin-right: 5px;
+}
+
+.suggest_link_all {
+	text-align: center;
+}
+.rss_loop {
+	background:url(../images/loop.png) no-repeat 95% 50%;
+	padding-right:30px !important;
+}

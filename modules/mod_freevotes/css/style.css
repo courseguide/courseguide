@@ -1,0 +1,73 @@
+.freevotes_altezza{
+	height:28px;
+	clear:both;
+}
+#freevotes_risposta{
+	float:left;
+	display:inline;
+	padding-right:25px;
+}
+#freevotes_percentuale{
+	float:left;
+	display:inline;
+}
+#freevotes_risposta .freevotes_altezza{
+	line-height:25px;
+}
+.freevotes_voto{
+	float:left;
+	padding:4px 0 0 7px;
+	width:17px;
+	height:21px;
+	background-image:url("../../../modules/mod_freevotes/images/vuoto.png");
+	background-repeat:no-repeat;
+	cursor:pointer;
+}
+#freevotes_voti{
+	height:250px;
+	margin-bottom:30px;
+}
+.freevotes_bottoni{
+	cursor:pointer;
+	width:145px;
+	text-align:center;
+	margin:15px auto 15px auto;
+	
+	background-image: linear-gradient(bottom, #3fc7d9 0%, #FFFFFF 63%);
+	background-image: -o-linear-gradient(bottom, #3fc7d9 0%, #FFFFFF 63%);
+	background-image: -moz-linear-gradient(bottom, #3fc7d9 0%, #FFFFFF 63%);
+	background-image: -webkit-linear-gradient(bottom, #3fc7d9 0%, #FFFFFF 63%);
+	background-image: -ms-linear-gradient(bottom, #3fc7d9 0%, #FFFFFF 63%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #3fc7d9),
+		color-stop(0.63, #FFFFFF)
+	);
+	
+	border: 1px solid #000;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px; 
+}
+#freevotes_vota_button, #freevotes_inserisci_button{
+	width:70px;
+	margin:10px 0 0 0;
+}
+#freevotes_ins_nuova_risp{
+	width:100%;
+	border-top:1px solid #000;
+	padding:15px 0 0 0;
+	margin:45px 0 0 0;
+	float:left;
+}
+#freevotes_titolo{
+	font-weight:bold;
+	text-align:center;
+	font-size:20px;
+	margin-bottom:35px;
+}
+#freevotes_nuova_risposta{
+	max-width:100%;
+}

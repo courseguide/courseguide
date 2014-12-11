@@ -1,0 +1,75 @@
+/**
+ * @package Component jVoteSystem for Joomla! 1.5-2.5
+ * @projectsite www.joomess.de/projects/jvotesystem
+ * @authors Johannes Meßmer, Andreas Fischer
+ * @copyright (C) 2010 - 2012 Johannes Meßmer
+ * @license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+**/
+
+#jvotesystem div.smalltoolbar, #jvotesystem div.infobar {
+	float: right;
+    margin: 3px 0 5px;
+    overflow: hidden;
+    width: auto;
+}
+#jvotesystem div.infobar {
+	float: left;	
+}
+#jvotesystem div.smalltoolbar .toolbarbutton, #jvotesystem div.infobar .toolbarlink {
+	background-color: transparent !important;
+    background-position: left center;
+    background-repeat: no-repeat;
+    border-bottom: 1px dotted transparent;
+    color: #777777;
+    float: right;
+    font-weight: bold;
+    line-height: 1em;
+    margin-left: 5px;
+    outline: medium none;
+    padding-left: 20px;
+    padding-right: 5px;
+    padding-top: 2px;
+    text-decoration: none;
+}
+#jvotesystem div.infobar .toolbarlink {
+	float: left;
+	padding-right: 2px;
+}
+#jvotesystem div.smalltoolbar .toolbarbutton + .toolbarbutton {
+	border-right: 2px dotted #777777;
+}
+#jvotesystem div.infobar .toolbarlink + .toolbarlink {
+	border-left: 2px dotted #777777;
+}
+#jvotesystem div.smalltoolbar a.toolbarbutton:hover, #jvotesystem div.infobar a.toolbarlink:hover {
+    color: #555555;
+    border-bottom: 1px dotted #555555;
+}
+
+#jvotesystem div.smalltoolbar .toolbarbutton.addpoll {
+	background-image: url("../images/toolbar/icon-16-add.png");
+}
+#jvotesystem div.smalltoolbar .toolbarbutton.editpoll {
+	background-image: url("../images/toolbar/icon-16-edit.png");
+}
+#jvotesystem div.smalltoolbar .toolbarbutton.removepoll {
+	background-image: url("../images/toolbar/icon-16-delete.png");
+}
+#jvotesystem div.smalltoolbar .toolbarbutton.publishpoll {
+	background-image: url("../images/toolbar/icon-16-publish.png");
+}
+#jvotesystem div.smalltoolbar .toolbarbutton.unpublishpoll {
+	background-image: url("../images/toolbar/icon-16-unpublish.png");
+}
+#jvotesystem div.infobar .toolbarlink.category-icon {
+	background-image: url("../images/toolbar/icon-16-category.png");
+}
+#jvotesystem div.infobar .toolbarlink.author-icon {
+	background-image: url("../images/toolbar/icon-16-author.png");
+    background-position: 4px center;
+    padding-left: 16px;
+}
+#jvotesystem div.infobar .toolbarlink.clock-icon {
+	background-image: url("../images/toolbar/icon-16-clock.png");
+	background-position: 3px 1px;
+}

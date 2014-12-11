@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<extension version="2.5.0" type="plugin" group="content"
+	method="upgrade">
+	<name>flashChart Content plugin</name>
+	<author>Joachim Schmidt</author>
+	<creationDate>September 2014</creationDate>
+	<copyright>(C) Joachim Schmidt All Rights Reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>joachim.schmidt@jschmidt-systemberatung.de</authorEmail>
+	<authorUrl>www.jschmidt-systemberatung.de</authorUrl>
+	<version>1.3.1.0</version>
+	<description>PLG_FLASHCHART_XML_DESCRIPTION</description>
+	<languages folder="language">
+		<language tag="de-DE">de-DE/de-DE.plg_content_flashchart.ini
+		</language>
+		<language tag="en-GB">en-GB/en-GB.plg_content_flashchart.ini
+		</language>
+		<language tag="sl-SI">sl-SI/sl-SI.plg_content_flashchart.ini
+		</language>
+		<language tag="de-DE">de-DE/de-DE.plg_content_flashchart.sys.ini
+		</language>
+		<language tag="en-GB">en-GB/en-GB.plg_content_flashchart.sys.ini
+		</language>
+		<language tag="sl-SI">sl-SI/sl-SI.plg_content_flashchart.sys.ini
+		</language>
+	</languages>
+	<files>
+		<filename plugin="flashchart">flashchart.php</filename>
+		<filename>helper.php</filename>
+		<filename>readme.txt</filename>
+		<filename>open-flash-chart.swf</filename>
+		<folder>js/</folder>
+		<folder>lib/</folder>
+		<folder>css/</folder>
+		<folder>images/</folder>
+		<folder>shadowbox</folder>
+	</files>
+	<updateservers>
+		<server type="extension" priority="1" name="flashChart Updates">http://www.jschmidt-systemberatung.de/downloads/flashchart_updates.xml
+		</server>
+	</updateservers>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" label="PLG_FLASHCHART_LBL_PLUGIN_PARAMETERS">
+				<field type="spacer" name="spacer1"
+					label="PLG_FLASHCHART_LBL_BASIC_PARAMETERS" hr="false" />
+				<field name="width" type="text" default="100%" size="4"
+					maxlength="4" label="PLG_FLASHCHART_LBL_DEFAULT_WIDTH" description="PLG_FLASHCHART_DESC_DEFAULT_WIDTH" />
+				<field name="height" type="text" default="200" size="4"
+					maxlength="4" label="PLG_FLASHCHART_LBL_DEFAULT_HEIGHT"
+					description="PLG_FLASHCHART_DESC_DEFAULT_HEIGHT" />
+				<field name="alpha" type="list" default="0.8"
+					label="PLG_FLASHCHART_LBL_DEFAULT_ALPHA" description="PLG_FLASHCHART_DESC_DEFAULT_ALPHA">
+					<option value="1">1</option>
+					<option value="0.9">0.9</option>
+					<option value="0.8">0.8</option>
+					<option value="0.7">0.7</option>
+					<option value="0.6">0.6</option>
+					<option value="0.5">0.5</option>
+				</field>
+				<field name="number_format" type="list" default="c"
+					label="PLG_FLASHCHART_LBL_DEFAULT_NUMBER_FORMAT" description="PLG_FLASHCHART_DESC_DEFAULT_NUMBER_FORMAT">
+					<option value="a">nnnn.nn</option>
+					<option value="b">nnnn,nn</option>
+					<option value="c">n.nnn,nn</option>
+					<option value="d">n,nnn.nn</option>
+				</field>
+				<field name="precision" type="list" default="2"
+					label="PLG_FLASHCHART_LBL_DEFAULT_PRECISION" description="PLG_FLASHCHART_DESC_DEFAULT_PRECISION">
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</field>
+				<field name="type" type="list" default="bar_dome"
+					label="PLG_FLASHCHART_LBL_DEFAULT_CHART_TYPE" description="PLG_FLASHCHART_DESC_DEFAULT_CHART_TYPE">
+					<option value="bar_dome">Bar dome</option>
+					<option value="bar_cylinder">Bar cylinder</option>
+					<option value="bar_3d">Bar in 3d</option>
+					<option value="bar_cylinder_outline">Bar cylinder outline</option>
+					<option value="bar_glass">Bar glass</option>
+					<option value="bar_round">Bar round</option>
+					<option value="bar_round3d">Bar round in 3d</option>
+					<option value="bar_rounded_glass">Bar rounded glass</option>
+					<option value="bar_filled">Bar filled</option>
+					<option value="bar_sketch">Bar sketch</option>
+					<option value="bar_stack">Stacked Bar</option>
+					<option value="bar_simple">Simple Bar</option>
+					<option value="bar_plastic">Bar plastic shape</option>
+					<option value="bar_horizontal">Horizontal Bar</option>
+					<option value="line">Line</option>
+					<option value="line_dotted">Line (dotted)</option>
+					<option value="line_hollow">Line (hollow)</option>
+					<option value="line_star">Line (stars)</option>
+					<option value="line_bow">Line (bows)</option>
+					<option value="line_area">Line (area)</option>
+					<option value="line_area_dotted">Line (area dotted)</option>
+					<option value="radar_area">Radar (area)</option>
+					<option value="radar_area_dotted">Radar (area dotted)</option>
+					<option value="radar_line">Radar (line)</option>
+					<option value="radar_line_dotted">Radar (line dotted)</option>
+					<option value="radar_line_hollow">Radar (line hollow)</option>
+					<option value="radar_line_star">Radar (line star)</option>
+					<option value="radar_line_bow">Radar (Line bow)</option>
+					<option value="pie">Pie</option>
+				</field>
+				</fieldset>
+			    <fieldset name="animation" label="PLG_FLASHCHART_LBL_PLUGIN_PARAMETERS_LAYOUT">
+				<field name="bar_animation" type="list" default="null"
+					label="PLG_FLASHCHART_LBL_DEFAULT_BAR_ANIMATION_TYPE" description="PLG_FLASHCHART_DESC_DEFAULT_BAR_ANIMATION_TYPE">
+					<option value="null">NO_ANIMATION</option>
+					<option value="pop">pop</option>
+					<option value="pop-up">pop-up</option>
+					<option value="drop">drop</option>
+					<option value="fade-in">fade-in</option>
+					<option value="grow-up">grow-up</option>
+					<option value="grow-down">grow-down</option>
+				</field>
+				<field name="line_animation" type="list" default="null"
+					label="PLG_FLASHCHART_LBL_DEFAULT_LINE_ANIMATION_TYPE" description="PLG_FLASHCHART_DESC_DEFAULT_LINE_ANIMATION_TYPE">
+					<option value="null">NO_ANIMATION</option>
+					<option value="pop-up">pop-up</option>
+					<option value="explode">explode</option>
+					<option value="mid-slide">mid-slide</option>
+					<option value="drop">drop</option>
+					<option value="fade-in">fade-in</option>
+					<option value="shrink-in">schrink-in</option>
+				</field>
+				<field name="pie_animation" type="radio" default="1"
+					label="PLG_FLASHCHART_LBL_DEFAULT_PIE_ANIMATION" description="PLG_FLASHCHART_DESC_DEFAULT_PIE_ANIMATION">
+					<option value="0">SWITCH_OFF</option>
+					<option value="1">SWITCH_ON</option>
+				</field>
+				<field name="scatter_animation" type="radio" default="0"
+					label="PLG_FLASHCHART_LBL_DEFAULT_SCATTER_ANIMATION" description="PLG_FLASHCHART_DESC_DEFAULT_SCATTER_ANIMATION">
+					<option value="0">SWITCH_OFF</option>
+					<option value="1">SWITCH_ON</option>
+				</field>
+				<field name="pie_label_values" type="radio" default="0"
+					label="PLG_FLASHCHART_LBL_DEFAULT_PIE_LABEL_VALUES" description="PLG_FLASHCHART_DESC_DEFAULT_PIE_LABEL_VALUES">
+					<option value="0">NO_NO</option>
+					<option value="1">YES_YES</option>
+				</field>
+				<field name="pie_legend" type="radio" default="0"
+					label="PLG_FLASHCHART_LBL_DEFAULT_PIE_LEGEND" description="PLG_FLASHCHART_DESC_DEFAULT_PIE_LEGEND">
+					<option value="0">NO_NO</option>
+					<option value="1">YES_YES</option>
+				</field>
+				<field name="right_legend" type="radio" default="0"
+					label="PLG_FLASHCHART_LBL_DEFAULT_LEGEND_POSITION" description="PLG_FLASHCHART_DESC_DEFAULT_LEGEND_POSITION">
+					<option value="0">NO_NO</option>
+					<option value="1">YES_YES</option>
+				</field>
+				<field name="axis_3d" type="radio" default="1"
+					label="PLG_FLASHCHART_LBL_DEFAULT_AXIS_3D" description="PLG_FLASHCHART_DESC_DEFAULT_AXIS_3D">
+					<option value="0">NO_NO</option>
+					<option value="1">YES_YES</option>
+				</field>
+			</fieldset>
+			<fieldset name="colors" label="PLG_FLASHCHART_LBL_PLUGIN_PARAMETERS_COLORS">
+				<field name="multibar_color" type="radio" default="0"
+					label="PLG_FLASHCHART_LBL_DEFAULT_MULTIBAR_COLOR" description="PLG_FLASHCHART_DESC_DEFAULT_MULTIBAR_COLOR">
+					<option value="0">NO_NO</option>
+					<option value="1">YES_YES</option>
+				</field>
+				<field name="chart_colors" type="textarea"
+					default="4169E1,008000,7A0000,00BFFF,DC143C,191970,FF6600,A52A2A,52CCA3,996633,339933"
+					cols="40" label="PLG_FLASHCHART_LBL_DEFAULT_CHART_COLORS"
+					description="PLG_FLASHCHART_DESC_DEFAULT_CHART_COLORS" />
+				<field name="bg_color" type="text" default="FFFFFF" size="6"
+					maxlength="6" label="PLG_FLASHCHART_LBL_DEFAULT_BACKGROUND_COLOR"
+					description="PLG_FLASHCHART_DESC_DEFAULT_BACKGROUND_COLOR" />
+				<field name="bg_image" type="text" default="" size="30"
+					maxlength="255" label="PLG_FLASHCHART_LBL_DEFAULT_BACKGROUND_IMAGE"
+					description="PLG_FLASHCHART_DESC_DEFAULT_BACKGROUND_IMAGE" />
+				<field name="label_color" type="text" default="555555" size="6"
+					maxlength="6" label="PLG_FLASHCHART_LBL_DEFAULT_LABEL_COLOR"
+					description="PLG_FLASHCHART_DESC_DEFAULT_LABEL_COLOR" />
+				<field name="x_axis_color" type="text" default="B0B0B0" size="6"
+					maxlength="6" label="PLG_FLASHCHART_LBL_DEFAULT_XAXIS_COLOR"
+					description="PLG_FLASHCHART_DESC_DEFAULT_XAXIS_COLOR" />
+				<field name="y_axis_color" type="text" default="B0B0B0" size="6"
+					maxlength="6" label="PLG_FLASHCHART_LBL_DEFAULT_YAXIS_COLOR"
+					description="PLG_FLASHCHART_DESC_DEFAULT_YAXIS_COLOR" />
+				<field name="grid_color" type="text" default="B0B0B0" size="6"
+					maxlength="6" label="PLG_FLASHCHART_LBL_DEFAULT_GRID_COLOR"
+					description="PLG_FLASHCHART_DESC_DEFAULT_GRID_COLOR" />
+			</fieldset>
+			<fieldset name="styling"
+				label="PLG_FLASHCHART_LBL_PLUGIN_PARAMETERS_STYLING">
+				<field name="title_style" type="textarea"
+					default="padding:10px; font-size:14px; color:51698F; font-weight:bold; font-family:Sans-Serif,Arial,Helvetica;"
+					cols="40" rows="3" label="PLG_FLASHCHART_LBL_DEFAULT_TITLE_STYLE"
+					description="PLG_FLASHCHART_DESC_DEFAULT_TITLE_STYLE" />
+				<field name="tooltip_style" type="textarea"
+					default="font-size:10px; font-weight:normal; color:51698F;" cols="40"
+					rows="2" label="PLG_FLASHCHART_LBL_DEFAULT_TOOLTIP_STYLE"
+					description="PLG_FLASHCHART_DESC_DEFAULT_TOOLTIP_STYLE" />
+				<field name="axis_legend_style" type="textarea"
+					default="font-size:10px; font-weight:normal; color:51698F; font-family:Sans-Serif,Arial,Helvetica;"
+					cols="40" rows="2" label="PLG_FLASHCHART_LBL_DEFAULT_AXIS_LEGEND_STYLE"
+					description="PLG_FLASHCHART_DESC_DEFAULT_AXIS_LEGEND_STYLE" />
+				<field name="label_fontsize" type="text" default="12" size="2"
+					maxlength="2" label="PLG_FLASHCHART_LBL_DEFAULT_LABEL_FONTSIZE"
+					description="PLG_FLASHCHART_DESC_DEFAULT_LABEL_FONTSIZE" />
+				<field name="legend_fontsize" type="text" default="12" size="2"
+					maxlength="2" label="PLG_FLASHCHART_LBL_DEFAULT_LEGEND_FONTSIZE"
+					description="PLG_FLASHCHART_DESC_DEFAULT_LEGEND_FONTSIZE" />	
+			</fieldset>
+			<fieldset name="optional" label="PLG_FLASHCHART_LBL_OPTIONAL_PARAMETERS">
+				<field name="allow_formula" type="radio" default="0"
+					label="PLG_FLASHCHART_LBL_ALLOW_FORMULA" description="PLG_FLASHCHART_DESC_ALLOW_FORMULA">
+					<option value="0">NO_NO</option>
+					<option value="1">YES_YES</option>
+				</field>
+				<field name="create_image" type="radio" default="1"
+					label="PLG_FLASHCHART_LBL_CREATE_IMAGE" description="PLG_FLASHCHART_DESC_CREATE_IMAGE">
+					<option value="0">NO_NO</option>
+					<option value="1">YES_YES</option>
+				</field>
+				<field name="flashchart_jquery" type="radio" default="1"
+					label="PLG_FLASHCHART_LBL_FLASHCHART_JQUERY" description="PLG_FLASHCHART_DESC_FLASHCHART_JQUERY">
+					<option value="0">NO_NO</option>
+					<option value="1">YES_YES</option>
+				</field>
+				<field name="flashchart_shadowbox" type="radio" default="1"
+					label="PLG_FLASHCHART_LBL_FLASHCHART_SHADOWBOX" description="PLG_FLASHCHART_DESC_FLASHCHART_SHADOWBOX">
+					<option value="0">NO_NO</option>
+					<option value="1">YES_YES</option>
+				</field>
+				<field name="dbname" type="text" default="" size="30"
+					maxlength="255" label="PLG_FLASHCHART_LBL_DBNAME" description="PLG_FLASHCHART_DESC_DBNAME" />
+				<field name="dbhost" type="text" default="localhost" size="30"
+					maxlength="255" label="PLG_FLASHCHART_LBL_DBHOST" description="PLG_FLASHCHART_DESC_DBHOST" />
+				<field name="dbuser" type="text" default="" size="30"
+					maxlength="100" label="PLG_FLASHCHART_LBL_DBUSER" description="PLG_FLASHCHART_DESC_DBUSER" />
+				<field name="dbpassword" type="password" default="" size="30"
+					maxlength="100" label="PLG_FLASHCHART_LBL_DBPASSWORD" description="PLG_FLASHCHART_DESC_DBPASSWORD" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

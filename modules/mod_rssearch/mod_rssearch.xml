@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" method="upgrade" client="site">
+	<name>mod_rssearch</name>
+	<creationDate>20/02/2011</creationDate>
+	<author>RSJoomla!</author>
+	<copyright>GNU General Public License</copyright>
+	<authorEmail>suport@rsjoomla.com</authorEmail>
+	<authorUrl>www.rsjoomla.com</authorUrl>
+	<version>1.0</version>
+	<description>RSF_MODULE_LIST_XML_DESC</description>
+
+	<files>
+		<filename module="mod_rssearch">mod_rssearch.php</filename>
+		<filename>index.html</filename>
+        <folder>tmpl</folder>
+        <folder>assets</folder>
+        <folder>fields</folder>
+	</files>
+
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.mod_rssearch.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.mod_rssearch.sys.ini</language>
+    </languages>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/modules/mod_rssearch/fields/">
+				<field name="comps" type="components" default="" label="RSF_MODULE_XML_COMPONENTS_LABEL" description="RSF_MODULE_XML_COMPONENTS_DESC" />
+				<field name="show_submit" type="list" default="yes" label="RSF_MODULE_XML_SHOW_BUTTON_LABEL" description="RSF_MODULE_XML_SHOW_BUTTON_DESC">
+					<option value="yes">JYES</option>
+					<option value="no">JNO</option>
+				</field>
+				<field name="show_loop" type="list" default="no" label="RSF_MODULE_XML_SHOW_LOOP_LABEL" description="RSF_MODULE_XML_SHOW_LOOP_DESC">
+					<option value="yes">JYES</option>
+					<option value="no">JNO</option>
+				</field>
+				<field name="show_type" type="list" default="1" label="RSF_MODULE_XML_SHOW_TYPE_LABEL" description="RSF_MODULE_XML_SHOW_TYPE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="search_limit" type="text" default="5" label="RSF_MODULE_XML_SEARCH_LIMIT_LABEL" description="RSF_MODULE_XML_SEARCH_LIMIT_DESC" />
+				<field name="field_width" type="text" default="120" label="RSF_MODULE_XML_FIELD_WIDTH_LABEL" description="RSF_MODULE_XML_FIELD_WIDTH_DESC" />
+				<field name="results_box_width" type="text" default="120" label="RSF_MODULE_XML_BOX_WIDTH_LABEL" description="RSF_MODULE_XML_BOX_WIDTH_DESC" />
+				<field name="nr_words" type="text" default="80" label="RSF_MODULE_XML_NR_WORDS_LABEL" description="RSF_MODULE_XML_NR_WORDS_DESC" />
+				<field name="moduleclass_sfx" type="text" default="" label="RSF_MODULE_CLASS_SUFFIX_LABEL" description="RSF_MODULE_XML_BOX_WIDTH_DESC" />
+				<field name="itemid" type="text" default="" label="RSF_MODULE_ITEMID_LABEL" description="RSF_MODULE_ITEMID_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

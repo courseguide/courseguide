@@ -1,0 +1,22 @@
+/* 
+	DEFAULT TEMPLATE LESS
+	THERE IS NOTHING YOU NEED TO DO HERE 
+	lessphp compiler is modifyed to compile all your @import "file.css" 
+	files also. Meaning that if in any of your css files 
+	you have @import "file.css" or  @import "file.less" it will be recompiled within template.css file
+	This way you can just go head and change your default css file the way 
+	you did before. If you want to add some LESS vars or any custom LESS/CSS code
+	including @import "somefile.less";
+	please use templates/TEMPLATE_NAME/css/custom.css file.
+	Activate custom.css file must be set to YES in template admin.
+*/
+@import "@{bootstrap}";
+@import "@{template_css}";// must be either first or after bootstrap. it contains css files at import
+@import "@{yjsgless}";
+@import "@{squirrel_style}";
+@import "@{yjsg_videocss}";
+@import "@{yjsg_responsive}";
+@import "@{custom_responsive}";
+@import "@{vars}";
+@import "@{template_style}";
+@import "@{custom_css}";// add your custom LESS or CSS code in this file ( must be activated in template admin )

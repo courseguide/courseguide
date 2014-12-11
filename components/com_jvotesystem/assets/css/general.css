@@ -1,0 +1,398 @@
+/**
+ * @package Component jVoteSystem for Joomla! 1.5-2.5
+ * @projectsite www.joomess.de/projects/jvotesystem
+ * @authors Johannes Meßmer, Andreas Fischer
+ * @copyright (C) 2010 - 2012 Johannes Meßmer
+ * @license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+**/
+
+/*Dialog*/
+.ZebraDialog {
+    font-family: Tahoma, Arial, Helvetica, sans-serif !important;
+    font-size: 12px;
+    background: #FFF;
+    padding: 0px;
+    width: 350px;
+    color: #222;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 0px 4px 2px #222;
+    -moz-box-shadow: 0px 0px 4px 2px #222;
+    box-shadow: 0px 0px 4px 2px #222;
+    *border: 1px solid #666;    /* IE6 & 7 */
+    border: 1px solid #666\9;   /* IE8 */
+}
+
+.ZebraDialog .ZebraDialog_Title {
+   	background: none repeat scroll 0 0 #222222;
+   	color: #FFFFFF;
+  	font-family: Tahoma,Arial,Helvetica,sans-serif !important;
+  	font-size: 14px;
+   	font-weight: bold;
+   	line-height: 1em;
+   	margin: 0;
+   	padding: 5px 10px;
+    text-align: left;
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    *padding: 7px 10px;     /* IE6 & 7 */
+    padding: 7px 10px\9;    /* IE8 */
+}
+
+.ZebraDialog .ZebraDialog_Body              { max-height: 350px; overflow: auto; background-repeat: no-repeat; background-position: 10px 10px; padding: 10px; text-align: left }
+
+.ZebraDialog .ZebraDialog_Icon              { padding: 10px 10px 10px 68px; min-height: 48px; _height: 48px }
+
+.ZebraDialog .ZebraDialog_Confirmation      { background-image: url('../images/dialog/confirmation.png') }
+.ZebraDialog .ZebraDialog_Error             { background-image: url('../images/dialog/error.png') }
+.ZebraDialog .ZebraDialog_Information       { background-image: url('../images/dialog/information.png') }
+.ZebraDialog .ZebraDialog_Question          { background-image: url('../images/dialog/question.png') }
+.ZebraDialog .ZebraDialog_Warning           { background-image: url('../images/dialog/warning.png') }
+
+.ZebraDialog .ZebraDialog_Buttons {
+    background: #E5E5E5;
+    border-top: 1px solid #DADADA;
+    padding: 5px 5px 5px 10px;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.ZebraDialog .ZebraDialog_Buttons a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+    background: transparent;
+    border: 1px solid #AAA;
+    padding: 4px 10px;
+    float: right;
+    margin-right: 5px;
+    min-width: 60px;
+    outline: 0 none;
+    _width: 60px;
+    text-align: center;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.ZebraDialog .ZebraDialog_Buttons a:hover   { background: #717366; color: #FFF }
+
+.ZebraDialogOverlay                         { background: #666 }
+
+.ZebraDialog .ZebraDialog_Body textarea  {font-size:1.1em; }
+
+/*Element: Main*/
+
+.jvotesystem {
+	margin:0;
+	border:0 none;
+	padding:0;
+}
+.jvsclearfix:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/*Tooltip*/
+.jvotesystem.vstooltip table.vsbubble {
+	display: none;
+    position: absolute;
+    top: 0;
+    z-index: 10002;
+    border-collapse: collapse;
+    border: 0 none !important;
+    width: auto !important;
+    margin: 0 !important;
+    color: #333333;
+    font-size: 15px;
+    line-height: 16.5px;
+    max-width: 450px;
+	max-height: 350px;
+	overflow: auto;
+	font-family: arial,helvetica,sans-serif;
+	text-align: center;
+}
+.jvotesystem.vstooltip table {
+	border: 0 none !important;
+	margin: 0 !important;
+}
+.jvotesystem.vstooltip tr, .jvotesystem.vstooltip td {
+	border: 0 none;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+	line-height: 17.5px;
+}
+.jvotesystem.vstooltip td.vscorner {
+    height: 15px;
+    width: 19px;
+}
+.jvotesystem.vstooltip td.vscontent { background-color: #FFFFFF; position: relative; background-color: #FFFFFF !important; }
+.jvotesystem.vstooltip td.vstopleft { background-image: url("../images/tooltip/1.png"); }
+.jvotesystem.vstooltip td.vstop { background-image: url("../images/tooltip/2.png"); }
+.jvotesystem.vstooltip td.vstopright { background-image: url("..//images/tooltip/3.png"); }
+.jvotesystem.vstooltip td.vsleft { background-image: url("../images/tooltip/4.png"); }
+.jvotesystem.vstooltip td.vsright { background-image: url("../images/tooltip/5.png"); }
+.jvotesystem.vstooltip td.vsbottomleft { background-image: url("../images/tooltip/6.png"); }
+.jvotesystem.vstooltip td.vsbottom { background-image: url("../images/tooltip/7.png"); text-align: center;}
+.jvotesystem.vstooltip td.vsbottom div, .jvotesystem.vstooltip td.vstop div { display: block; width: 30px; height: 29px; float:right; margin: 0 auto -14px; background-image: url("../images/tooltip/arrow_bot.png");}
+.jvotesystem.vstooltip td.vstop div { display: none; background-image: url("../images/tooltip/arrow_top.png"); margin-bottom: 0; margin-top: -14px;}
+.jvotesystem.vstooltip .vsbubble.posTop td.vstop div { display: block; }
+.jvotesystem.vstooltip .vsbubble.posTop td.vsbottom div { display: none; }
+.jvotesystem.vstooltip .vsbubble.posLeft td.vsbottom div, .jvotesystem.vstooltip .vsbubble.posLeft td.vstop div { float: left; }
+.jvotesystem.vstooltip td.vsbottomright { background-image: url("../images/tooltip/8.png"); }
+
+.jvotesystem.vstooltip .tool-content {
+	padding-left: 12px;
+}
+.jvotesystem.vstooltip td.vscontent table {
+	width: 100%;
+}
+.jvotesystem.vstooltip td.vscontent a {
+	text-decoration: none;
+	background: none repeat scroll 0 0 transparent;
+    color: #095197;
+}
+.jvotesystem.vstooltip .tool-title {
+	color: #1F75CC;
+    font-size: 10pt;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+.jvotesystem.vstooltip .tool-msg {
+	color: #777777;
+    font-size: 9pt;
+    text-align: left;
+}
+.jvotesystem.vstooltip .tool-infotable {
+	
+}
+.jvotesystem.vstooltip .tool-infotable .tool-infotable-values td {
+	font-size: 14pt;
+    font-weight: bold;
+    padding: 0 3px;
+    text-align: center;
+}
+.jvotesystem.vstooltip .tool-infotable .tool-infotable-legends td {
+	color: #777777;
+    font-size: 7pt;
+    font-style: italic;
+    padding: 0 3px;
+    text-align: center;
+}
+
+.jvotesystem.vstooltip .contentbox {
+	max-width: 350px;
+	max-height: 300px;
+	overflow: auto;
+	text-align: left;
+}
+
+/*admininfo*/
+.jvotesystem.vstooltip .admininfo_list {
+	font-size: 11px;
+}
+.jvotesystem.vstooltip .admininfo_list thead th {
+	background-color: #BBB;
+	text-align: center;
+}
+.jvotesystem.vstooltip .admininfo_list tbody th {
+	background-color: #DDDDDD;
+	text-align: left;
+	padding: 0 4px;
+}
+.jvotesystem.vstooltip .admininfo_list tbody td { 
+	text-align: center;
+}
+
+/*User Avatar*/
+.jvs_avatar {
+	height: 50px;
+    overflow: hidden;
+    position: relative;
+    width: 50px;
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+}
+.jvs_avatar img {
+	max-height: 50px;
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+}
+.jvs_avatar.thumb50 {height: 50px;width: 50px;}.jvs_avatar.thumb50 img {max-height: 50px;}
+.jvs_avatar.thumb40 {height: 40px;width: 40px;}.jvs_avatar.thumb40 img {max-height: 40px;}
+.jvs_avatar.thumb30 {height: 30px;width: 30px;}.jvs_avatar.thumb30 img {max-height: 30px;}
+/*Icons*/
+.jvotesystem .icon-48-category {
+	background-position: center center;
+    border: 0 none;
+    display: block;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    width: 50px;
+}
+.jvotesystem .icon-48-category { background-image: url("../images/icon-48-category.png"); }
+/*Time*/
+.jvotesystem div.bbcodeToolbar img {
+	margin-right: 2px;
+	cursor: pointer;
+}
+
+.jvotesystem .time_container {
+	border-bottom: 1px dotted #888888;
+}
+
+/* Votes by User - Popup */
+
+.ZebraDialog_Body ul.userlist {
+	background:#F6FCF6;
+	width:426px;
+	border: 1px solid #333;
+}
+
+.ZebraDialog_Body ul.userlist + ul.userlist {
+	margin-top:2px;
+}
+
+.ZebraDialog_Body .userlist li.number {
+	width:60px;
+	list-style-type: none;
+	float:left;
+	clear:left;
+}
+
+.ZebraDialog_Body .userlist li.profile_img {
+	list-style-type: none;
+	float:left;
+	width:40px;
+	border: 1px solid #333;
+	border-width: 0 0 0 1px;
+}
+
+.ZebraDialog_Body .userlist li.detail {
+	background:#eee;
+	list-style-type: none;
+	border:1px solid #333;
+	border-width: 0 0 0 1px;
+	float:left;
+	width:316px;
+	padding:4px;
+}
+
+.ZebraDialog_Body .userlist span.user {
+	font-weight:bold;
+}
+
+.ZebraDialog_Body .userlist span.votecount {
+    color: #1F75CC;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ZebraDialog_Body .userlist span.votecounttext {
+    color: #444444;
+	display: block;
+    font-size: 11px;
+    text-align: center;
+}
+
+/*Facebook Vote Button*/
+.jvotesystem .facebookVoteButton {
+	
+}
+.jvotesystem .facebookVoteButton .fb-like {
+	border: 0 none;
+	width: 128px;
+	height: 20px;
+	margin: 3px;
+}
+.jvotesystem .facebookVoteButton .fb_edge_widget_with_comment span.fb_edge_comment_widget iframe.fb_ltr {
+	display: none !important;
+}
+
+/*TopContainer*/
+.jvotesystem .topbar_container {
+	padding: 0 0 5px;
+	margin: 0;
+	overflow: visible;
+	height: 20px;
+}
+.jvotesystem .socialbar {
+	padding: 0 0 0 5px;
+	margin: 0;
+	float: left;
+}
+
+/*Search*/
+.jvotesystem .searchfield input[type="text"] {
+    background: url("../images/search/search-white.png") no-repeat scroll 6px 2px #FCFCFC;
+    border: 1px solid #d1d1d1;
+    font: bold 12px Arial,Helvetica,Sans-serif;
+    color: #bebebe;
+    width: 120px;
+    padding: 2px 8px 1px 25px;
+    margin: 0;
+    float: right;
+    outline: 0 none;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+}
+
+.jvotesystem .searchfield input[type="text"]:focus {
+	width: 170px;
+}
+
+/*Notifications*/
+.jvotesystem .notification {
+    background: none no-repeat scroll 5px 5px #EEEEEE !important;
+    border-bottom: 2px dotted #888888;
+    border-top: 2px dotted #888888;
+    color: #555555;
+    font-weight: bold;
+    margin: 2px;
+    padding: 3px 10px 3px 34px;    
+    min-height: 28px;
+}
+.jvotesystem .notification.success {
+	background-image: url("../images/notification/icon-24-success.png") !important;
+}
+.jvotesystem .notification.error {
+	background-image: url("../images/notification/icon-24-error.png") !important;
+}
+.jvotesystem .notification.warning, .jvotesystem .notification.notice {
+	background-image: url("../images/notification/icon-24-warning.png") !important;
+}
+
+/*Loading*/
+.jvs-loading, .jvs-loading div, .jvs-loading a, .jvs-loading p, .jvs-loading span, .jvs-loading img {
+	cursor: progress !important;
+}

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content" method="upgrade">
+	<name>plg_content_cdminipolls</name>
+	<author>Daniel Rataj</author>
+	<creationDate>November 11th, 2011</creationDate>
+	<copyright>(C) 2007 - 2011 Great Joomla! All rights reserved.
+	</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL 3</license>
+	<authorEmail>info@greatjoomla.com</authorEmail>
+	<authorUrl>www.greatjoomla.com</authorUrl>
+	<version>1.0.0 Beta</version>
+	<description>PLG_CONTENT_CDMINIPOLLS_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="cdminipolls">cdminipolls.php</filename>
+		<folder>css</folder>
+		<folder>fields</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+		<folder>table</folder>
+		<folder>tmpl</folder>
+		<filename>index.html</filename>
+		<filename>license-gpl.txt</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_content_cdminipolls.ini
+		</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_content_cdminipolls.sys.ini
+		</language>
+	</languages>
+	<config>
+		<fields name="params" addfieldpath="/plugins/system/cdscriptegrator/fields">
+			<fieldset name="layout" label="PLG_CONTENT_CDMINIPOLLS_FIELDSET_LAYOUT" addfieldpath="/plugins/content/cdminipolls/fields">
+				<field
+					type="checkscriptegrator"
+					title="PLG_CONTENT_CDMINIPOLLS_ERROR_ENABLE_SCRIPTEGRATOR"
+				/>
+				<field
+					name="uitheme"
+					type="uithemecombobox"
+					default="ui-lightness"
+					label="PLG_CONTENT_CDMINIPOLLS_LABEL_UITHEME"
+					description="PLG_CONTENT_CDMINIPOLLS_DESC_UITHEME"
+				/>
+				<field
+					name="progressbar_width"
+					type="text"
+					default="200px"
+					label="PLG_CONTENT_CDMINIPOLLS_PROGRESSBAR_WIDTH_LABEL"
+					description="PLG_CONTENT_CDMINIPOLLS_PROGRESSBAR_WIDTH_DESCRIPTION"
+				/>
+			</fieldset>
+			<fieldset name="statistics" label="PLG_CONTENT_CDMINIPOLLS_FIELDSET_STATISTISTICS">
+				<field
+					name="show_statistics"
+					type="list"
+					default="1"
+					label="PLG_CONTENT_CDMINIPOLLS_SHOW_STATISTICS_LABEL"
+					description="PLG_CONTENT_CDMINIPOLLS_SHOW_STATISTICS_DESCRIPTION">
+					<option value="0">PLG_CONTENT_CDMINIPOLLS_SHOW_STATISTICS_PARAM_NO</option>
+					<option value="1">PLG_CONTENT_CDMINIPOLLS_SHOW_STATISTICS_PARAM_YES</option>
+				</field>
+				<field
+					type="spacer"
+					hr="true"
+				/>
+				<field
+					name="show_statistics_total"
+					type="list"
+					default="1"
+					label="PLG_CONTENT_CDMINIPOLLS_SHOW_STATISTICS_TOTAL_LABEL"
+					description="PLG_CONTENT_CDMINIPOLLS_SHOW_STATISTICS_TOTAL_DESCRIPTION">
+					<option value="0">PLG_CONTENT_CDMINIPOLLS_SHOW_STATISTICS_TOTAL_PARAM_NO</option>
+					<option value="1">PLG_CONTENT_CDMINIPOLLS_SHOW_STATISTICS_TOTAL_PARAM_YES</option>
+				</field>
+				<field
+					name="show_statistics_firstvote"
+					type="list"
+					default="1"
+					label="PLG_CONTENT_CDMINIPOLLS_SHOW_STATISTICS_FIRSTVOTE_LABEL"
+					description="PLG_CONTENT_CDMINIPOLLS_SHOW_STATISTICS_FIRSTVOTE_DESCRIPTION">
+					<option value="0">PLG_CONTENT_CDMINIPOLLS_SHOW_STATISTICS_FIRSTVOTE_PARAM_NO</option>
+					<option value="1">PLG_CONTENT_CDMINIPOLLS_SHOW_STATISTICS_FIRSTVOTE_PARAM_YES</option>
+				</field>
+				<field
+					name="show_statistics_lastvote"
+					type="list"
+					default="1"
+					label="PLG_CONTENT_CDMINIPOLLS_SHOW_STATISTICS_LASTVOTE_LABEL"
+					description="PLG_CONTENT_CDMINIPOLLS_SHOW_STATISTICS_LASTVOTE_DESCRIPTION">
+					<option value="0">PLG_CONTENT_CDMINIPOLLS_SHOW_STATISTICS_LASTVOTE_PARAM_NO</option>
+					<option value="1">PLG_CONTENT_CDMINIPOLLS_SHOW_STATISTICS_LASTVOTE_PARAM_YES</option>
+				</field>
+			</fieldset>
+			<fieldset name="administration" label="PLG_CONTENT_CDMINIPOLLS_FIELDSET_ADMINISTRATION">
+				<field
+					name="resetpoll"
+					type="resetpoll"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

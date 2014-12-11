@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<joomfish type="contentelement">
+  <name>jVoteSystem:Polls</name>
+  <author>Johannes Messmer</author>
+  <authorEmail>service@joomess.de</authorEmail>
+  <authorUrl>http://www.joomess.de</authorUrl>
+  <version>1.00</version>
+  <description>Polls translations for jVoteSystem</description>
+  <primarykey>id</primarykey>
+  <reference name="content">
+    <table name="jvotesystem_boxes">
+		<field type="referenceid" name="id" translate="0">ID</field>
+		<field type="titletext" name="title" translate="1">Title</field>
+		<field type="textarea" name="question" translate="1">Question</field>
+		<field type="created_date" name="created" translate="0">Created</field>
+	</table>
+  </reference>
+  <translationfilters>
+    <keyword>title</keyword>
+    <published>published</published>
+  </translationfilters>
+</joomfish>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Polls">
+		<message>
+			Polls
+		</message>
+	</layout>
+	<state>
+		<name>Polls</name>
+		<params addpath="/administrator/components/com_jvotesystem/elements">
+			<param name="cat" type="category" section="com_jvotesystem" default="0" label="CATEGORIES" required="false" />
+			<param name="subcats" type="radio" default="1" label="INCLUDE_SUBCATS">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</param>
+			<param name="order" type="list" default="popular" label="ORDER_LIST_BY">
+				<option value="most-voted">MOST_VOTED</option>
+				<option value="recent">RECENT</option>
+				<option value="popular">POPULAR</option>
+				<option value="most-discussed">MOST_DISCUSSED</option>
+			</param>
+			<param name="time" type="list" default="all-time" label="POLLS_CREATED">
+				<option value="all-time">ALL</option>
+				<option value="month">THIS_MONTH</option>
+				<option value="week">THIS_WEEK</option>
+				<option value="today">TODAY</option>
+			</param>
+			<param name="list_layout" type="list" default="table" label="POLLS_LAYOUT">
+				<option value="table">TABLE</option>
+				<option value="pollslist">POLLSLIST</option>
+			</param>
+			<param name="showOrderBar" type="radio" default="1" label="SHOW_ORDER_BAR">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</param>
+			<param name="showTimeBar" type="radio" default="1" label="SHOW_TIME_BAR">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</param>
+			<param name="showSearchField" type="radio" default="1" label="SHOW_SEARCH_FIELD">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</param>
+			<param name="showCategoryDropdown" type="radio" default="1" label="SHOW_CATEGORY_DROPDOWN">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</param>
+		</params>
+	</state>
+
+	<fields name="params">
+		<fieldset name="basic" label="JGLOBAL_CATEGORIES_OPTIONS" addfieldpath="/administrator/components/com_jvotesystem/fields">
+			<field name="cat" type="category" section="com_jvotesystem" default="0" label="CATEGORIES" required="false" />
+			<field name="subcats" type="radio" default="1" label="INCLUDE_SUBCATS">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="order" type="list" default="most-voted" label="ORDER_LIST_BY">
+				<option value="most-voted">MOST_VOTED</option>
+				<option value="recent">RECENT</option>
+				<option value="popular">POPULAR</option>
+				<option value="most-discussed">MOST_DISCUSSED</option>
+			</field>
+			<field name="time" type="list" default="all-time" label="POLLS_CREATED">
+				<option value="all-time">ALL</option>
+				<option value="month">THIS_MONTH</option>
+				<option value="week">THIS_WEEK</option>
+				<option value="today">TODAY</option>
+			</field>
+		</fieldset>
+		<fieldset name="layout" label="JGLOBAL_LAYOUT_OPTIONS">
+			<field name="list_layout" type="list" default="table" label="POLLS_LAYOUT">
+				<option value="table">TABLE</option>
+				<option value="pollslist">POLLSLIST</option>
+			</field>
+			<field name="showOrderBar" type="radio" default="1" label="SHOW_ORDER_BAR">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="showTimeBar" type="radio" default="1" label="SHOW_TIME_BAR">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="showSearchField" type="radio" default="1" label="SHOW_SEARCH_FIELD">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="showCategoryDropdown" type="radio" default="1" label="SHOW_CATEGORY_DROPDOWN">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+		</fieldset>
+	</fields>
+
+</metadata>

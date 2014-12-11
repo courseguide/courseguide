@@ -1,0 +1,353 @@
+/*======================================================================*\
+|| #################################################################### ||
+|| # Package - Joomla Template based on YJSimpleGrid Framework          ||
+|| # Copyright (C) 2010  Youjoomla.com. All Rights Reserved.            ||
+|| # license - PHP files are licensed under  GNU/GPL V2                 ||
+|| # license - CSS  - JS - IMAGE files  are Copyrighted material        ||
+|| # bound by Proprietary License of Youjoomla.com                      ||
+|| # for more information visit http://www.youjoomla.com/license.html   ||
+|| # Redistribution and  modification of this software                  ||
+|| # is bounded by its licenses                                         ||
+|| # websites - http://www.youjoomla.com | http://www.yjsimplegrid.com  ||
+|| #################################################################### ||
+\*======================================================================*/
+.top_bg {
+	padding:20px 0;
+}
+/* grids padding */
+.yjsg_grid {
+	padding:20px 0;
+}
+#yjsgbodytop {
+	padding:0;
+}
+#yjsgbodybottom {
+	padding:5px 0;
+}
+.yjsg4_before{
+	display:block;
+	overflow:hidden;
+	padding:25px 0;
+}
+#yjsg7 {
+	padding:50px 0;
+}
+.footer_holders {
+	padding:20px 0;
+}
+/* article and module titles font size*/
+.article_title,
+.module_title {
+	font-size:170%;
+}
+.module_title {
+	text-transform: capitalize;
+}
+/* pathway */
+#pathway {
+	margin-bottom:20px;
+}
+/*TOP MENU RESET */
+#yjsgheadergrid {
+float: right;
+clear: none;
+}
+#topmenu_holder {
+	margin-top:25px;
+	float:right;
+}
+body.yjsgrtl #topmenu_holder {
+	float:left;
+}
+/* flyouts */
+div.top_menu ul.subul_main,
+div.top_menu ul.subul_main.dropline,
+div.top_menu ul.subul_main {
+	/*	margin-top:5px;
+*/	padding-top:0!important;
+	padding-bottom:0!important;
+}
+/* mega holder */
+div.YJSG-inner.horiznav {
+	padding-top:7px!important;
+	padding-bottom:7px!important;
+}
+/* mega haschild flyouts */
+.top_menu ul.subul_main.level2,
+.top_menu ul.subul_main.level3,
+.top_menu ul.subul_main.level4 {
+	margin-top:20px;
+}
+/*Baseline into*/
+.yjsquare.baseline-intro {
+	text-align:center;
+	padding:30px 0;
+}
+.yjsquare.baseline-intro .yjsquare_in {
+	text-align:center;
+}
+.baseline-intro h1 {
+	font-size:550%;
+	text-align:center;
+}
+.baseline-intro p {
+	font-size:170%;
+	line-height:150%;
+	text-align:center;
+}
+/*OurServices*/
+/*content*/
+.Content-OurServices {
+	width: 25%;
+	display: block;
+	float: left;
+	overflow: hidden;
+	padding:20px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+.OurServices {
+	padding:50px 0;
+}
+.OurServices h2.module_title {
+	font-size:250%;
+	text-align:center;
+}
+.Content-OurServices h4 {
+	font-size:150%;
+	display:block;
+	margin-bottom:30px;
+	margin-top:5px;
+}
+/*content header*/
+.Content-OurServices h4 span {
+	font-size:280%;
+	float:left;
+	margin-top:-10px;
+	margin-right:20px
+}
+body.yjsgrtl .Content-OurServices h4 span {
+	float:right;
+	margin-right:0;
+	margin-left:20px
+}
+/*content paragraph*/
+.Content-OurServices p {
+}
+/*Read more */
+a.rm_content {
+	display:block;
+	float:left;
+	padding:10px 15px;
+	text-align:center;
+	font-size:100%;
+	-webkit-border-radius:4px;
+	-khtml-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+	margin-top:20px;
+}
+/* social icons */
+.getSocial .module_title {
+	font-size:250%;
+	text-align:center;
+}
+.baselineSocials {
+	text-align:center;
+}
+.baselineSocials a {
+	display:inline-block;
+	margin:10px;
+	font-size:350%;
+}
+.baselineSocials p {
+	font-size:130%;
+}
+/*yjme team-sample*/
+.yjsquare.yjme.team-sample {
+	padding:25px 0;
+}
+.yjsquare.yjme.team-sample .module_title {
+	text-align:center;
+	font-size:250%;
+	margin-bottom:35px;
+}
+.yjsquare.yjme.team-sample .yjme_item {
+	clear:none;
+	float:left;
+	width:33%;
+	text-align:center;
+}
+.yjsquare.yjme.team-sample .yjme_item .item_image,
+.yjsquare.yjme.team-sample .yjme_item .imageholder {
+	-webkit-border-radius:50%;
+	-khtml-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+	margin:0 auto;
+	text-align:center;
+	overflow:hidden;
+	position:relative;
+}
+.yjsquare.yjme.team-sample .yjme_item .item_image img {
+	max-width:inherit!important;
+	-webkit-border-radius:50%;
+	-khtml-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+	
+}
+.yjsquare.yjme.team-sample .yjme_item .item_title {
+	font-size:120%;
+	padding:20px 0;
+	text-align:center;
+}
+/*yjme Read more*/
+.yjsquare.yjme.team-sample a.item_readmore {
+	float:none;
+	font-size:150%;
+	text-align:left;
+	padding:10px 0 0 0;
+	margin:0;
+	width:auto;
+}
+/* team image article view */
+img.teamImage{
+	display:block;
+	margin:0 auto;
+	-webkit-border-radius:50%;
+	-khtml-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+}
+/* Client Testimonials*/
+.testimonial {
+	padding:25px 0;
+	text-align:center;
+}
+.testimonial h2 {
+	font-size:250%;
+	margin-bottom:35px;
+	text-align:center;
+}
+.testimonial blockquote p {
+	text-align:center;
+}
+/*yjme paragrapf */
+.yjme_item p.item_intro {
+	padding-top:5px;
+}
+/* Links Footer*/
+.Links ul.disk li {
+	padding:5px;
+}
+/* input box*/
+.contactUs p {
+	padding-bottom:10px;
+}
+.contactUs .button {
+	padding:5px 10px;
+	margin-top:-10px;
+}
+.roundup {
+	display:block;
+	overflow:hidden;
+	text-align:center;
+	position:relative;
+	clear:both;
+}
+.mycirclefloat {
+	display:inline-block;
+	overflow:hidden;
+	margin:0 10px;
+}
+.mycirclehold {
+	display:table;
+	margin:0 auto;
+	height: 200px;
+	width: 200px;
+	-webkit-border-radius:50%;
+	-khtml-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+	position:relative;
+	overflow:hidden;
+}
+.mycircle {
+	display:table-cell;
+	vertical-align: middle;
+	-webkit-border-radius:50%;
+	-khtml-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+	overflow:hidden;
+	width:100%;
+	height:100%;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	overflow:hidden;
+	position:relative;
+}
+.mycircle .showtext {
+	margin: auto;
+	text-align:center;
+	width:60%;
+	font-size:180%;
+}
+/* news items spacing */
+div.yjsg-newsitems {
+	padding:20px 0;
+}
+.news_item_a {
+	padding:20px 5px;
+}
+/* custom team page css class */
+.news_item_c.teamPage{
+	text-align:center;
+}
+.news_item_c.teamPage .newsitem_info{
+	width:100%;
+	text-align:center;
+	clear:both;
+	float:none;
+}
+.news_item_c.teamPage .newsitem_info{
+	width:100%;
+	text-align:center;
+	clear:both;
+	float:none;
+}
+.news_item_c.teamPage .newsitem_info span{
+	float:none;
+}
+.yjsg-newsitems.teamPage a.readon{
+	float:none;
+	display:inline-block;
+	clear:none;
+	margin:0 auto;
+}
+
+/* category module font size */
+.category-module.yjsg-article-category h6 {
+	font-size:100%;
+}
+/* no radius */
+.readon,
+.inputbox,
+.button,
+.validate,
+input,
+#pathway .breadcrumb,
+.popbox img,
+.popboxv img,
+.add-on,
+a.baseline-button
+{
+	-webkit-border-radius:4px;
+	-khtml-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+	text-shadow:none;
+}

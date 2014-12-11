@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.0"
+	client="site"
+	method="upgrade">
+	<name>mod_loginregister</name>
+	<author>JM-Experts!</author>
+	<creationDate>Aug 2013</creationDate>
+	<copyright>Free Module by JM-Experts!. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@jm-experts.com</authorEmail>
+	<authorUrl>www.jm-experts.com</authorUrl>
+	<version>3.1.0</version>
+	<description>MOD_LOGINREGISTER_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_loginregister">mod_loginregister.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+        <filename>mod_loginregister.xml</filename>		
+		<folder>loginregister</folder>
+	</files>
+	<languages>
+		<language folder="admin" tag="en-GB">en-GB.mod_loginregister.ini</language>
+		<language folder="admin" tag="en-GB">en-GB.mod_loginregister.sys.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_LOGIN" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="view"
+					type="list"
+					default="0"
+					label="MOD_LOGINREGISTER_LABEL_DEFAULTVIEW"
+					description="MOD_LOGINREGISTER_DESC_DEFAULTVIEW">
+					<option
+						value="0">MOD_LOGINREGISTER_PARAM_DEFAULTVIEW_01</option>
+					<option
+						value="1">MOD_LOGINREGISTER_PARAM_DEFAULTVIEW_02</option>
+				</field>
+                 <field
+					name="disablelog"
+					type="list"
+					default="0"
+					label="MOD_LOGINREGISTER_LABEL_DISABLELOGIN"
+					description="MOD_LOGINREGISTER_DESC_DISABLELOGIN">
+					<option
+						value="0">MOD_LOGINREGISTER_PARAM_01</option>
+					<option
+						value="1">MOD_LOGINREGISTER_PARAM_02</option>
+				</field>
+				<field
+					name="pretext"
+					type="textarea"
+					filter="safehtml"
+					cols="30"
+					rows="5"
+					label="MOD_LOGINREGISTER_LABEL_PRETEXT"
+					description="MOD_LOGINREGISTER_DESC_PRETEXT" />
+				<field
+					name="posttext"
+					type="textarea"
+					filter="safehtml"
+					cols="30"
+					rows="5"
+					label="MOD_LOGINREGISTER_LABEL_POSTTEXT"
+					description="MOD_LOGINREGISTER_DESC_POSTTEXT" />
+				<field
+					name="regpretext"
+					type="textarea"
+					filter="safehtml"
+					cols="30"
+					rows="5"
+					label="MOD_LOGINREGISTER_LABEL_REGPRETEXT"
+					description="MOD_LOGINREGISTER_DESC_REGPRETEXT" />
+				<field
+					name="regposttext"
+					type="textarea"
+					filter="safehtml"
+					cols="30"
+					rows="5"
+					label="MOD_LOGINREGISTER_LABEL_REGPOSTTEXT"
+					description="MOD_LOGINREGISTER_DESC_REGPOSTTEXT" />
+				<field
+					name="login"
+					type="menuitem"
+					disable="separator"
+					label="MOD_LOGINREGISTER_LABEL_LOGINREDIRECTIONPAGE"
+					description="MOD_LOGINREGISTER_DESC_LOGINREDIRECTIONPAGE" >
+					<option
+						value="">MOD_LOGINREGISTER_PARAM_LOGINREDIRECTIONPAGE_01</option>
+				</field>
+				<field
+					name="logout"
+					type="menuitem"
+					disable="separator"
+					label="MOD_LOGINREGISTER_LABEL_LOGOUTREDIRECTIONPAGE"
+					description="MOD_LOGINREGISTER_DESC_LOGOUTREDIRECTIONPAGE" >
+					<option
+						value="">MOD_LOGINREGISTER_PARAM_LOGOUTREDIRECTIONPAGE_01</option>
+				</field>
+				<field
+					name="greeting"
+					type="radio"
+					default="1"
+					label="MOD_LOGINREGISTER_LABEL_SHOWGREETING"
+					description="MOD_LOGINREGISTER_DESC_SHOWGREETING">
+					<option
+						value="0">MOD_LOGINREGISTER_PARAM_SHOWGREETING_01</option>
+					<option
+						value="1">MOD_LOGINREGISTER_PARAM_SHOWGREETING_02</option>
+				</field>
+				<field
+					name="name"
+					type="list"
+					default="0"
+					label="MOD_LOGINREGISTER_LABEL_SHOWNAME_USERNAME"
+					description="MOD_LOGINREGISTER_DESC_SHOWNAME_USERNAME">
+					<option
+						value="0">MOD_LOGINREGISTER_PARAM_SHOWNAME_USERNAME_01</option>
+					<option
+						value="1">MOD_LOGINREGISTER_PARAM_SHOWNAME_USERNAME_02</option>
+				</field>
+				<field
+					name="usesecure"
+					type="radio"
+					default="0"
+					label="MOD_LOGINREGISTER_LABEL_ENCRYPTLOGINFORM"
+					description="MOD_LOGINREGISTER_DESC_ENCRYPTLOGINFORM">
+					<option
+						value="0">MOD_LOGINREGISTER_PARAM_ENCRYPTLOGINFORM_01</option>
+					<option
+						value="1">MOD_LOGINREGISTER_PARAM_ENCRYPTLOGINFORM_02</option>
+				</field>
+			</fieldset>
+
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="0"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+					
+	
+				<field type="radio" name="checkbox1" default="1" 
+				label="MOD_LOGINREGISTER_LABEL_RADIOBOTTONPOSITION" 
+				description="MOD_LOGINREGISTER_DESC_RADIOBOTTONPOSITION">
+					<option value="1">MOD_LOGINREGISTER_PARAM_RADIOBOTTONPOSITION_01</option>
+					<option value="0">MOD_LOGINREGISTER_PARAM_RADIOBOTTONPOSITION_02</option>
+				</field>
+				
+				<field name="jqueryload" type="list" default="local" label="MOD_LOGINREGISTER_LABEL_JQUERYSOURCE" description="MOD_LOGINREGISTER_DESC_JQUERYSOURCE">		
+					<option value="local">MOD_LOGINREGISTER_PARAM_JQUERYSOURCE_FROMMODULECORE</option>
+					<option value="online">MOD_LOGINREGISTER_PARAM_JQUERYSOURCE_FROMGOOGLECDN</option>
+				</field>
+				
+				<field type="radio" name="tou" default="1" label="MOD_LOGINREGISTER_LABEL_TERMFOUSE" description="MOD_LOGINREGISTER_DESC_TERMFOUSE">
+					<option value="1">MOD_LOGINREGISTER_PARAM_TERMFOUSE_01</option>
+					<option value="2">MOD_LOGINREGISTER_PARAM_TERMFOUSE_02</option>
+				</field>
+				
+				<field type="radio" name="checkbox" default="checked" 
+				label="MOD_LOGINREGISTER_LABEL_CHECKBOX"
+				description="MOD_LOGINREGISTER_DESC_CHECKBOX">
+					<option value="checked">MOD_LOGINREGISTER_PARAM_CHECKBOX_01</option>
+					<option value="notchecked">MOD_LOGINREGISTER_PARAM_CHECKBOX_02</option>
+				</field>
+				
+				<field type="text" name="articleid" default="1" 
+				label="MOD_LOGINREGISTER_LABEL_ARTICLEID" 
+				description="MOD_LOGINREGISTER_DESC_ARTICLEID"></field>
+				
+				<field type="text" name="title" default="I Agree to the Terms of Use" 
+				label="MOD_LOGINREGISTER_LABEL_DISPLAYTEXT" 
+				size="50" 
+				description="MOD_LOGINREGISTER_DESC_DISPLAYTEXT">
+				</field>
+				
+				<field ame="newwindow" type="list" default="_self" 
+				label="MOD_LOGINREGISTER_LABEL_LINK">
+					<option value="_self">MOD_LOGINREGISTER_PARAM_OPENINTHESAMEWINDOW</option>
+					<option value="_blank">MOD_LOGINREGISTER_PARAM_OPENINTHENEWWINDOW</option>
+				</field>
+				
+			</fieldset>
+			
+			<fieldset name="RECAPTCHA">	
+				<field name="enablecap" type="radio" default="0" 
+				label="MOD_LOGINREGISTER_LABEL_ENABLECAPTCHA" 
+				description="">
+					<option value="0">MOD_LOGINREGISTER_PARAM_01</option>
+					<option value="1">MOD_LOGINREGISTER_PARAM_02</option>
+				</field>
+				<field type="text" name="public" default='' label="MOD_LOGINREGISTER_LABEL_PUBLICKEY"  description="MOD_LOGINREGISTER_DESC_PUBLICKEY" />
+				<field type="text" name="private" default='' label="MOD_LOGINREGISTER_LABEL_PRIVATEKEY" description="MOD_LOGINREGISTER_DESC_PRIVATEKEY" />
+				<field type="list" name="jmtheme" default="0" label="MOD_LOGINREGISTER_LABEL_RECAPTCHATHEME" description="MOD_LOGINREGISTER_DESC_RECAPTCHATHEME">
+					<option value="0">MOD_LOGINREGISTER_PARAM_RECAPTCHATHEME_0</option>
+					<option value="1">MOD_LOGINREGISTER_PARAM_RECAPTCHATHEME_1</option>
+					<option value="2">MOD_LOGINREGISTER_PARAM_RECAPTCHATHEME_2</option>
+					<option value="3">MOD_LOGINREGISTER_PARAM_RECAPTCHATHEME_3</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD module 1.0//EN" "http://joomla.org/xml/dtd/1.5/module-install.dtd">
+<extension type="module" version="2.5" method="upgrade" client="site">
+  <name>jVS - Polls</name>
+  <creationDate>17-April-2012</creationDate>
+  <author>Johannes Meßmer</author>
+  <authorEmail>service@joomess.de</authorEmail>
+  <authorUrl>http://www.joomess.de</authorUrl>
+  <copyright>Copyright (C) 2011- Johannes Meßmer</copyright>
+  <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+  <version>1.00</version>
+  <description></description>
+  <files>
+    <filename>index.html</filename>
+    <filename module="mod_jvs_polls">mod_jvs_polls.php</filename>
+    <filename>general.css</filename>
+    <folder>images</folder>
+  </files>
+  <languages>
+	<language tag="en-GB">en-GB.mod_jvs_polls.ini</language>
+	<language tag="de-DE">de-DE.mod_jvs_polls.ini</language>
+  </languages>
+  <params>
+  	<param type="list" name="order" label="JVS_MODUL_ORDERBY" default="popular">
+	  <option value="popular">JVS_MODUL_POPULAR</option>
+	  <option value="most-voted">JVS_MODUL_MOST_VOTED</option>
+	  <option value="recent">JVS_MODUL_RECENT</option>
+	  <option value="most-discussed">JVS_MODUL_MOST_DISCUSSED</option>
+	  <option value="random">JVS_MODUL_RANDOM</option>
+	</param>
+	<param name="time" type="list" default="all-time" label="JVS_MODUL_POLLS_CREATED">
+		<option value="all-time">JVS_MODUL_ALL</option>
+		<option value="month">JVS_MODUL_THIS_MONTH</option>
+		<option value="week">JVS_MODUL_THIS_WEEK</option>
+		<option value="today">JVS_MODUL_TODAY</option>
+	</param>
+	<param type="text" name="limit" label="JVS_MODUL_LIMIT" default="10" size="3" />
+	<param type="spacer" name="spacerDisplay" label="&lt;b&gt;&lt;i&gt;Display:&lt;/i&gt;&lt;/b&gt;" />
+	<param type="radio" name="show_avatar" label="JVS_MODUL_SHOW_AVATAR" default="1">
+	  <option value="1">JVS_MODUL_JYES</option>
+	  <option value="0">JVS_MODUL_JNO</option>
+	</param>
+	<param type="radio" name="show_title" label="JVS_MODUL_SHOW_TITLE" default="1">
+	  <option value="1">JVS_MODUL_JYES</option>
+	  <option value="0">JVS_MODUL_JNO</option>
+	</param>
+	<param type="radio" name="show_question" label="JVS_MODUL_SHOW_QUESTION" default="1">
+	  <option value="1">JVS_MODUL_JYES</option>
+	  <option value="0">JVS_MODUL_JNO</option>
+	</param>
+	<param type="radio" name="show_votes" label="JVS_MODUL_SHOW_VOTES" default="1">
+	  <option value="1">JVS_MODUL_JYES</option>
+	  <option value="0">JVS_MODUL_JNO</option>
+	</param>
+	<param type="radio" name="show_date" label="JVS_MODUL_SHOW_DATE" default="1">
+	  <option value="1">JVS_MODUL_JYES</option>
+	  <option value="0">JVS_MODUL_JNO</option>
+	</param>
+	<param type="text" name="short" label="JVS_MODUL_SHORT" default="50" size="3" />
+	<param type="radio" name="bbcode" label="JVS_MODUL_BBCODE" default="0">
+	  <option value="1">JVS_MODUL_JYES</option>
+	  <option value="0">JVS_MODUL_JNO</option>
+	</param>
+	<param type="spacer" name="spacerCategory" label="&lt;b&gt;&lt;i&gt;Category:&lt;/i&gt;&lt;/b&gt;" />
+	<param type="radio" name="cat_all" label="JVS_MODUL_ALLCATS" default="1" description="JVS_MODUL_ALLCATS_DESC">
+	  <option value="1">JVS_MODUL_JYES</option>
+	  <option value="0">JVS_MODUL_JNO</option>
+	</param>
+	<param type="sql" name="cat_id" label="JVS_MODUL_CAT" default="" description="JVS_MODUL_CAT_DESC" query="SELECT id AS value, title AS cat_id FROM #__jvotesystem_categories" />
+	<param type="radio" name="sub_cats" label="JVS_MODUL_SUBCATS" default="1">
+	  <option value="1">JVS_MODUL_JYES</option>
+	  <option value="0">JVS_MODUL_JNO</option>
+	</param>
+  </params>
+  <config>
+	<!--Joomla 1.6-->
+   	<fields name="params">
+		<fieldset name="basic">
+			<field type="list" name="order" label="JVS_MODUL_ORDERBY" default="popular">
+			  <option value="popular">JVS_MODUL_POPULAR</option>
+			  <option value="most-voted">JVS_MODUL_MOST_VOTED</option>
+			  <option value="recent">JVS_MODUL_RECENT</option>
+			  <option value="most-discussed">JVS_MODUL_MOST_DISCUSSED</option>
+			  <option value="random">JVS_MODUL_RANDOM</option>
+			</field>
+			<field name="time" type="list" default="all-time" label="JVS_MODUL_POLLS_CREATED">
+				<option value="all-time">JVS_MODUL_ALL</option>
+				<option value="month">JVS_MODUL_THIS_MONTH</option>
+				<option value="week">JVS_MODUL_THIS_WEEK</option>
+				<option value="today">JVS_MODUL_TODAY</option>
+			</field>
+			<field type="text" name="limit" label="JVS_MODUL_LIMIT" default="10" size="3" />
+			<field type="spacer" name="spacerDisplay" label="&lt;b&gt;&lt;i&gt;Display:&lt;/i&gt;&lt;/b&gt;" />
+			<field type="radio" name="show_avatar" label="JVS_MODUL_SHOW_AVATAR" default="1">
+			  <option value="1">JVS_MODUL_JYES</option>
+			  <option value="0">JVS_MODUL_JNO</option>
+			</field>
+			<field type="radio" name="show_title" label="JVS_MODUL_SHOW_TITLE" default="1">
+			  <option value="1">JVS_MODUL_JYES</option>
+			  <option value="0">JVS_MODUL_JNO</option>
+			</field>
+			<field type="radio" name="show_question" label="JVS_MODUL_SHOW_QUESTION" default="1">
+			  <option value="1">JVS_MODUL_JYES</option>
+			  <option value="0">JVS_MODUL_JNO</option>
+			</field>
+			<field type="radio" name="show_votes" label="JVS_MODUL_SHOW_VOTES" default="1">
+			  <option value="1">JVS_MODUL_JYES</option>
+			  <option value="0">JVS_MODUL_JNO</option>
+			</field>
+			<field type="radio" name="show_date" label="JVS_MODUL_SHOW_DATE" default="1">
+			  <option value="1">JVS_MODUL_JYES</option>
+			  <option value="0">JVS_MODUL_JNO</option>
+			</field>
+			<field type="text" name="short" label="JVS_MODUL_SHORT" default="50" size="3" />
+			<field type="radio" name="bbcode" label="JVS_MODUL_BBCODE" default="0">
+			  <option value="1">JVS_MODUL_JYES</option>
+			  <option value="0">JVS_MODUL_JNO</option>
+			</field>
+			<field type="spacer" name="spacerCategory" label="&lt;b&gt;&lt;i&gt;Category:&lt;/i&gt;&lt;/b&gt;" />
+			<field type="radio" name="cat_all" label="JVS_MODUL_ALLCATS" default="1" description="JVS_MODUL_ALLCATS_DESC">
+			  <option value="1">JVS_MODUL_JYES</option>
+			  <option value="0">JVS_MODUL_JNO</option>
+			</field>
+  			<field type="sql" name="cat_id" label="JVS_MODUL_CAT" default="" description="JVS_MODUL_CAT_DESC" query="SELECT id AS value, title AS cat_id FROM #__jvotesystem_categories" />
+  			<field type="radio" name="sub_cats" label="JVS_MODUL_SUBCATS" default="1">
+			  <option value="1">JVS_MODUL_JYES</option>
+			  <option value="0">JVS_MODUL_JNO</option>
+			</field>
+		</fieldset>
+		<fieldset name="advanced">
+			<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+		</fieldset>
+	</fields>
+  </config>
+</extension>

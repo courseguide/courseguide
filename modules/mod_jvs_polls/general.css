@@ -1,0 +1,65 @@
+/**
+ * @package Component jVoteSystem for Joomla! 1.5-2.5
+ * @projectsite www.joomess.de/projects/jvotesystem
+ * @authors Johannes Meßmer, Andreas Fischer
+ * @copyright (C) 2010 - 2012 Johannes Meßmer
+ * @license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+**/
+
+.jvs-module-polls, .jvs-module-polls tbody, .jvs-module-polls tr, .jvs-module-polls td, .jvs-module-polls span {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+	vertical-align: top;
+	font-size: 12.8px;
+    line-height: 16px;
+}
+.jvs-module-polls {
+	width: 100%;
+}
+.jvs-module-polls .avatar {
+    background-image: url("../../components/com_jvotesystem/templates/assets/images/point.png");
+    background-position: right 12px;
+    background-repeat: no-repeat;
+    padding: 2px;
+    width: 42px;
+    vertical-align: top;
+}
+.jvs-module-polls .avatar .jvs_avatar {
+	border: 1px solid #AACCEE;
+	background-color: #FFFFFF;
+}
+.jvs-module-polls .poll {
+	padding: 2px;
+	vertical-align: middle;
+}
+.jvs-module-polls .poll-title {
+	font-weight: bold;
+}
+.jvs-module-polls .poll-question {
+	font-style: italic;
+}
+.jvs-module-polls tr {
+	cursor: pointer;
+}
+.jvs-module-polls tr:hover {
+	background-color: #DDDDDD;
+}
+.jvs-module-polls .stats {
+	padding: 2px;
+}
+.jvs-module-polls .stats span {
+	background-position: 3px 3px;
+	background-repeat: no-repeat;
+	padding-left: 18px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	opacity: 0.9;
+}
+.jvs-module-polls .stats .votes {
+	background-image: url("images/thumb-up-icon.png");
+	font-weight: bold;
+}
+.jvs-module-polls .stats .created {
+	background-image: url("images/time-icon.png");
+}

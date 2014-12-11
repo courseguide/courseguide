@@ -1,0 +1,83 @@
+/**
+* @package Component jVoteSystem for Joomla! 1.5-2.5 - 2.5
+* @projectsite www.joomess.de/projects/jvotesystem
+* @authors Johannes Meßmer, Andreas Fischer
+* @copyright (C) 2010 - 2012 Johannes Meßmer
+* @license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+**/
+
+span.jvs-easyquestion, .jvs-easyquestion div {
+	display: inline;
+}
+
+/* Bars */
+.jvs-easyquestion div.jsbarchart, .jvs-easyquestion .jsbarchart div {
+	display: block;
+}
+.jvs-easyquestion div.barbox .barholder {
+	padding: 1px;
+	border: 1px solid #CCCCCC;
+}
+.jvs-easyquestion div.barbox {
+	margin-bottom: 4px;
+}
+.jvs-easyquestion div.barbox .barholder div {
+	width: 1%;
+}
+.jvs-easyquestion div.barbox .barholder div > a {
+	display:block;
+	height: 15px;
+	text-align: right;
+}
+.jvs-easyquestion div.barbox .barholder div > a > span {
+	color: #EEEEEE;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 0 3px;
+    display: none;
+    line-height: 16px;
+}
+.jvs-easyquestion div.barbox p {
+	font-weight: bold;
+    line-height: 1em;
+    margin: 2px 0 5px;
+}
+.jvs-easyquestion .jsbarchart {
+	min-width: 200px;
+	position: relative;
+	background-color: #FFFFFF;
+}
+
+
+
+/*Question*/
+.jvs-easyquestion .poll_question {
+	
+}
+.jvs-easyquestion .barchart_link {
+	cursor: pointer;
+}
+.jvs-easyquestion .barchart_link span:hover {
+	text-decoration: underline;
+}
+
+.jvotesystem.jvs-easyquestion .notification {
+    background-color: transparent !important;
+    background-position: center center !important;
+    border: 0 none;
+    display: inline-block;
+    height: 24px;
+    margin: 0;
+    min-height: 0;
+    padding: 0;
+    width: 24px;
+    margin: -5px 0;
+}
+.jvs-easyquestion a {
+	text-decoration: none !important;
+}
+.jvs-easyquestion .answer + .answer {
+	border-left: 1px solid #444444;
+    margin-left: 3px;
+    padding-left: 3px;
+}

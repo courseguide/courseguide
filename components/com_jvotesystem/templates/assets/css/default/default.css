@@ -1,0 +1,773 @@
+/**
+* @package Component jVoteSystem for Joomla! 1.5-2.5 - 2.5
+* @projectsite www.joomess.de/projects/jvotesystem
+* @authors Johannes Meßmer, Andreas Fischer
+* @copyright (C) 2010 - 2012 Johannes Meßmer
+* @license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+**/
+
+.jvs-default p {
+	line-height: 0.9em;
+}
+
+.jvs-default .pagebox {
+	/*overflow: hidden;*/
+	position:relative;
+}
+
+/*Navigation*/
+
+.jvs-default div.navi {
+	position:relative;
+	border-collapse: separate;
+	padding: 0;
+	border: 0 none !important;
+	width: 100%;
+	overflow: hidden;
+}
+.jvs-default .navi a {
+	background: none repeat scroll 0 0 #AACCEE !important;
+    border: 0 none;
+    border-radius: 10px 10px 10px 10px;
+    color: #FFFFFF;
+    padding: 1px 7px;
+    text-decoration: none !important;
+    display:inline-block;
+    margin:2px 0 2px 5px;
+    cursor: pointer;
+    outline: medium none;
+    line-height: 14px;
+}
+.jvs-default .commentsnavi a {
+	line-height:12px;
+	margin: 1px 0 1px 3px;
+	padding: 1px 5px;
+	font-size:10px;
+}
+.jvs-default .navi a:hover, .jvs-default .navi a.pageSelected {
+	background-color: #1F75CC !important;
+}
+.jvs-default .navi a.pageNull {
+	cursor: default;
+	background-color: #CDE6FF !important;
+}
+.jvs-default .navi div.naviVor{
+	float: left;
+	padding-left: 15px;
+	text-align: left;
+	width: 15%;
+	min-width: 70px;
+}
+.jvs-default .navi div.naviPages{
+	width: 70%;
+	text-align: center;
+	margin:0 15%;
+}
+/*.jvs-default .navi .naviPages a.pageSelected{
+	background: none repeat scroll 0 0 #1F75CC;
+}
+.jvs-default .navi .naviPages a.pageNull {
+	background: none repeat scroll 0 0 #AACCEE !important;
+	cursor: default;
+}*/
+.jvs-default .navi div.naviWeiter{
+	float: right;
+	padding-right: 15px;
+	text-align: right;
+	width: 15%;
+	min-width: 70px;
+}
+
+/*FOOTER*/
+p.jvs-defaultFooter {
+	font-size: 11pt;
+    text-align: center;
+	font-style: italic;
+}
+p.jvs-defaultFooter a.copylink{
+	text-decoration: underline
+}
+
+/*Element: Answer*/
+
+/*Tabelle in AntwortBox*/
+.jvs-default .answer {
+	width: 100%;
+	border-collapse: separate;
+	height: auto;
+	border: 0 none !important;
+    padding: 0;
+	font-family: Helvetica,Arial,sans-serif;
+	line-height: 1.3em;
+	position:relative;
+}
+
+/*Div in AntwortBox fï¿½r Text*/
+.jvs-default div.answerbox {
+    padding: 0;
+	vertical-align: top;
+	margin: 0;
+	margin-left:0;
+	min-height: 58px;
+}
+.jvs-default div+div.answerbox {
+	margin-left: 80px;
+}
+.jvs-default div+div+div.answerbox {
+	margin-left: 134px;
+}
+.jvs-default .answerbox div.text {
+	color: #2c343d;
+	margin: 0 0 2px 0;
+	padding: 7px;
+	background: none repeat scroll 0 0 #F6FCF6;
+    border: 1px solid #AACCEE;
+	position:relative;
+	font-size: 14px;
+}
+.jvs-default .answerbox span.answertext {
+	float:left;
+	width:100%;
+}
+.jvs-default .answerbox p.autor {
+	color: #888888;
+    font-size: 11px;
+	margin:3px 3px 0 0 ;
+	float:right;
+	line-height: 13px;    
+	padding: 0 !important;    
+	width: auto;
+}
+
+.jvs-default  div.rank {
+	background: none repeat scroll 0 0 #1F75CC;
+    border: 1px solid transparent;
+    color: #FFF;
+    font-size: 40px;
+    line-height: 53px;
+    text-align: center !important;
+    width: 50px;
+	position:absolute;
+	left:0;
+	top:0;
+}
+.jvs-default div.answervote {
+    position:absolute;
+    vertical-align:top;
+    width:78px;
+	left:0;
+}
+
+.jvs-default div+div.answervote {
+	left:54px;
+}
+
+.jvs-default div.new {
+	height: auto;
+}
+.jvs-default .answervote a.link{
+	cursor: pointer;
+    outline: medium none;
+	color: #135CAE;
+}
+.jvs-default .answervote a.link:hover{
+	color: #134782;
+}
+.jvs-default .answervote div.count, .jvs-default .answervote div.vote, .jvs-default  .answervote div.vote_grey{
+	background: none repeat scroll 0 0 #F6FCF6;
+    border: 1px solid #AACCEE;
+}
+.jvs-default .answervote div.vote_grey{
+	background: none repeat scroll 0 0 #DDE2DD;
+    border: 1px solid #B6BAB6;
+}
+.jvs-default div.count {
+	margin-bottom: 2px;
+	width: 76px;
+	height:35px;
+	position:relative;
+}
+
+.jvs-default .answervote div.vote, .jvs-default .answervote div.vote_grey {
+	padding: 2px;
+	text-align: center;
+}
+.jvs-default .answervote a.link {
+	color: #135CAE;
+}
+.jvs-default .answervote a.link:hover div.vote {
+	border: 1px solid #388DDD;
+}
+.jvs-default .answervote a.link:active div.vote {
+	background: none repeat scroll 0 0 #388DDD;
+	color: #FFFFFF;
+}
+.jvs-default .answervote .vote span.text, .jvs-default .answervote .vote_grey span.text{
+	font-size: 11px;
+	text-align: center;
+	vertical-align: middle;
+}
+.jvs-default .answervote .vote_grey span.text{
+	color: #5E605E;
+}
+.jvs-default .answervote .vote img.icon, .jvs-default .answervote .vote_grey img.icon{
+	border: medium none;
+    height: 16px;
+    margin: -1px 4px 0 0;
+    padding: 0 !important;
+    vertical-align: middle;
+    width: 16px;
+}
+.jvs-default .answervote span.votecount {
+	font-size: 18px;
+	color: #1F75CC;
+    display: block;
+	text-align: center;
+    font-weight: bold;
+    margin-top: 2px;
+    line-height: 1em;
+}
+.jvs-default .answervote p.votecounttext {
+	color: #444444;
+    font-family: "lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif;
+    font-size: 8pt;
+    font-weight: normal;
+	text-align: center;
+	margin: 0;
+	line-height: 15px;
+	padding: 0;
+}
+
+/*Icons*/
+
+.jvs-default a.icon, .jvs-default a.icon:hover {
+	display:block;
+	height:16px;
+	width:16px;
+	color: #000 !important;
+	margin: 1px !important;
+	background-color:transparent !important;
+	background-repeat:no-repeat !important;
+	float:right;
+	outline: medium none;
+	cursor: pointer;
+	padding: 0 !important;
+}
+
+.jvs-default a.trash, .jvs-default a.trash:hover {
+background-image:url(../../../assets/images/default/icons/icon-16-trash.png) !important;
+}
+.jvs-default a.report, .jvs-default a.report:hover {
+background-image:url(../../../assets/images/default/icons/icon-16-spam.png) !important;
+}
+.jvs-default a.published, .jvs-default a.published:hover {
+background-image:url(../../../assets/images/default/icons/icon-16-published.png) !important;
+}
+.jvs-default a.unpublished, .jvs-default a.unpublished:hover {
+background-image:url(../../../assets/images/default/icons/icon-16-unpublished.png) !important;
+}
+.jvs-default a.comment, .jvs-default a.comment:hover {
+	background-image:url(../../../assets/images/default/icons/icon-16-comment.png) !important;
+	padding:0px 0px 0px 20px !important;
+	width:auto;
+	display:block;
+	color: #494848 !important;
+	font-size: 11px;
+	float:left;
+}
+.jvs-default a.userlist, .jvs-default a.userlist:hover {
+	background-image:url(../../../assets/images/default/icons/icon-16-users.png) !important;
+	float:none;
+	position:absolute;
+	cursor:pointer;
+	left: 0;
+	top: 0;
+}
+
+.jvs-default a.vote, .jvs-default a.vote:focus, .jvs-default a.vote:hover, .jvs-default a.novote, .jvs-default a.novote:focus, .jvs-default a.novote:hover {
+	display:block;
+	padding:1px 1px 1px 16px;
+	text-decoration:none;
+	font-size:11px;
+	text-align:center;
+	line-height:12px !important;
+	outline: 0 none;
+}
+.jvs-default a.vote, .jvs-default a.vote:focus, .jvs-default a.vote:hover {
+	background:url(../../../assets/images/default/icons/vote.png) no-repeat scroll 1px 1px #F6FCF6 !important;
+	border: 1px solid #AACCEE;
+	color: #135CAE !important;
+}
+.jvs-default a.vote:hover {
+border: 1px solid #388DDD;
+}
+
+.jvs-default a.novote, .jvs-default a.novote:focus, .jvs-default a.novote:hover {
+	background:url(../../../assets/images/default/icons/vote_grey.png) no-repeat scroll 1px 1px #DDE2DD !important;
+	border: 1px solid #B6BAB6;
+	color:#5E605E !important;
+	cursor:text !important;
+	outline: medium none;
+}
+
+.jvs-default div.answeroptions {
+	border: 0 none;
+	line-height:16px !important;
+	padding:1px;
+	margin-bottom:2px;
+    overflow: hidden;
+    min-height: 18px;
+}
+
+/**
+ * @package Component jVoteSystem for Joomla! 1.5-2.5
+ * @projectsite www.joomess.de/projects/jvotesystem
+ * @author Johannes Meï¿½mer
+ * @copyright (C) 2010- Johannes Meï¿½mer
+ * @license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+**/
+/*Comments-DIV*/
+.jvs-default .comments {
+    font-family: Helvetica,Arial,sans-serif;
+    line-height: 1.3em;
+    width: 100%;
+	overflow:hidden;
+	position:relative;
+	margin-bottom: 3px;
+}
+
+.jvs-default .commentpage > div {
+	margin-top: 2px;
+}
+
+.jvs-default .comments .autor span.autorname{
+	text-decoration: underline;
+}
+.jvs-default .comments .comment {
+	position:relative;
+	color: #2C343D;
+    font-size: 14px;
+	font-family: Helvetica,Arial,sans-serif;
+    font-style: italic;
+}
+.jvs-default .comments .comment .avatar {
+	position: absolute;
+	border: 1px solid #AACCEE;
+}
+.jvs-default .comments .comment .avatar .point {
+	background-image: url("../../images/point.png");
+    display: block;
+    height: 11px;
+    overflow: hidden;
+    position: absolute;
+    right: -10px;
+    top: 1.1em;
+    width: 8px;
+}
+.jvs-default .comments .comment .comment-text {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #AACCEE;
+    padding: 7px;
+    margin-left: 50px;
+    min-height: 26px;
+}
+.jvs-default .comments .comment .creation-date {
+	color: #888888;
+    float: right;
+    font-size: 8pt;
+}
+.jvs-default .comments .newcommentbox form div {
+	display: none;
+	margin-left: 50px;
+}
+.jvs-default .comments .newcommentbox form div.comment-text {
+	display: block;
+}
+.jvs-default .comments .newcommentbox form > div {
+	margin-top:2px;
+}
+.jvs-default .comments .newcommentbox .comment{
+	
+}
+.jvs-default .comments .newcommentbox  input {
+	border:2px solid #135CAE !important;
+	border-radius:3px !important;
+	padding:2px !important;
+	width:32% !important;
+	background:transparent !important;
+	color: #444444;
+	margin-right: 5px;
+	cursor: pointer;
+}
+/*ICONS*/
+.jvs-default .comments .comment div.icons img.icon{
+	float: right;
+	padding: 0;
+	margin: 1px;
+	border: 0;
+	height: 16px;
+	width: 16px;
+}
+
+
+/*Element: Topbox*/
+
+.jvs-default div.topbox {
+	background: none repeat scroll 0 0 #F6FCF6;
+    border: 1px solid #8BD183;
+    margin-bottom: 0.5em;
+    padding: 15px;
+	line-height: 1.3em;
+	min-height: 31px;
+}
+.jvs-default div.topbox .title {
+	font-size: 13pt;
+	color: #1F6A17;
+	margin: 0;
+    padding: 0;
+	font-family: "lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif;
+	font-weight: normal;
+	line-height: 20px;
+}
+.jvs-default div.topbox p.question {
+	font-size: 12pt;
+	color: #1F75CC;
+    text-decoration: none;
+	margin: 0;
+    padding: 0;
+	font-family: "lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif;
+	font-weight: normal;
+	background-image: none !important;
+}
+
+/*MENUEBAR*/
+.jvs-default div.topbox div.bar {
+	float: right;
+    margin: -9.5px -8.5px 0 0;
+    padding: 0;
+}
+.jvs-default div.topbox img.icon, .jvs-default div.topbox img.iconSelected {
+	margin: 0 0 0 5px;
+    padding: 0 !important;
+	border: 1px solid #8BD183;
+	float: left;
+}
+.jvs-default div.topbox a.link:hover img.icon {
+	border: 1px solid #4E9B44;
+}
+.jvs-default div.topbox a.link:active img.icon {
+	background: none repeat scroll 0 0 #4E9B44;
+}
+.jvs-default div.topbox a.link:hover img.iconSelected {
+	border: 1px solid #8BD183;
+}
+.jvs-default div.topbox a.link:active img.iconSelected {
+	background: none ;
+	border: 1px solid #8BD183;
+}
+.jvs-default div.topbox div.topbar {
+	float:right;
+	margin-top:-8px;
+	margin-right:-8px;
+}
+.jvs-default .topbox .chart {
+	display:block;
+	height:48px;
+	width:48px;
+	float:right;
+	background-color:transparent !important;
+	border: 1px solid #8BD183;
+	margin-left:3px;
+	cursor:pointer;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.jvs-default .topbox .chart:hover {
+	border-color: #009900;
+}
+.jvs-default .topbox .barchart { background-image:url(../../images/default/icons/icon-48-bar.png) !important; }
+.jvs-default .topbox .piechart { background-image:url(../../images/default/icons/icon-48-pie.png) !important; }
+.jvs-default .topbox .chart:active, .jvs-default .topbox .chart.active {
+	background-color: #009900 !important;
+}
+
+/*Element: Endbox*/
+
+.jvs-default div.endbox {
+	background: none repeat scroll 0 0 #F7E1E2;
+    border: 1px solid #e1888a;
+    margin-bottom: 0.5em;
+    padding: 10px;
+	min-height: 13px;
+	line-height: 1.3em;    
+	overflow: hidden;
+}
+.jvs-default div.endbox div.leftMessage {
+	font-size: 13pt;
+	color: #b53d40;
+	margin: 0;
+    padding: 0;
+	font-family: "lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif;
+	font-weight: normal;
+	float: left;
+	display: block;
+}
+.jvs-default div.endbox a.link {
+	color: #C73F48;
+    float: right;
+    font-weight: bold;
+    text-decoration: none;
+}
+.jvs-default div.endbox div.leftMessage span.count{
+	font-weight: bold;
+}
+
+/*Element: Newanswer*/
+
+.jvs-default div.bbcodeToolbar {
+	border: 0;
+    margin: 0;
+    padding: 0;
+}
+.jvs-default div.bbcodeToolbar img.bbcodeIcon{
+	border: 0;
+    cursor: pointer;
+    margin: 0;
+}
+.jvs-default div.newanswerbox {
+	margin: 5px 0 0 !important;
+	position:relative;
+	width:auto;
+	overflow:hidden;
+}
+.jvs-default div.newcommentbox  textarea, .jvs-default div.newanswerbox  textarea {
+	background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #2C343D;
+    float: none;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    margin: 0;
+    min-height: 17px;
+    overflow: hidden;
+    padding: 0;
+    resize: none;
+    width: 100%;
+    outline: none;    
+    box-shadow: 0 0 0;
+    height: auto;
+}
+.jvs-default div.newanswerbox form > div {
+	margin-bottom:5px;
+	display: none;
+}
+.jvs-default .answerbox div.text {
+	display: block;	
+}
+.jvs-default div.newanswerbox input {
+	border:2px solid #135CAE !important;
+	border-radius:3px !important;
+	padding:3px !important;
+	width:32% !important;
+	background:transparent !important;
+	color: #444444;
+	margin-right: 5px;
+}
+.jvs-default div.newanswerbox > div {
+	position: absolute;
+	width: 78px;
+	left: 0;
+}
+.jvs-default div.newanswerbox > div > span {
+	color: #1F75CC;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+    text-align: center;
+}
+.jvs-default div.newanswerbox div + form {
+	margin-left: 80px;
+}
+.jvs-default .author {
+	background-image: url("../../images/default/icons/icon-14-author.png");
+    background-repeat: no-repeat;
+    padding-left: 12px;
+}
+.jvs-default .author a {
+	background: none repeat scroll 0 0 transparent !important;
+    color: #888888 !important;
+    cursor: pointer;
+    text-decoration: none;
+}
+.jvs-default .author a:hover {
+	text-decoration: underline;
+}
+/*Own Votes Box*/
+.jvs-default .vote-down {
+  	position: absolute;
+  	right: -8px;
+    top: -6px;
+    z-index: 10;
+}
+.jvs-default .vote-down .reset-bub {
+	display: none;
+}
+.jvs-default .vote-down.resetvotes .reset-bub {
+	display: block
+}
+.jvs-default .vote-down em {
+	font-style: normal;
+	background: orange;
+	color: #FFF;
+	padding: 0 0.4em;
+	-moz-border-radius: 0.25em;
+	-webkit-border-radius: 0.25em;
+	border-radius: 0.25em;
+	position: relative;
+	font-size: 12.8px;
+}
+.jvs-default .vote-down.resetvotes em {
+	cursor: pointer;
+	background: #C62828;
+}
+.jvs-default .vote-down .reset-bub {
+	position: absolute;
+    right: -5px;
+}
+.jvs-default .vote-down .reset-bub div {
+	position: relative;
+}
+.jvs-default .vote-down .reset-bub span {
+	font-style: normal;
+	background: #C62828;
+	color: #FFF;
+	padding: 0 0.4em;
+	-moz-border-radius: 0.25em;
+	-webkit-border-radius: 0.25em;
+	border-radius: 0.25em;
+	font-size: 8pt;
+	position: absolute;
+	text-align: center;
+}
+.jvs-default .vote-down .point {
+	font-size: 12.8px;
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 1.1em;
+	right: 0.8em;
+	display: block;
+	border-left: 0.45em solid orange; 
+	border-bottom: 0.45em solid #FFF; /* IE fix */
+	border-bottom: 0.45em solid rgba(0,0,0,0); 
+	overflow: hidden; /* IE fix */
+}
+.jvs-default .vote-down.resetvotes .point {
+	border-left: 0.45em solid #C62828; 
+}
+
+/* Bars */
+.jvs-default div.barbox .barholder div {
+	min-width: 1%;
+    width: 1%;
+}
+.jvs-default div.barbox .barholder div > a {
+	display: block;
+    height: 20px;
+    text-align: right;
+}
+.jvs-default div.barbox .barholder div > a > span {
+	color: #EEEEEE;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0 4px;
+    display: none;
+    line-height: 20px;
+}
+.jvs-default div.barbox p {
+	font-weight: bold;
+    line-height: 1.2em;
+    margin: 2px 0 5px;
+}
+.jvs-default .jsbarchart, .jvs-default .jspiechart {
+	background: none repeat scroll 0 0 #F6FCF6;
+    border: 1px solid #AACCEE;
+}
+.jvs-default .jsbarchart {
+	padding: 5px;
+}
+.jvs-default .jspiechart {
+	min-height: 300px;
+	margin-bottom: 0.5em;
+}
+
+.jvs-default .answer.jvsbanner .answerbox {
+	display: block;
+}
+.jvs-default .answer.jvsbanner .answerbox .bannercode {
+	height: 65px;
+    width: 100%;
+}
+.jvs-default .answer.jvsbanner .answervote .count {
+	margin-top: 10px;
+}
+
+/*Facebook*/
+.jvs-default .fblogin .overlay {
+	background-color: #111111;
+    bottom: 0;
+    left: 0;
+    opacity: 0.2;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 15;
+    box-shadow: 0 0 10px #111111;
+}
+.jvs-default .fblogin .boxEl {
+    background-color: #FFFFFF;
+    border-radius: 10px 10px 10px 10px;
+    bottom: 0;
+    box-shadow: 0.5px 0.5px 5px #000000;
+    height: 70px;
+    left: 50%;
+    margin-left: -170px;
+    margin-top: -45px;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    width: 320px;
+    z-index: 16;
+    cursor: pointer;
+}
+.jvs-default .fblogin .boxEl .message {
+	margin-right: 30px;
+}
+.jvs-default .fblogin .boxEl .login-symbol {
+    background-color: #35609E;
+    background-image: url("../../../../assets/images/icon-32-facebook.png");
+    background-position: center 10px;
+    background-repeat: no-repeat;
+    border-radius: 0 8px 8px 0;
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+}
+.jvs-default .fblogin .boxEl .login-symbol .arrow_right {
+    bottom: 8px;
+    height: 24px;
+    position: absolute;
+    right: 3px;
+    width: 24px;
+    background: url("../../../../assets/images/icon-24-arrow_right.png") no-repeat scroll center center transparent;
+}
+
+.jvs-default .sharebutton {
+	background-image: url("../../images/default/icons/icon-14-share.png");
+    background-position: 0 -1px;
+    background-repeat: no-repeat;
+    padding-left: 16px;
+}

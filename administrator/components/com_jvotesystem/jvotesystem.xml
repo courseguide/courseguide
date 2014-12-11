@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://www.joomla.org/xml/dtd/1.5/component-install.dtd">
+<extension type="component" version="2.5.0" method="upgrade" client="site">
+  <name>jVoteSystem</name>
+  <creationDate>23-Jul-2011</creationDate>
+  <author>Johannes Meßmer</author>
+  <authorEmail>service@joomess.de</authorEmail>
+  <authorUrl>http://www.joomess.de</authorUrl>
+  <copyright>Copyright (C) 2010-2012 Johannes Meßmer</copyright>
+  <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3</license>
+  <version>2.56</version>
+  <description />
+  <installfile>install/install.package.php</installfile>
+  <uninstallfile>install/uninstall.package.php</uninstallfile>
+  <install>
+    <sql>
+      <file driver="mysql" charset="utf8">install/sql/install.sql</file>
+	  <file driver="mysqli" charset="utf8">install/sql/install.sql</file>
+    </sql>
+  </install>
+  <uninstall>
+    <sql>
+      <file driver="mysql" charset="utf8">install/sql/uninstall.sql</file>
+	  <file driver="mysqli" charset="utf8">install/sql/install.sql</file>
+    </sql>
+  </uninstall>
+  
+  <files folder="frontend">
+    <filename>jvotesystem.php</filename>
+    <filename>controller.php</filename>
+    <filename>index.html</filename>
+    <filename>jomsocial_rule.xml</filename>
+    <filename>router.php</filename>
+    <folder>assets</folder>
+    <filename>ajax.php</filename>
+    <filename>api.php</filename>
+    <filename>connect.php</filename>
+	<folder>assistant</folder>
+    <folder>classes</folder>
+    <folder>language</folder>
+    <folder>models</folder>
+	<folder>templates</folder>
+    <folder>views</folder>
+  </files>
+  <languages folder="frontend/language">
+    <language tag="bg-BG">bg-BG/bg-BG.com_jvotesystem.ini</language>
+    <language tag="de-DE">de-DE/de-DE.com_jvotesystem.ini</language>
+    <language tag="en-GB">en-GB/en-GB.com_jvotesystem.ini</language>
+    <language tag="hu-HU">hu-HU/hu-HU.com_jvotesystem.ini</language>
+    <language tag="es-ES">es-ES/es-ES.com_jvotesystem.ini</language>
+    <language tag="fr-FR">fr-FR/fr-FR.com_jvotesystem.ini</language>
+    <language tag="it-IT">it-IT/it-IT.com_jvotesystem.ini</language>
+    <language tag="nl-NL">nl-NL/nl-NL.com_jvotesystem.ini</language>
+    <language tag="index">index.html</language>
+  </languages>
+  <administration>
+    <menu view="cpanel" img="components/com_jvotesystem/assets/images/icon-16-jvotesystem.png">jVoteSystem</menu>
+    <files folder="backend">
+      <filename>jvotesystem.php</filename>
+	  <filename>access.xml</filename>
+      <filename>config.xml</filename>
+      <filename>controller.php</filename>
+      <filename>index.html</filename>
+    
+      <folder>assets</folder>
+      <folder>controllers</folder>
+      <folder>elements</folder>
+	  <folder>fields</folder>
+      <folder>install</folder>
+      <folder>plugins</folder>
+      <folder>language</folder>
+	  <folder>logs</folder>
+      <folder>models</folder>
+      <folder>views</folder>
+    </files>
+    <languages folder="backend/language">
+      <language tag="bg-BG">bg-BG/bg-BG.com_jvotesystem.ini</language>
+	  <language tag="de-DE">de-DE/de-DE.com_jvotesystem.ini</language>
+	  <language tag="de-DE">de-DE/de-DE.com_jvotesystem.sys.ini</language>
+      <language tag="en-GB">en-GB/en-GB.com_jvotesystem.ini</language>
+      <language tag="en-GB">en-GB/en-GB.com_jvotesystem.sys.ini</language>
+      <language tag="es-ES">es-ES/es-ES.com_jvotesystem.ini</language>
+	  <language tag="fr-FR">fr-FR/fr-FR.com_jvotesystem.ini</language>
+	  <language tag="it-IT">it-IT/it-IT.com_jvotesystem.ini</language>
+	  <language tag="nl-NL">nl-NL/nl-NL.com_jvotesystem.ini</language>
+      <language tag="index">index.html</language>
+    </languages>
+  </administration>
+</extension>

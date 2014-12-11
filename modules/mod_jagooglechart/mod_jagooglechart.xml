@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension 
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+	<name>JA Google Chart</name>
+    <author>JoomlArt_com</author>
+	<creationDate>13 March 2013</creationDate>
+	<copyright>Copyright (C), J.O.O.M Solutions Co., Ltd. All Rights Reserved_</copyright>
+	<license>license GNU/GPLv3 http://www_gnu_org/licenses/gpl-3.0.html</license>
+	<authorEmail>webmaster@joomlart_com</authorEmail>
+	<authorUrl>www.joomlart.com</authorUrl>
+	<version>2.6.2</version>
+    <description>
+	<![CDATA[
+		<div style='text-align: left;'>
+	 	<p><strong>JA Google Chart</strong> is a free responsive joomla module, compatible with Joomla 2.5 &amp; Joomla 3 used to display your data in google charts: bar chart, pie chart, column chart, line chart, geo chart, area chart. You can customize the display of each chart.</p>
+		<p style="clear:both"><span style="color: #ff6600;"><strong>Key Features:</strong></span></p>
+		 <ul>
+		   	<li>Native with Joomla 2.5 and Joomla 3</li>
+			<li>Fully responsive</li>
+            <li>Support 6 chart types</li>
+            <li>3 ways to upload data: manual, import and Google Speadsheet CSV url</li>
+            <li>Configurable Axis: horizontal and vertical</li>
+            <li>3D view for Pie chart</li>
+            <li>3 Display modes for GEO Chart</li>	
+		 </ul>	
+		<p><strong><span style="color: #ff0000;">Upgrade Method:</span><br /></strong></p>
+		<ul>
+			<li>You can install the new version directly over this version. Uninstallation is not required. Backup any customized files before upgrading. OR</li>
+			<li>Use <strong><a href="http://extensions.joomla.org/extensions/core-enhancements/installers/12077" target="_blank">JA Extensions Manager</a></strong> Component for easy upgrades and rollbacks. <strong><a href="http://www.youtube.com/user/JoomlArt#p/c/BC9B0C0BFE98657E/2/mNAuJRmifG8" target="_blank">Watch Video..</a></strong></li>
+		</ul>
+		<p><span style="color: #008000;"><strong>References:</strong></span></p>
+		<ul>
+			<li><a target="_blank" href="http://www.joomlart.com/documentation/joomla-module/ja-google-chart">Documentation</a></li>
+			<li><a target="_blank" href="http://www.joomlart.com/forums/forumdisplay.php?538-JA-Google-Charts-Module">Forum</a></li>
+			<li><a target="_blank" href="http://update.joomlart.com/">Updates &amp; Versions</a></li>
+		</ul>
+		<p>Copyright 2004 - 2014 <a href="http://www.joomlart.com/" title="Visit Joomlart.com!">JoomlArt.com</a>.</p>
+		</div>
+	 ]]>
+	</description>
+	<languages>
+		<language tag="en-GB">en-GB.mod_jagooglechart.ini</language>
+	</languages>
+    <files>
+      	<folder>admin</folder>
+      	<folder>tmpl</folder>
+        <folder>asset</folder>
+        <!--<folder>helper</folder>-->
+        <filename>index.html</filename>
+        <filename module="mod_jagooglechart">mod_jagooglechart.php</filename>
+    </files>
+	<config>
+		<fields name="params">
+			<fieldset 
+				name="basic"
+                addfieldpath="/modules/mod_jagooglechart/asset/elements">
+				
+				<field 
+					name="jarequest"
+					type="jarequest" />
+				
+				<field
+					name="chart_type"
+					type="list"
+					default="area_chart"
+					label="STYLE_LABEL"
+					description="STYLE_DESC">
+						<option value="area_chart">AREA_CHARTS</option>
+						<option value="bar_chart">BAR_CHARTS</option>
+						<option value="column_chart">COLUMN_CHARTS</option>
+						<option value="geo_chart">GEO_CHARTS</option>
+						<option value="line_chart">LINE_CHARTS</option>
+						<option value="pie_chart">PIE_CHARTS</option>
+				</field>
+				<field type="spacer" hr="true"/>
+
+                <field
+                    name="data_source"
+                    type="list"
+                    default="csv"
+                    label="DATA_SOURCE" >
+                        <option value="csv">DATA_INPUT_FROM_CSV</option>
+                        <option value="googlesheet">DATA_INPUT_FROM_GOOGLE_SHEET</option>
+                </field>
+
+                <field
+					name="data_input"
+					type="jaimportcsv"
+					cols="45"
+					rows="5"
+					default=""
+					label="DATA_INPUT_LABEL"
+					description="DATA_INPUT_DESC"/>
+				
+				<field
+                    name="data_input_url"
+                    type="text"
+                    default=""
+                    label="DATA_INPUT_URL"
+                    description="DATA_INPUT_URL_DESC" />
+
+                <field
+                        name="chart_description"
+                        type="textarea"
+                        filter="safehtml"
+                        rows="3"
+                        cols="40"
+                        label="CHART_DESCRIPTION"
+                        description="CHART_DESCRIPTION_DESC" />
+
+				<field type="spacer" hr="false" label="Containing Element Settings"  />
+				<field
+					name="width"
+					type="text"
+					default="100%"
+					label="WIDTH_LABEL"
+					description="WIDTH_DESC"/>
+				<field
+					name="height"
+					type="text"
+					default="600"
+					label="HEIGHT_LABEL"
+					description="HEIGHT_DESC"/>
+				<field type="spacer" hr="false" label="Charts Area Settings" description="An object with members to configure the placement and size of the chart area (where the chart itself is drawn, excluding axis and legends). Two formats are supported: a number, or a number followed by %. A simple number is a value in pixels; a number followed by % is a percentage." />			
+				
+				<field
+					name="chartArea_left"
+					type="text"
+					default="50"
+					label="CHARTAREA_LEFT_LABEL"
+					description="CHARTAREA_LEFT_DESC"/>
+				<field
+					name="chartArea_top"
+					type="text"
+					default="50"
+					label="CHARTAREA_TOP_LABEL"
+					description="CHARTAREA_TOP_DESC"/>
+				<field 
+					name="chartArea_width" 
+					type="text" 
+					default="750" 
+					label="CHARTAREA_WIDTH_LABEL" 
+					description="CHARTAREA_WIDTH_DESC" />
+				<field 
+					name="chartArea_height" 
+					type="text"
+					default="500" 
+					label="CHARTAREA_HEIGHT_LABEL" 
+					description="CHARTAREA_HEIGHT_DESC" />
+					
+				<field type="spacer" hr="true"/>
+				<field name="backgroundColor"
+					type="color"
+					default="#ffffff"
+					label="BACKGROUNDCOLOR_LABEL"
+					description="BACKGROUNDCOLOR_DESC"/>
+					
+				<field name="stroke"
+					type="color"
+					default="#666666"
+					label="STROKE_LABEL"
+					description="STROKE_DESC"/>
+					
+				<field name="strokeWidth"
+					type="text"
+					default="0"
+					label="STROKEWIDTH_LABEL"
+					description="STROKEWIDTH_DESC"/>
+				<field 
+					name="font"
+					type="fontface"
+					default="arial"
+					label="FONT_LABEL"
+					description="FONT_DESC">
+				</field>
+				
+				
+				<field type="spacer" hr="false" label="Charts Title Settings"/>	
+				<field
+					name="chart_titleName"
+					type="text"	
+					size="30"
+					default=""
+					label="CHART_TITLENAME_LABEL"
+					description="CHART_TITLENAME_DESC"/>
+
+				<field
+					name="chart_titleFont"
+					type="fontface"
+					default=""
+					label="CHART_TITLEFONT_LABEL"
+					description="CHART_TITLEFONT_DESC">
+					<option value="">USE_GLOBAL</option>
+				</field>
+				<field
+					name="chart_titleSize"
+					type="text"
+					default="9"
+					label="CHART_TITLESIZE_LABEL"
+					description="CHART_TITLESIZE_DESC"/>
+				<field
+					name="chart_titleColor"
+					type="color"
+					default="#000000"
+					label="CHART_TITLECOLOR_LABEL"
+					description="CHART_TITLECOLOR_DESC"/>
+				
+				<field type="spacer" hr="false" label="Legend Settings"/>
+				<field
+					name="legend_position"
+					type="list"
+					default="right"
+					label="LEGEND_POSITION_LABEL"
+					description="LEGEND_POSITION_DESC">
+						<option value="right">RIGHT</option>
+						<option value="top">ABOVE_THE_CHART</option>
+						<option value="bottom">BELOW_THE_CHART</option>
+						<option value="in">INSIDE_THE_CHART_BY_THE_TOP_LEFT_CORNER</option>
+						<option value="none">NO_LEGEND_IS_DISPLAYED</option>
+				</field>
+				<field
+					name="legend_font"
+					type="fontface"
+					default=""
+					label="LEGEND_FONT_LABEL"
+					description="LEGEND_FONT_DESC">
+					<option value="">USE_GLOBAL</option>
+				</field>
+				<field
+					name="legend_textSize"
+					type="text"
+					default="9"
+					label="LEGEND_TEXTSIZE_LABEL"
+					description="LEGEND_TEXTSIZE_DESC"/>
+				<field
+					name="legend_textColor"
+					type="color"
+					default="#000000"
+					label="LEGEND_TEXTCOLOR_LABEL"
+					description="LEGEND_TEXTCOLOR_DESC"/>	
+					
+				<field type="spacer" hr="false" label="Tooltip Settings"/>
+				<field
+					name="tooltip_enabled"
+					type="radio"
+					class="btn-group"
+					default="1"
+					label="TOOLTIP_ENABLED_LABEL"
+					description="TOOLTIP_ENABLED_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field
+					name="tooltip_font"
+					type="fontface"
+					default=""
+					label="TOOLTIP_FONT_LABEL"
+					description="TOOLTIP_FONT_DESC">
+					<option value="">USE_GLOBAL</option>
+				</field>
+				<field
+					name="tooltip_textSize"
+					type="text"
+					default="9"
+					label="TOOLTIP_TEXTSIZE_LABEL"
+					description="TOOLTIP_TEXTSIZE_DESC"/>
+				<field
+					name="tooltip_textColor"
+					type="color"
+					default="#000000"
+					label="TOOLTIP_TEXTCOLOR_LABEL"
+					description="TOOLTIP_TEXTCOLOR_DESC"/>
+
+                <field
+                    name="group"
+                    hidden="true"
+                    type="japanel"
+                    function="depend">
+                    <option for="data_source" value="csv" hideRow="true">data_input</option>
+                    <option for="data_source" value="googlesheet" hideRow="true">data_input_url</option>
+                </field>
+				<field type="japanel" path="modules/mod_jagooglechart/asset/elements/" />
+			</fieldset>
+			
+			<fieldset 
+				name="axis_chart_settings" 
+				label="AXIS_CHART_SETTINGS_LABEL" description="AXIS_CHART_SETTINGS_DESC">
+				<field name="axis_reverseCategories"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="AXIS_REVERSECATEGORIES_LABEL"
+					description="AXIS_REVERSECATEGORIES_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="axis_lineWidth"
+					type="text"
+					default="2"
+					label="AXIS_LINEWIDTH_LABEL"
+					description="AXIS_LINEWIDTH_DESC" />
+				<field name="axis_pointSize"
+					type="text"
+					default="0"
+					label="AXIS_POINTSIZE_LABEL"
+					description="AXIS_POINTSIZE_DESC" />
+				
+				<field type="spacer" hr="false" label="Horizontal Axis" description="" />
+				<field name="hAxis_title"
+					type="text"
+					default=""
+					label="HAXIS_TITLE_LABEL"
+					description="HAXIS_TITLE_DESC" />
+				<field
+					name="hAxis_title_font"
+					type="fontface"
+					default=""
+					label="HAXIS_TITLE_FONT_LABEL"
+					description="HAXIS_TITLE_FONT_DESC">
+					<option value="">USE_GLOBAL</option>
+				</field>
+				<field
+					name="hAxis_title_textSize"
+					type="text"
+					default="11"
+					label="HAXIS_TITLE_TEXTSIZE_LABEL"
+					description="HAXIS_TITLE_TEXTSIZE_DESC"/>
+				<field
+					name="hAxis_title_textColor"
+					type="color"
+					default="#000000"
+					label="HAXIS_TITLE_TEXTCOLOR_LABEL"
+					description="HAXIS_TITLE_TEXTCOLOR_DESC"/>	
+					
+				<field type="spacer" hr="true" />
+				<field name="hAxis_textPosition"
+					type="list"
+					default="out"
+					label="HAXIS_TEXTPOSITION_LABEL"
+					description="HAXIS_TEXTPOSITION_DESC">
+					<option value="out">Out</option>
+					<option value="in">In</option>
+					<option value="none">None</option>
+				</field>
+				<field
+					name="hAxis_text_font"
+					type="fontface"
+					default=""
+					label="HAXIS_TEXT_FONT_LABEL"
+					description="HAXIS_TEXT_FONT_DESC">
+					<option value="">USE_GLOBAL</option>
+				</field>
+				<field
+					name="hAxis_text_textSize"
+					type="text"
+					default="9"
+					label="HAXIS_TEXT_TEXTSIZE_LABEL"
+					description="HAXIS_TEXT_TEXTSIZE_DESC"/>
+				<field
+					name="hAxis_text_textColor"
+					type="color"
+					default="#000000"
+					label="HAXIS_TEXT_TEXTCOLOR_LABEL"
+					description="HAXIS_TEXT_TEXTCOLOR_DESC"/>	
+				
+				<field name="hAxis_direction"
+					type="list"
+					default="1"
+					label="HAXIS_DIRECTION_LABEL"
+					description="HAXIS_DIRECTION_DESC">
+					<option value="1">1</option>
+					<option value="-1">-1</option>
+				</field>
+
+				<field type="spacer" hr="false" label="Vertical Axis" description="" />
+				<field name="vAxis_title"
+					type="text"
+					default=""
+					label="VAXIS_TITLE_LABEL"
+					description="VAXIS_TITLE_DESC" />
+				<field
+					name="vAxis_title_font"
+					type="fontface"
+					default=""
+					label="VAXIS_TITLE_FONT_LABEL"
+					description="VAXIS_TITLE_FONT_DESC">
+					<option value="">USE_GLOBAL</option>
+				</field>
+				<field
+					name="vAxis_title_textSize"
+					type="text"
+					default="11"
+					label="VAXIS_TITLE_TEXTSIZE_LABEL"
+					description="VAXIS_TITLE_TEXTSIZE_DESC"/>
+				<field
+					name="vAxis_title_textColor"
+					type="color"
+					default="#000000"
+					label="VAXIS_TITLE_TEXTCOLOR_LABEL"
+					description="VAXIS_TITLE_TEXTCOLOR_DESC"/>	
+					
+				<field type="spacer" hr="true" />
+				<field name="vAxis_textPosition"
+					type="list"
+					default="out"
+					label="VAXIS_TEXTPOSITION_LABEL"
+					description="VAXIS_TEXTPOSITION_DESC">
+					<option value="out">Out</option>
+					<option value="in">In</option>
+					<option value="none">None</option>
+				</field>
+				<field
+					name="vAxis_text_font"
+					type="fontface"
+					default=""
+					label="VAXIS_TEXT_FONT_LABEL"
+					description="VAXIS_TEXT_FONT_DESC">
+					<option value="">USE_GLOBAL</option>
+				</field>
+				<field
+					name="vAxis_text_textSize"
+					type="text"
+					default="9"
+					label="VAXIS_TEXT_TEXTSIZE_LABEL"
+					description="VAXIS_TEXT_TEXTSIZE_DESC"/>
+				<field
+					name="vAxis_text_textColor"
+					type="color"
+					default="#000000"
+					label="VAXIS_TEXT_TEXTCOLOR_LABEL"
+					description="VAXIS_TEXT_TEXTCOLOR_DESC"/>	
+				
+				<field name="vAxis_direction"
+					type="list"
+					default="1"
+					label="VAXIS_DIRECTION_LABEL"
+					description="VAXIS_DIRECTION_DESC">
+					<option value="1">1</option>
+					<option value="-1">-1</option>
+				</field>
+
+			</fieldset>	
+			
+			<fieldset name="pie_chart_settings"
+				label="Pie Chart Settings">
+				<field name="pie_is3D"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="PIE_IS3D_LABEL"
+					description="PIE_IS3D_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="pie_reverseCategories"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="PIE_REVERSECATEGORIES_LABEL"
+					description="PIE_REVERSECATEGORIES_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="pie_pieSliceBorderColor"
+					type="color"
+					default="#FFFFFF"
+					label="PIE_PIESLICEBORDERCOLOR_LABEL"
+					description="PIE_PIESLICEBORDERCOLOR_DESC" />
+				
+				<field type="spacer" hr="false" label="Slice Text Style" description="An object that specifies the slice text style" />
+				<field name="pie_pieSliceText"
+					type="list"
+					default="percentage"
+					label="PIE_PIESLICETEXT_LABEL"
+					description="PIE_PIESLICETEXT_DESC">
+					<option value="percentage">PERCENTAGE</option>
+					<option value="value">VALUE</option>
+					<option value="label">LABEL</option>
+					<option value="none">None</option>
+				</field>
+				<field
+					name="pieSlice_font"
+					type="fontface"
+					default=""
+					label="PIESLICE_FONT_LABEL"
+					description="PIESLICE_FONT_DESC">
+					<option value="">USE_GLOBAL</option>
+				</field>
+				<field
+					name="pieSlice_textSize"
+					type="text"
+					default="9"
+					label="PIESLICE_TEXTSIZE_LABEL"
+					description="PIESLICE_TEXTSIZE_DESC"/>
+				<field
+					name="pieSlice_textColor"
+					type="color"
+					default="#000000"
+					label="PIESLICE_TEXTCOLOR_LABEL"
+					description="PIESLICE_TEXTCOLOR_DESC"/>	
+				<field 
+					name="pie_depend"
+					type="japanel"
+					function="depend"
+					hidden="true">
+						<option for="pie_is3D" value="0" hideRow="true">
+						pie_pieSliceBorderColor
+						</option>
+				</field>
+			</fieldset>
+			
+			<fieldset name="geo_chart_settings"
+				label="GEO Chart Settings">
+				<field name="geo_displayMode"
+					type="list"
+					default="regions"
+					label="GEO_DISPLAYMODE_LABEL"
+					description="GEO_DISPLAYMODE_DESC">
+					<option value="auto">AUTO_CHOOSE_BASED_ON_THE_FORMAT_OF_THE_DATA</option>
+					<option value="regions">REGION_MAP</option>
+					<option value="markers">MARKER_MAP</option>
+				</field>
+					
+				<field name="geo_region"
+					type="text"
+					size="30"
+					default="world"
+					label="GEO_REGION_LABEL"
+					description="GEO_REGION_DESC" />
+					
+				<field name="geo_resolution"
+					type="list"
+					default="countries"
+					label="GEO_RESOLUTION_LABEL"
+					description="GEO_RESOLUTION_DESC">
+					<option value="countries">COUNTRIES</option>
+					<option value="provinces">PROVINCES</option>
+					<option value="metros">METROS</option>
+				</field>
+					
+				<field name="geo_enableRegionInteractivity"
+					type="radio"
+					class="btn-group"
+					default="1"
+					label="GEO_ENABLEREGIONINTERACTIVITY_LABEL"
+					description="GEO_ENABLEREGIONINTERACTIVITY_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field name="geo_keepAspectRatio"
+					type="radio"
+					class="btn-group"
+					default="1"
+					label="GEO_KEEPASPECTRATIO_LABEL"
+					description="GEO_KEEPASPECTRATIO_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field name="geo_markerOpacity"
+					type="list"
+					class="btn-group"
+					default="1.0"
+					label="GEO_MARKEROPACITY_LABEL"
+					description="GEO_MARKEROPACITY_DESC">
+					<option value="0.0">0.0</option>
+					<option value="0.1">0.1</option>
+					<option value="0.2">0.2</option>
+					<option value="0.3">0.3</option>
+					<option value="0.4">0.4</option>
+					<option value="0.5">0.5</option>
+					<option value="0.6">0.6</option>
+					<option value="0.7">0.7</option>
+					<option value="0.8">0.8</option>
+					<option value="0.9">0.9</option>
+					<option value="1.0">1.0</option>
+				</field>
+				
+				<field type="spacer" hr="false" label="Color Axis"/>	
+				<field name="geo_colorAxis_minValue"
+					type="text"
+					default="0"
+					label="GEO_COLORAXIS_MINVALUE_LABEL"
+					description="GEO_COLORAXIS_MINVALUE_DESC" />
+				<field name="geo_colorAxis_maxValue"
+					type="text"
+					default=""
+					label="GEO_COLORAXIS_MAXVALUE_LABEL"
+					description="GEO_COLORAXIS_MAXVALUE_DESC" />
+				<field name="geo_colorAxis_fromColor"
+					type="color"
+					default="#FFFFFF"
+					label="GEO_COLORAXIS_FROMCOLOR_LABEL"
+					description="GEO_COLORAXIS_FROMCOLOR_DESC" />
+				<field name="geo_colorAxis_toColor"
+					type="color"
+					default="#35A339"
+					label="GEO_COLORAXIS_TOCOLOR_LABEL"
+					description="GEO_COLORAXIS_TOCOLOR_DESC" />
+				<field name="geo_datalessRegionColor"
+					type="color"
+					default="#F5F5F5"
+					label="GEO_DATALESSREGIONCOLOR_LABEL"
+					description="GEO_DATALESSREGIONCOLOR_DESC" />
+
+			</fieldset>
+			<fieldset name="advanced">
+                <field name="layout" type="modulelayout"
+                       label="JFIELD_ALT_LAYOUT_LABEL"
+                       description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+                <field
+                        name="moduleclass_sfx"
+                        type="text"
+                        label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                        description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+                <field name="cache" type="list"
+                       default="1"
+                       label="COM_MODULES_FIELD_CACHING_LABEL"
+                       description="COM_MODULES_FIELD_CACHING_DESC"
+                        >
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+
+                <field name="cache_time" type="text"
+                       default="900"
+                       label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                       description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+                <field
+                        name="cachemode"
+                        type="hidden"
+                        default="static">
+                    <option
+                            value="static"></option>
+                </field>
+					 
+			</fieldset>		
+		</fields>
+				
+	</config>
+</extension>

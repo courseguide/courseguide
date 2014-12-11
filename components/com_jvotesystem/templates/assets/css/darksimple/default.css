@@ -1,0 +1,520 @@
+/**
+* @package Component jVoteSystem for Joomla! 1.5-2.5 - 2.5
+* @projectsite www.joomess.de/projects/jvotesystem
+* @authors Johannes Meßmer, Andreas Fischer
+* @copyright (C) 2010 - 2012 Johannes Meßmer
+* @license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+**/
+
+.jvotesystem.jvs-darksimple {
+	background: none repeat scroll 0 0 #3B3A38;
+	padding: 10px;
+	color: #EEEEEE;
+}
+.jvs-darksimple p {
+	color: #EEEEEE !important;
+    text-shadow: 0 0 0 !important;
+}
+.jvs-darksimple .answer {
+	position: relative;
+}
+.jvs-darksimple .answerbox {
+	padding: 10px;
+    background-color: #252524;
+    font-size: 15px;
+	border-bottom-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+.jvs-darksimple .answer + .answer {
+	margin-top: 10px;
+}
+.jvs-darksimple .count .votecount {
+	top: 12px;
+    color: #939393;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 17px;
+    position: absolute;
+    right: 15px;
+}
+.jvs-darksimple .answertext {
+	line-height: 1.4;
+    padding: 2px 70px 0;
+    color: #EEEEEE;
+}
+.jvs-darksimple .votebutton {
+	float: left;
+}
+.jvs-darksimple .votebutton a {
+	background: url("../../images/darksimple/vote_arrows.png") no-repeat scroll 0 0 transparent !important;
+	cursor: pointer;
+    float: left;
+    height: 26px;
+    margin-right: 4px;
+    width: 26px;
+	display: block;
+	outline: medium none;
+}
+.jvs-darksimple .votebutton a.novote {
+	cursor: default;
+    opacity: 0.5;
+}
+.jvs-darksimple .votebutton a.vote-down {
+	background-position: -26px 0 !important;
+	visibility: hidden;
+}
+.jvs-darksimple .votebutton a.vote-down.reset {
+	visibility: visible;
+}
+.jvs-darksimple .votebutton a.vote-down span {
+	display: none;
+}
+.jvs-darksimple .votebutton a.vote:hover {
+	background-position: 0 -26px !important;
+}
+.jvs-darksimple .rank {
+	background: none repeat scroll 0 0 #ff9900;
+	color: #FFFFFF;
+    font-size: 20pt;
+    left: 0;
+    line-height: 28px;
+    min-width: 20px;
+    position: absolute;
+    width: 40px;
+    border-top-left-radius: 12px;
+	min-height: 36px;
+	padding-top: 10px;
+	text-align: center !important;
+}
+.jvs-darksimple .rank + .answerbox {
+	margin-left: 40px;
+	z-index: 5;
+	border-top-left-radius: 0;
+}
+.jvs-darksimple .topbox {
+	position: relative;
+}
+.jvs-darksimple .topbox .votes_left{
+	background-color: #252524;
+	padding: 5px;
+	border-bottom-left-radius: 6px;
+	float: right;
+	line-height: 16px;
+}
+.jvs-darksimple .newanswerbox {
+	margin-top: 10px;
+}
+.jvs-darksimple .newanswerbox form div {
+	display: none;
+}
+.jvs-darksimple form .bbcodeToolbar {
+	margin-bottom: 5px;
+}
+.jvs-darksimple .newanswerbox form textarea {
+	width: 80%;
+	padding: 0;
+	font-family: Arial,Helvetica,sans-serif;
+	background-color: #252524;
+    font-size: 15px;
+	color: #EEEEEE;
+	padding: 2px;
+	border: 1px solid #3b3a38;
+	overflow: hidden;
+	min-height: 21px;
+	resize: none;
+	margin: 0;
+}
+.jvs-darksimple .newanswerbox .rank {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 12px;
+	bottom: 0;
+}
+.jvs-darksimple .newanswerbox form input.submitbutton {
+	background: none repeat scroll 0 0 orange !important;
+    border: 0 none;
+    color: #EEEEEE;
+    cursor: pointer;
+    float: right;
+    font-variant: small-caps;
+    font-weight: bold;
+    margin: 0 !important;
+    min-height: 27px;
+    padding: 0 !important;
+    text-shadow: 0 0 0;
+    width: 18%;
+}
+.jvs-darksimple .topbox {
+	overflow: hidden;
+}
+.jvs-darksimple .title {
+	float: left;
+	background-color: #252524;
+	padding: 5px;
+	color: #EEEEEE !important;
+	margin-right: 10px !important;
+	border-bottom-right-radius: 6px;
+	margin-bottom: -3px !important;    
+	font-weight: bold;
+	line-height: 16px;
+}	
+.jvs-darksimple .question {
+	background: none no-repeat scroll 0 0 transparent !important;
+    font-size: 16px;
+    margin: 0 0 8px 0;
+	line-height: 1.4em;
+	padding-top: 2px;
+}
+.jvs-darksimple .pagebox {
+    position: relative;
+}
+
+/*Navigation*/
+
+.jvs-darksimple div.navi {
+	position:relative;
+	border-collapse: separate;
+	padding: 0;
+	border: 0 none !important;
+	width: 100%;
+	overflow: hidden
+}
+.jvs-darksimple .navi a {
+	background: none repeat scroll 0 0 #333;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 0 2px #666666;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    margin: 2px 0 2px 5px;
+    padding: 1px 9px;
+    text-decoration: none !important;
+	outline: medium none;
+}
+.jvs-darksimple .commentsnavi a {
+	line-height:12px;
+	margin: 1px 0 1px 3px;
+	padding: 1px 5px;
+	font-size:10px;
+}
+.jvs-darksimple .navi a:hover{
+	background: none repeat scroll 0 0 #ffbc3b !important;
+}
+.jvs-darksimple .navi div.naviVor{
+	float: left;
+	padding-left: 15px;
+	text-align: left;
+}
+.jvs-darksimple .navi div.naviPages{
+	text-align: center;
+	width: 80%;
+	margin: 0 auto;
+}
+.jvs-darksimple .navi .naviPages a.pageSelected{
+	background: none repeat scroll 0 0 orange;
+}
+.jvs-darksimple .navi .naviPages a.pageNull {
+	background: none repeat scroll 0 0 #464644 !important;
+	cursor: default;
+}
+.jvs-darksimple .navi div.naviWeiter{
+	float: right;
+	padding-right: 15px;
+	text-align: right;
+}
+
+.jvs-darksimple .answericons {
+	display: none;
+    left: 50%;
+    margin-left: -200px;
+    position: absolute;
+    text-align: center !important;
+    top: 15px;
+    width: 400px;
+    opacity: 0.5;
+    height: 20px;
+}
+.jvs-darksimple .answericons:hover {
+	opacity: 1;
+}
+.jvs-darksimple .answericons span {
+	border: 3px solid #666666;
+	background: none repeat scroll 0 0 #999999;
+	-moz-border-radius:10px;
+	-khtml-border-radius:10px;
+	padding: 3px;
+	z-index: 99;
+}
+.jvs-darksimple .answericons span a {
+	background-color: transparent !important;
+    background-repeat: no-repeat !important;
+    color: #666666;
+    font-weight: bold;
+    height: 16px;
+    margin: 1px;
+    outline: medium none;
+    padding-left: 20px;
+    text-decoration: none;
+    width: 16px;
+    display: inline;
+}
+.jvs-darksimple .answericons span a:hover {
+	color: #FFFFFF;
+}
+.jvs-darksimple .answericons span a + a {
+	border-left: 2px solid #666666; 
+}
+.jvs-darksimple .answericons span a.trash { background-image: url("../../images/darksimple/icon-16-trash.png") !important; }
+.jvs-darksimple .answericons span a.state, .jvs-darksimple .answericons span a.report { background-position: 3px center !important; }
+.jvs-darksimple .answericons span a.published { background-image: url("../../images/darksimple/icon-16-published.png") !important; }
+.jvs-darksimple .answericons span a.unpublished { background-image: url("../../images/darksimple/icon-16-unpublished.png") !important; }
+.jvs-darksimple .answericons span a.report { background-image: url("../../images/darksimple/icon-16-report.png") !important; }
+
+/*Charts*/
+.jvs-darksimple .topbox .chart {
+	height: 26px;
+	width: 26px;
+	float: right;
+	background: none no-repeat scroll center center #999999 !important;
+	margin-left: 5px;
+	cursor: pointer;
+}
+.jvs-darksimple .topbox .chart:hover, .jvs-darksimple .topbox .chart.active {
+	background-color: #252524 !important;
+}
+.jvs-darksimple .topbox .piechart { background-image: url("../../images/darksimple/icon-24-pie.png") !important; }
+.jvs-darksimple .topbox .barchart { background-image: url("../../images/darksimple/icon-24-bar.png") !important; background-position: center 2px !important; }
+.jvs-darksimple .jspiechart {
+	min-height: 300px;
+}
+
+/* Bars */
+.jvs-darksimple .jsbarchart {
+	padding-bottom: 5px;
+}
+.jvs-darksimple div.barbox .barholder div {
+	min-width: 1%;
+    width: 1%;
+}
+.jvs-darksimple div.barbox .barholder div > a {
+	display:block;
+	height: 20px;
+	text-align: right;
+}
+.jvs-darksimple div.barbox .barholder div > a > span {
+	color: #EEEEEE;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0 3px;
+    display: none;
+    line-height: 20px;
+}
+.jvs-darksimple div.barbox p {
+	font-weight: bold;
+    line-height: 1.2em;
+    margin: 2px 0 5px;
+}
+
+/*Comments*/
+.jvs-darksimple .comments {
+    font-family: Helvetica,Arial,sans-serif;
+    line-height: 1.3em;
+    width: 100%;
+	overflow:hidden;
+	position:relative;
+}
+
+.jvs-darksimple .commentpage > div {
+	margin-top: 2px;
+}
+
+.jvs-darksimple .comments .autor span.autorname{
+	text-decoration: underline;
+}
+.jvs-darksimple .comments .comment {
+	position:relative;
+	color: #999999;
+    font-size: 14px;
+	font-family: Helvetica,Arial,sans-serif;
+    font-style: italic;
+}
+.jvs-darksimple .comments .comment .avatar {
+	position: absolute;
+	border: 1px solid #555555;
+}
+.jvs-darksimple .comments .comment .avatar .point {
+	background-image: url("../../images/darksimple/point.png");
+    display: block;
+    height: 11px;
+    overflow: hidden;
+    position: absolute;
+    right: -10px;
+    top: 1.1em;
+    width: 8px;
+}
+.jvs-darksimple .comments .comment .comment-text {
+	background: none repeat scroll 0 0 #333333;
+    border: 1px solid #555555;
+    padding: 7px;
+    margin-left: 50px;
+    min-height: 26px;
+}
+.jvs-darksimple .comments .comment .creation-date {
+	color: #888888;
+    float: right;
+    font-size: 8pt;
+}
+.jvs-darksimple .comments .newcommentbox form div {
+	display: none;
+	margin-left: 50px;
+}
+.jvs-darksimple .comments .newcommentbox form div.comment-text {
+	display: block;
+}
+.jvs-darksimple .comments .newcommentbox form > div {
+	margin-top:2px;
+}
+.jvs-darksimple .comments .newcommentbox input {
+	background: none repeat scroll 0 0 orange !important;
+    border: 0 none;
+    color: #EEEEEE;
+    font-variant: small-caps;
+    font-weight: bold;
+    line-height: 18px;
+    margin: 0 6px 0 0 !important;
+    min-height: 22px;
+    padding: 0 3px !important;
+    text-shadow: 0 0 0;
+    width: 22%;
+}
+.jvs-darksimple div.newcommentbox  textarea {
+	background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #999999;
+    float: none;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    margin: 0;
+    min-height: 17px;
+    overflow: hidden;
+    padding: 0;
+    resize: none;
+    width: 100%;
+    outline: none;
+    box-shadow: 0 0 0;    
+    border-radius: 0 0 0 0;
+}
+.jvs-darksimple .comments-holder {
+	padding-left: 43px;
+    padding-right: 38px;
+}
+
+/*Userlist*/
+.jvs-darksimple a.userlist, .jvs-default a.userlist:hover {
+	display:block;
+	height:16px;
+	width:16px;
+	color: #000 !important;
+	margin: 1px;
+	background-color:transparent !important;
+	background-repeat:no-repeat !important;
+	outline: medium none;
+	background-image: url("../../../assets/images/default/icons/icon-16-users.png") !important;
+    cursor: pointer;
+    float: none;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    padding: 0 !important;
+}
+/*Banner*/
+.jvs-darksimple .answer.jvsbanner .answerbox {
+	padding: 2px;
+	text-align: left;
+}
+
+/*Comment-Icon*/
+.jvs-darksimple a.comment ~ .answerbox, .jvs-darksimple a.comment ~ .count span, .jvs-darksimple a.comment ~ .count a {
+	margin-right: 35px;
+}
+.jvs-darksimple a.comment ~ .answerbox {
+	border-bottom-right-radius: 0;
+}
+.jvs-darksimple a.comment {
+	background: url("../../images/darksimple/icon-24-comment.png") no-repeat scroll center top #FF9900 !important;
+    border-bottom-right-radius: 12px;
+    min-height: 24px;
+    outline: medium none;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-decoration: none !important;
+    bottom: 0;
+    width: 35px;
+    padding: 0 !important;
+}
+.jvs-darksimple a.comment span {
+	color: #EEEEEE;
+    font-size: 10pt;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+/*Icons*/
+.jvs-darksimple .comments-holder .icons {
+	margin-top: -2px;
+}
+.jvs-darksimple .comments-holder a.icon, .jvs-default .comments-holder a.icon:hover {
+    background-color: transparent !important;
+    background-repeat: no-repeat !important;
+    color: #000000 !important;
+    cursor: pointer;
+    display: block;
+    float: right;
+    height: 16px;
+    margin: 1px;
+    outline: medium none;
+    width: 16px;    
+    padding: 0 !important;
+}
+.jvs-darksimple .comments-holder a.trash, .jvs-darksimple .comments-holder a.trash:hover {
+    background-image: url("../../images/darksimple/icon-16-trash.png") !important;
+}
+.jvs-darksimple .comments-holder a.report, .jvs-darksimple .comments-holder a.report:hover {
+    background-image: url("../../images/darksimple/icon-16-spam.png") !important;
+}
+.jvs-darksimple .comments-holder a.published, .jvs-darksimple .comments-holder a.published:hover {
+    background-image: url("../../images/darksimple/icon-16-published.png") !important;
+}
+.jvs-darksimple .comments-holder a.unpublished, .jvs-darksimple .comments-holder a.unpublished:hover {
+    background-image: url("../../images/darksimple/icon-16-unpublished.png") !important;
+}
+/*Endbox*/
+.jvs-darksimple .endbox {
+	clear: both;
+    font-size: 11pt;
+    line-height: 1.3em;
+    margin-bottom: -5px;
+    margin-top: 2px;
+    padding: 2px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.jvs-darksimple .endbox .link {
+	color: #C73F48;
+    float: right;
+    font-weight: bold;
+    text-decoration: none;
+}
+.jvs-darksimple .endbox .votestate {
+	color: #DC3912;
+	float: none;
+	font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.jvotesystem.jvs-darksimple .notification {
+	color: #EEEEEE;
+	background-color: transparent !important;
+}

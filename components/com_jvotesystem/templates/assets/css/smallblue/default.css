@@ -1,0 +1,697 @@
+/**
+* @package Component jVoteSystem for Joomla! 1.5-2.5 - 2.5
+* @projectsite www.joomess.de/projects/jvotesystem
+* @authors Johannes Meßmer, Andreas Fischer
+* @copyright (C) 2010 - 2012 Johannes Meßmer
+* @license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+**/
+
+.jvs-smallblue p {
+	line-height: 0.9em;
+}
+
+.jvs-smallblue .pagebox {
+	/*overflow: hidden;*/
+	position:relative;
+}
+.jvotesystem.jvs-smallblue {
+	background: none repeat scroll 0 0 #EBEBEB;
+	padding: 10px;
+}
+
+/*Navigation*/
+
+.jvs-smallblue div.navi {
+	position:relative;
+	border-collapse: separate;
+	padding: 0;
+	border: 0 none !important;
+	width: 100%;
+	overflow: hidden;
+}
+.jvs-smallblue .navi a {
+	background: none repeat scroll 0 0 #AACCEE !important;
+    border: 0 none;
+    border-radius: 10px 10px 10px 10px;
+    color: #FFFFFF;
+    padding: 1px 7px;
+    text-decoration: none !important;
+    display:inline-block;
+    margin:2px 0 2px 5px;
+    cursor: pointer;
+    outline: medium none;
+}
+.jvs-smallblue .commentsnavi a {
+	line-height:12px;
+	margin: 1px 0 1px 3px;
+	padding: 1px 5px;
+	font-size:10px;
+}
+.jvs-smallblue .navi a:hover, .jvs-smallblue .navi a.pageSelected {
+	background-color: #1F75CC !important;
+}
+.jvs-smallblue .navi a.pageNull {
+	cursor: default;
+	background-color: #CDE6FF !important;
+}
+.jvs-smallblue .navi div.naviVor{
+	float: left;
+	padding-left: 15px;
+	text-align: left;
+	width: 15%;
+	min-width: 70px;
+}
+.jvs-smallblue .navi div.naviPages{
+	width: 70%;
+	text-align: center;
+	margin:0 15%;
+}
+/*.jvs-smallblue .navi .naviPages a.pageSelected{
+	background: none repeat scroll 0 0 #1F75CC;
+}
+.jvs-smallblue .navi .naviPages a.pageNull {
+	background: none repeat scroll 0 0 #AACCEE !important;
+	cursor: default;
+}*/
+.jvs-smallblue .navi div.naviWeiter{
+	float: right;
+	padding-right: 15px;
+	text-align: right;
+	width: 15%;
+	min-width: 70px;
+}
+
+/*FOOTER*/
+p.jvs-smallblueFooter {
+	font-size: 11pt;
+    text-align: center;
+	font-style: italic;
+}
+p.jvs-smallblueFooter a.copylink{
+	text-decoration: underline
+}
+
+/*Element: Answer*/
+
+/*Tabelle in AntwortBox*/
+.jvs-smallblue .answer {
+	width: 100%;
+	border-collapse: separate;
+	height: auto;
+	border: 0 none !important;
+    padding: 0;
+	font-family: Helvetica,Arial,sans-serif;
+	line-height: 1.3em;
+	position:relative;
+}
+
+/*Div in AntwortBox fï¿½r Text*/
+.jvs-smallblue div.answerbox {
+    padding: 0;
+	vertical-align: top;
+	margin: 0;
+	margin-left:0;
+}
+.jvs-smallblue div.rank+div.answerbox {
+	margin-left: 52px;
+}
+.jvs-smallblue div.count+div.answerbox {
+	margin-left: 80px;
+}
+.jvs-smallblue div.rank+div.count+div.answerbox {
+	margin-left: 132px;
+}
+.jvs-smallblue .answerbox div.text {
+	padding: 4px;
+	position:relative;
+	font-size: 14px;
+	color: #003E71;
+	min-height: 19.5px;
+	font-weight: bold;
+	line-height: 18px;
+	background: none repeat scroll 0 0 #F4F4F4;
+}
+.jvs-smallblue .answerbox span.answertext {
+	float:left;
+	width:100%;
+}
+.jvs-smallblue .answerbox p.autor {
+	color: #888888;
+    font-size: 11px;
+	margin:3px 3px 0 0 ;
+	float:right;
+}
+
+.jvs-smallblue  div.rank {
+	background: none repeat scroll 0 0 #FFFFFF;
+    color: #79BCD7;
+    font-size: 20pt;
+    height: 27.5px;
+    line-height: 28px;
+    width: 50px;
+	position:absolute;
+	left:0;
+	top:0;
+	text-align: center;
+}
+.jvs-smallblue div.answervote {
+    position:absolute;
+	top: 0;
+    width:78px;
+	right:0;
+}
+.jvs-smallblue div.answervote ~ .answerbox {
+	margin-right: 78px;
+}
+.jvs-smallblue div.new {
+	height: auto;
+}
+.jvs-smallblue .answervote a.votingbutton {
+	background: url("../../../assets/images/default/icons/vote.png") no-repeat scroll 5px 8px #A4B06E !important;
+    border: medium none;
+    color: #FCFFF1;
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    height: 11.5px;    
+    line-height: 12px;
+    outline: medium none;
+    padding: 8px 0 8px 16px;
+    text-align: center;
+    text-decoration: none;
+}
+.jvs-smallblue .answervote a.link:hover{
+	color: #134782;
+}
+.jvs-smallblue  div.rank + .count {
+	margin-left: 50px;
+}
+.jvs-smallblue div.count {
+	background: none repeat scroll 0 0 #79BCD7;
+    height: 21.5px;
+    padding: 3px;
+    position: absolute;
+    width: 76px;
+}
+.jvs-smallblue .answervote a.votingbutton:hover, .jvs-smallblue .answervote a.votingbutton:active {
+	background-color: #F05922 !important;
+}
+
+.jvs-smallblue .answervote a.votingbutton.novote, .jvs-smallblue .answervote a.votingbutton.novote:active, .jvs-smallblue .answervote a.votingbutton.novote:hover {
+	background-image: url(../../../assets/images/default/icons/vote_grey.png) !important;
+	background-color: #CCCCCC !important;
+	color:#5E605E !important;
+	cursor:text !important;
+}
+
+.jvs-smallblue .answervote .vote span.text, .jvs-smallblue .answervote .vote_grey span.text{
+	font-size: 11px;
+	text-align: center;
+	vertical-align: middle;
+}
+.jvs-smallblue .answervote .vote_grey span.text{
+	color: #5E605E;
+}
+.jvs-smallblue .answervote .vote img.icon, .jvs-smallblue .answervote .vote_grey img.icon{
+	border: medium none;
+    height: 16px;
+    margin: -1px 4px 0 0;
+    padding: 0 !important;
+    vertical-align: middle;
+    width: 16px;
+}
+.jvs-smallblue .count span.votecount {
+	color: #FFFFFF;
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    height: auto;
+    line-height: 21px;
+    margin: 0;
+    min-width: 20px;
+    width: auto;
+    text-align: center;
+    clear: none;
+    padding: 0;
+}
+.jvs-smallblue .count p.votecounttext {
+	color: #FFFFFF;
+    font-weight: bold;
+    line-height: 20px;
+    font-family: "lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif;
+    font-size: 8pt;
+	text-align: center;
+	margin: 0;
+}
+
+/*Icons*/
+
+.jvs-smallblue a.icon, .jvs-smallblue a.icon:hover {
+	display:block;
+	height:16px;
+	width:16px;
+	color: #000 !important;
+	margin: 1px;
+	background-color:transparent !important;
+	background-repeat:no-repeat !important;
+	float:right;
+	outline: medium none;
+	cursor: pointer;
+	padding: 0 !important;
+}
+
+.jvs-smallblue a.trash, .jvs-smallblue a.trash:hover {
+background-image:url(../../../assets/images/default/icons/icon-16-trash.png) !important;
+}
+.jvs-smallblue a.report, .jvs-smallblue a.report:hover {
+background-image:url(../../../assets/images/default/icons/icon-16-spam.png) !important;
+}
+.jvs-smallblue a.published, .jvs-smallblue a.published:hover {
+background-image:url(../../../assets/images/default/icons/icon-16-published.png) !important;
+}
+.jvs-smallblue a.unpublished, .jvs-smallblue a.unpublished:hover {
+background-image:url(../../../assets/images/default/icons/icon-16-unpublished.png) !important;
+}
+.jvs-smallblue a.comment, .jvs-smallblue a.comment:hover {
+	background-image:url(../../../assets/images/default/icons/icon-16-comment.png) !important;
+	padding:0px 0px 0px 20px !important;
+	width:auto;
+	display:block;
+	color: #494848 !important;
+	font-size: 11px;
+}
+.jvs-smallblue a.userlist, .jvs-smallblue a.userlist:hover {
+	background-image:url(../../../assets/images/default/icons/icon-16-users.png) !important;
+	float:none;
+	position:absolute;
+	cursor:pointer;
+	margin-left: -10px;
+    margin-top: -8px;
+}
+
+.jvs-smallblue div.answeroptions {
+	border: 0 none;
+    float: right;
+    line-height: 16px !important;
+    min-height: 16px;
+    overflow: hidden;
+    padding: 1px;
+}
+
+/**
+ * @package Component jVoteSystem for Joomla! 1.5-2.5
+ * @projectsite www.joomess.de/projects/jvotesystem
+ * @author Johannes Meï¿½mer
+ * @copyright (C) 2010- Johannes Meï¿½mer
+ * @license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+**/
+/*Comments-DIV*/
+.jvs-smallblue .comments {
+    font-family: Helvetica,Arial,sans-serif;
+    line-height: 1.3em;
+    width: 100%;
+	overflow:hidden;
+	position:relative;
+	margin-bottom: 3px;
+}
+
+.jvs-smallblue .commentpage > div {
+	margin-top: 2px;
+}
+
+.jvs-smallblue .comments .autor span.autorname{
+	text-decoration: underline;
+}
+.jvs-smallblue .comments .comment {
+	position:relative;
+	color: #2C343D;
+    font-size: 14px;
+	font-family: Helvetica,Arial,sans-serif;
+    font-style: italic;
+}
+.jvs-smallblue .comments .comment .avatar {
+	position: absolute;
+	border: 1px solid #AACCEE;
+}
+.jvs-smallblue .comments .comment .avatar .point {
+	background-image: url("../../images/point.png");
+    display: block;
+    height: 11px;
+    overflow: hidden;
+    position: absolute;
+    right: -10px;
+    top: 1.1em;
+    width: 8px;
+}
+.jvs-smallblue .comments .comment .comment-text {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #AACCEE;
+    padding: 7px;
+    margin-left: 50px;
+    min-height: 26px;
+}
+.jvs-smallblue .comments .comment .creation-date {
+	color: #888888;
+    float: right;
+    font-size: 8pt;
+}
+.jvs-smallblue .comments .newcommentbox form div {
+	display: none;
+	margin-left: 50px;
+}
+.jvs-smallblue .comments .newcommentbox form div.comment-text {
+	display: block;
+}
+.jvs-smallblue .comments .newcommentbox form > div {
+	margin-top:2px;
+}
+.jvs-smallblue .comments .newcommentbox .comment{
+	
+}
+.jvs-smallblue .comments .newcommentbox  input {
+	background-color: #79BCD7;
+    border: 0 none;
+    color: #FFFFFF;
+    font-variant: small-caps;
+    font-weight: bold;
+    line-height: 18px;
+    min-height: 22px;
+    padding: 0 3px;
+    outline: medium none;
+	margin-right: 5px;
+}
+/*ICONS*/
+.jvs-smallblue .comments .comment div.icons img.icon{
+	float: right;
+	padding: 0;
+	margin: 1px;
+	border: 0;
+	height: 16px;
+	width: 16px;
+}
+
+
+/*Element: Topbox*/
+
+.jvs-smallblue div.topbox {
+	background: none repeat scroll 0 0 #003E71 !important;
+    border: 1px solid #010E18;
+    color: #80A4BE;
+    line-height: 1.3em;
+    margin-bottom: 0.5em;
+    min-height: 47px;
+    padding: 10px 15px 5px;
+}
+.jvs-smallblue div.topbox .title {
+	font-size: 13pt;
+	color: #FFFFFF !important;
+	margin: 0;
+    padding: 0;
+	font-family: "lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif;
+	font-weight: normal;
+	line-height: 20px;
+}
+.jvs-smallblue div.topbox p.question {
+	background-image: none !important;
+	font-size: 12pt;
+	color: #79BCD6;
+    text-decoration: none;
+	margin: 0;
+    padding: 0;
+	font-family: "lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif;
+	font-weight: normal;
+}
+
+/*MENUEBAR*/
+.jvs-smallblue div.topbox div.bar {
+	float: right;
+    margin: -9.5px -8.5px 0 0;
+    padding: 0;
+}
+.jvs-smallblue div.topbox img.icon, .jvs-smallblue div.topbox img.iconSelected {
+	margin: 0 0 0 5px;
+    padding: 0 !important;
+	border: 1px solid #8BD183;
+	float: left;
+}
+.jvs-smallblue div.topbox a.link:hover img.icon {
+	border: 1px solid #4E9B44;
+}
+.jvs-smallblue div.topbox a.link:active img.icon {
+	background: none repeat scroll 0 0 #4E9B44;
+}
+.jvs-smallblue div.topbox a.link:hover img.iconSelected {
+	border: 1px solid #8BD183;
+}
+.jvs-smallblue div.topbox a.link:active img.iconSelected {
+	background: none ;
+	border: 1px solid #8BD183;
+}
+.jvs-smallblue div.topbox div.topbar {
+	float:right;
+	margin-top:-4px;
+	margin-right:-8px;
+}
+.jvs-smallblue .topbox .chart {
+	display:block;
+	height:48px;
+	width:48px;
+	float:right;
+	background-color:transparent !important;
+	border: 1px solid #79BCD7;
+	margin-left:3px;
+	cursor:pointer;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.jvs-smallblue .topbox .chart:hover {
+	border-color: #AACCEE;
+}
+.jvs-smallblue .topbox .barchart { background-image:url(../../images/default/icons/icon-48-bar.png) !important; }
+.jvs-smallblue .topbox .piechart { background-image:url(../../images/default/icons/icon-48-pie.png) !important; }
+.jvs-smallblue .topbox .chart:active, .jvs-smallblue .topbox .chart.active {
+	background-color: #79BCD7 !important;
+}
+
+/*Element: Endbox*/
+
+.jvs-smallblue div.endbox {
+	padding: 3px;
+	min-height: 13px;
+	line-height: 1.3em;
+	overflow: hidden;
+	width: auto;
+}
+.jvs-smallblue div.endbox div.leftMessage {
+	font-size: 13pt;
+	color: #b53d40;
+	margin: 0;
+    padding: 0;
+	font-family: "lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif;
+	font-weight: normal;
+	float: none;
+}
+.jvs-smallblue div.endbox a.link {
+	color: #C73F48;
+    float: right;
+    font-weight: bold;
+    text-decoration: none;
+}
+.jvs-smallblue div.endbox div.left span.count{
+	font-weight: bold;
+}
+
+/*Element: Newanswer*/
+
+.jvs-smallblue div.bbcodeToolbar {
+	border: 0;
+    margin: 0;
+    padding: 0;
+}
+.jvs-smallblue div.bbcodeToolbar img.bbcodeIcon{
+	border: 0;
+    cursor: pointer;
+    margin: 0;
+}
+.jvs-smallblue div.newanswerbox {
+	margin: 5px 0 0 !important;
+	position:relative;
+	width:auto;
+	overflow:hidden;
+}
+.jvs-smallblue div.newcommentbox  textarea, .jvs-smallblue div.newanswerbox  textarea {
+	background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #2C343D;
+    float: none;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    margin: 0;
+    min-height: 17px;
+    overflow: hidden;
+    padding: 0;
+    resize: none;
+    width: 100%;
+    outline: none;
+    box-shadow: 0 0 0;
+}
+.jvs-smallblue div.newanswerbox form > div {
+	margin-bottom:5px;
+	display: none;
+}
+.jvs-smallblue .answerbox div.text {
+	display: block;	
+}
+.jvs-smallblue div.newanswerbox input {
+	background: none repeat scroll 0 0 #79BCD7;
+    border: 0 none;
+    color: #FFFFFF;
+    font-variant: small-caps;
+    font-weight: bold;
+    line-height: 18px;
+    min-height: 22px;
+    outline: medium none;
+    padding: 3px;
+	margin-right: 5px;
+}
+.jvs-smallblue div.newanswerbox > div {
+	position: absolute;
+	width: 78px;
+	left: 0;
+}
+.jvs-smallblue div.newanswerbox > div > span {
+	color: #1F75CC;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+    text-align: center;
+}
+.jvs-smallblue div.newanswerbox div + form {
+	margin-left: 80px;
+}
+.jvs-smallblue .author {
+	background-image: url("../../images/default/icons/icon-14-author.png");
+    background-repeat: no-repeat;
+    padding-left: 12px;
+}
+.jvs-smallblue .author a {
+	background: none repeat scroll 0 0 transparent !important;
+    color: #888888 !important;
+    cursor: pointer;
+    text-decoration: none;
+}
+.jvs-smallblue .author a:hover {
+	text-decoration: underline;
+}
+/*Own Votes Box*/
+.jvs-smallblue .vote-down {
+  	position: absolute;
+  	right: -8px;
+    top: -6px;
+    z-index: 10;
+}
+.jvs-smallblue .vote-down .reset-bub {
+	display: none;
+}
+.jvs-smallblue .vote-down.resetvotes .reset-bub {
+	display: block
+}
+.jvs-smallblue .vote-down em {
+	font-style: normal;
+	background: orange;
+	color: #FFF;
+	padding: 0 0.4em;
+	-moz-border-radius: 0.25em;
+	-webkit-border-radius: 0.25em;
+	border-radius: 0.25em;
+	position: relative;
+	font-size: 12.8px;
+}
+.jvs-smallblue .vote-down.resetvotes em {
+	cursor: pointer;
+	background: #C62828;
+}
+.jvs-smallblue .vote-down .reset-bub {
+	position: absolute;
+    right: -5px;
+}
+.jvs-smallblue .vote-down .reset-bub div {
+	position: relative;
+}
+.jvs-smallblue .vote-down .reset-bub span {
+	font-style: normal;
+	background: #C62828;
+	color: #FFF;
+	padding: 0 0.4em;
+	-moz-border-radius: 0.25em;
+	-webkit-border-radius: 0.25em;
+	border-radius: 0.25em;
+	font-size: 8pt;
+	position: absolute;
+	font-size: 12.8px;
+	text-align: center;
+}
+.jvs-smallblue .vote-down .point {
+	font-size: 12.8px;
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 1.1em;
+	right: 0.8em;
+	display: block;
+	border-left: 0.45em solid orange; 
+	border-bottom: 0.45em solid #FFF; /* IE fix */
+	border-bottom: 0.45em solid rgba(0,0,0,0); 
+	overflow: hidden; /* IE fix */
+}
+.jvs-smallblue .vote-down.resetvotes .point {
+	border-left: 0.45em solid #C62828; 
+}
+
+/* Bars */
+.jvs-smallblue div.barbox .barholder div {
+	min-width: 1%;
+    width: 1%;
+}
+.jvs-smallblue div.barbox .barholder div > a {
+	display:block;
+	height: 20px;
+	text-align: right;
+}
+.jvs-smallblue div.barbox .barholder div > a > span {
+	color: #EEEEEE;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0 3px;
+    display: none;
+    line-height: 20px;
+}
+.jvs-smallblue div.barbox p {
+	font-weight: bold;
+    line-height: 1.2em;
+    margin: 2px 0 5px;
+    color: #003E71;
+}
+.jvs-smallblue .jsbarchart, .jvs-smallblue .jspiechart {
+	background: none repeat scroll 0 0 #F6FCF6;
+    border: 1px solid #AACCEE;
+}
+.jvs-smallblue .jsbarchart {
+	padding: 5px;
+}
+.jvs-smallblue .jspiechart {
+	min-height: 300px;
+	margin-bottom: 0.5em;
+}
+
+.jvs-smallblue .answer.jvsbanner .answerbox {
+	display: block;
+}
+.jvs-smallblue .answer.jvsbanner .answerbox .bannercode {
+	height: 65px;
+    width: 100%;
+}
+.jvs-smallblue .answer.jvsbanner .answervote .count {
+	margin-top: 10px;
+}

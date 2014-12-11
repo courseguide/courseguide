@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5">
+	<name>Free votes</name>
+	<creationDate>2012-2-16</creationDate>
+	<author>Iacopo Guarneri</author>
+	<authorEmail>iacopo.guarneri@alice.it</authorEmail>
+	<authorUrl>http://www.the-html-tool.com/</authorUrl>
+	<version>1.0</version>
+	<menu link="option=com_freevotes">Free votes</menu>
+	<description>Gestione anagrafiche per tutorial.</description>
+
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysql">sql/install.mysql.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file charset="utf8" driver="mysql">sql/uninstall.mysql.sql</file>
+		</sql>
+	</uninstall>
+
+	<files folder="site">
+		<filename>index.html</filename>
+        <filename>freevotes.php</filename>
+	</files>
+	<administration>
+		<menu link="com_freevotes">Free votes</menu>
+		<files folder="administrator">
+			<filename>index.html</filename>
+			<filename>freevotes.php</filename>
+			<filename>domanda.php</filename>
+			<filename>risposta.php</filename>
+			<folder>sql</folder>
+		</files>
+		<languages folder="admin/language">
+			<language tag="en-GB">language/en-GB/en-GB.com_freevotes.ini</language>
+			<language tag="it-IT">language/it-IT/it-IT.com_freevotes.ini</language>
+		</languages>
+	</administration>
+</extension>

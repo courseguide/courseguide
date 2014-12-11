@@ -1,0 +1,357 @@
+/*======================================================================*\
+|| #################################################################### ||
+|| # Package - Joomla Template based on YJSimpleGrid Framework          ||
+|| # Copyright (C) 2010  Youjoomla.com. All Rights Reserved.            ||
+|| # license - PHP files are licensed under  GNU/GPL V2                 ||
+|| # license - CSS  - JS - IMAGE files  are Copyrighted material        ||
+|| # bound by Proprietary License of Youjoomla.com                      ||
+|| # for more information visit http://www.youjoomla.com/license.html   ||
+|| # Redistribution and  modification of this software                  ||
+|| # is bounded by its licenses                                         ||
+|| # websites - http://www.youjoomla.com | http://www.yjsimplegrid.com  ||
+|| #################################################################### ||
+\*======================================================================*/
+/* mod preview tp=1*/
+.mod-preview {
+	background:#fff;
+	border: 1px solid red;
+	padding:2px;
+	margin:0 5px;
+}
+div.mod-preview-info {
+	display:none;
+}
+.mod-preview-wrapper .yjsquare_in {
+	text-align:center;
+	font-weight:bold;
+	font-size:14px;
+}
+/* EDITOR */
+.form_view {
+	padding:10px;
+}
+legend {
+	padding:3px 5px;
+	font-weight:bold;
+}
+form#adminForm {
+}
+.edit form#adminForm fieldset {
+	padding:20px 15px;
+	margin:10px 0 15px 0;
+}
+.formelm {
+	margin:5px 0
+}
+.formelm label {
+	width:13em;
+	display:inline-block;
+	vertical-align:top;
+}
+form#adminForm .formelm-area {
+	padding:5px 0
+}
+form#adminForm .formelm-area label {
+	vertical-align:top;
+	display:inline-block;
+	width:7.9em
+}
+.formelm-buttons {
+	text-align:right;
+	margin-bottom:10px
+}
+#editor-xtd-buttons a,
+.toggle-editor a {
+	background:#eee;
+	padding:0 5px;
+	height:20px;
+	margin:10px 0 0 0;
+	line-height:20px;
+	border:solid 1px #ddd;
+	font-weight:bold;
+	text-decoration:none;
+}
+.toggle-editor {
+	float:right;
+}
+/* mail to*/
+#mailtoForm {
+	padding:0 5px;
+	background:#efefef;
+	border:1px solid #ccc;
+	margin:10px 20px;
+	position:relative;
+}
+#mailtoForm label {
+	width:100px;
+}
+#mailtoForm input {
+	width:95%!important;
+	margin:0 auto!important;
+}
+.mailto-close {
+	position:absolute;
+	right:-5px;
+	top:-10px;
+	background:none;
+}
+.mailto-close a {
+	background:url(../images/system/closebox.gif) no-repeat !important;
+	min-width:22px;
+	display:block;
+	min-height:22px;
+	overflow:visible;
+}
+.mailto-close a span {
+	position:absolute;
+	left:-3000px;
+	top:-3000px;
+	display:inline;
+}
+.warning ul {
+	padding-left:0;
+}
+/* default system 
+--------------------- */
+/* Tooltips */
+.tip-wrap .tip {
+	float: left;
+	background: #000;
+	border:none;
+	padding: 5px;
+	max-width: 200px;
+	text-align:left;
+	-webkit-border-radius:5px;
+	-khtml-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px
+}
+.tip-wrap .tip-title {
+	padding: 0;
+	margin: 0;
+	font-size:12px;
+	font-weight: bold;
+	margin-top: -15px;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	text-align:left;
+	background:none;
+	color:#fff;
+}
+.tip-wrap .tip-text {
+	font-size:11px;
+	margin: 0;
+	text-align:left;
+	color:#fff;
+}
+/* OpenID icon style */
+input.system-openid {
+	background: url(http://openid.net/login-bg.gif) no-repeat;
+	background-color: #fff;
+	background-position: 0 50%;
+	color: #000;
+	padding-left: 18px;
+}
+/* Unpublished */
+.system-unpublished {
+	background: #FDFDFD;
+	border-top: 1px solid #EAEAEA;
+	border-bottom: 1px solid #EAEAEA;
+}
+/* System Messages */
+#system-message {
+	margin-bottom: 10px;
+	padding: 0;
+}
+#system-message dt {
+	font-weight: bold;
+}
+#system-message dd {
+	margin: 0;
+	font-weight: bold;
+	text-indent: 30px;
+	background-image:none;
+}
+#system-message dd ul {
+	background-color:#FDFDFD;
+	color: #c02;
+	margin-bottom: 10px;
+	list-style: none;
+	padding: 10px;
+	border-top: 1px solid #EAEAEA;
+	border-bottom: 1px solid #EAEAEA;
+}
+/* System Standard Messages */
+#system-message dt.message {
+	display: none;
+}
+#system-message dd.message {
+}
+#system-message dd.message ul li {
+	background-image:none;
+}
+/* System Error Messages */
+#system-message dt.error {
+	display: none;
+}
+#system-message dd.error ul {
+	color: #c00;
+	background-color: #FDFDFD;
+	border-top: 1px solid #EAEAEA;
+	border-bottom: 1px solid #EAEAEA;
+}
+#system-message dd.error ul li {
+	background-image:none;
+}
+/* System Notice Messages */
+#system-message dt.notice {
+	display: none;
+}
+#system-message dd.notice ul {
+	color: #c00;
+	background: #FDFDFD;
+	border-top: 1px solid #EAEAEA;
+	border-bottom: 1px solid #EAEAEA;
+}
+#system-message dd.notice ul li {
+	background-image:none;
+}
+/* Debug */
+#system-debug {
+	color: #ccc;
+	background-color: #fff;
+	padding: 10px;
+	margin: 10px;
+	text-align:left;
+}
+#system-debug div {
+	font-size: 11px;
+}
+/* Form validation */
+.invalid {
+	border-color: #ff0000;
+}
+label.invalid {
+	color: #ff0000;
+}
+/* Editor */
+#editor-xtd-buttons {
+	padding: 5px;
+}
+.button2-left,
+.button2-right {
+	float: left;
+	margin-left: 5px;
+}
+/* intro image holder*/
+div.img-introtext-left {
+	float:left;
+	margin:10px 10px 0 0;
+}
+div.img-introtext-right {
+	float:right;
+	margin:10px 0 0 10px;
+}
+div.img-introtext-none {
+	clear:both;
+	margin:0;
+}
+/* full image holder*/
+div.img-fulltext-left {
+	float:left;
+	margin:10px 10px 0 0;
+}
+div.img-fulltext-right {
+	float:right;
+	margin:10px 0 0 10px;
+}
+div.img-fulltext-none {
+	clear:both;
+	margin:0;
+}
+#system-message-container #system-message {
+	margin:10px;
+}
+#system-message-container .alert {
+	padding: 8px 35px 8px 14px;
+	margin-bottom: 20px;
+	color: #B94A48;
+	background-color: #F2DEDE;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	border: 1px solid #EED3D7;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+#system-message-container .close {
+	float: right;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 20px;
+	color: black;
+	text-shadow: 0 1px 0 white;
+	opacity: 0.2;
+	filter: alpha(opacity=20);
+	color:#000;
+}
+/* smart search */
+fieldset.word {
+	overflow:hidden;
+}
+#finder-filter-window {
+	overflow:hidden!important;
+}
+#finder-filter-window ul li {
+	background:none;
+	padding-left:0;
+	margin:10px 0;
+}
+#finder-filter-select-list li {
+	background:none;
+	padding-left:0;
+	display:block;
+	clear:both;
+	overflow:hidden;
+}
+#finder-filter-select-list li label {
+	width:180px;
+	float:left;
+	display:block;
+}
+#finder-filter-select-list li select {
+	float:left;
+	display:block;
+	clear:right;
+}
+#finder-filter-select-dates select,
+#finder-filter-select-dates input {
+	margin:10px 0;
+}
+#finder-filter-select-dates img {
+	margin:0px 0 -3px 10px;
+	float:none;
+}
+/* smart search module */
+#mod-finder-advanced ul {
+	margin:10px 0 0 0;
+	padding:0;
+}
+#mod-finder-advanced ul li {
+	background:none;
+	padding:0;
+}
+#mod-finder-advanced label {
+	width:180px;
+	display:inline-block;
+}
+#mod-finder-advanced select {
+	padding:2px 0 2px 10px;
+	text-indent:-2px;
+}
+.newsitem_tools .buttonheading li a span{
+	display:none;
+}
+ul.actions li{
+	background:none;
+	padding-left:0;
+}

@@ -1,0 +1,8 @@
+#ja-import-csv fieldset {border: 0 none;margin: 0;padding: 0;}
+#ja-import-csv legend {border-bottom: 1px #E5E5E5 solid;color: #333333;display: block;font-size: 19.5px;line-height: 36px;margin-bottom: 18px;padding: 0;width: 100%;}
+#ja-import-csv-result{width: 400px; height: 190px; display: block; float: right;}
+#ja-import-csv-form { padding: 5px; float: left; border-radius: 5px; width: 350px;}
+#ja-import-csv-progress { display:block;overflow: hidden;border: 1px solid #ccc; width: 250px; height: 20px; margin-top: 10px;text-align: center;position: relative;}
+#ja-import-csv-bar { background: #F39A3A; height: 20px; width: 0px;}
+#ja-import-csv-percent { position: absolute; left: 50%; top: 0px;}
+#ja-import-csv-data{width: 380px;}

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.0" type="module" method="upgrade">
+<name>freevotes</name>
+<creationDate>16 02 2012</creationDate>
+<version>1.0</version>
+<author>Iacopo Guarneri</author>
+<authorEmail>iacopo.guarneri@alice.it</authorEmail>
+<authorUrl>http://www.the-html-tool.com/</authorUrl>
+
+	<files>
+		<filename module="mod_freevotes">mod_freevotes.php</filename>
+		<filename>mod_freevotes.xml</filename>
+		<filename>index.html</filename>
+		<filename>highcharts.js</filename>
+		<filename>images/index.html</filename>
+		<filename>images/pieno.png</filename>
+		<filename>images/vuoto.png</filename>
+		<filename>images/wait.gif</filename>
+		<filename>css/index.html</filename>
+		<filename>css/style.css</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_freevotes.ini</language>
+		<language tag="it-IT">it-IT/it-IT.mod_freevotes.ini</language>
+	</languages>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="general" group="general" label="General Settings">
+				<field name="domanda" type="sql" key_field="id" label="MOD_FREEVOTES_BACK_LAB_DOMANDA" description="MOD_FREEVOTES_BACK_DOMANDA" query="SELECT id, nome AS domanda FROM #__free_votes_domande" />
+
+				<field name="range_da" type="text" default="0" label="MOD_FREEVOTES_BACK_LAB_DA" description="MOD_FREEVOTES_BACK_RANGE_DA" />
+				<field name="range_a" type="text" default="5" label="MOD_FREEVOTES_BACK_LAB_A" description="MOD_FREEVOTES_BACK_RANGE_A" />
+				
+				<field name="img_vuoto" type="text" default="modules/mod_freevotes/images/vuoto.png" label="MOD_FREEVOTES_IMG_VUOTO" description="MOD_FREEVOTES_IMG_VUOTO_DESC" />
+				<field name="img_pieno" type="text" default="modules/mod_freevotes/images/pieno.png" label="MOD_FREEVOTES_IMG_PIENO" description="MOD_FREEVOTES_IMG_PIENO_DESC" />
+				
+				<field name="modifica_voti" type="radio" default="0" label="MOD_FREEVOTES_BACK_LAB_MODIFICA" description="MOD_FREEVOTES_BACK_MODIFICA_VOTI">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				
+				<field name="aggiungi_risposte" type="radio" default="1" label="MOD_FREEVOTES_AGGIUNGI_RISPOSTE" description="MOD_FREEVOTES_AGGIUNGI_RISPOSTE_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				
+				<field name="view_graph" type="radio" default="1" label="MOD_FREEVOTES_BACK_LAB_VISUALIZZA" description="">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				
+				<field name="type_graph" type="radio" default="pie" label="MOD_FREEVOTES_BACK_LAB_TIPO" description="">
+					<option value="pie">MOD_FREEVOTES_BACK_LAB_TIPO_TORTA</option>
+					<option value="column">MOD_FREEVOTES_BACK_LAB_TIPO_COLONNE</option>
+				</field>
+				
+				<field name="label" type="radio" default="1" label="MOD_FREEVOTES_BACK_LAB_LABEL" description="MOD_FREEVOTES_BACK_LABEL">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				
+				<field name="legend" type="radio" default="0" label="MOD_FREEVOTES_BACK_LAB_LEGEND" description="MOD_FREEVOTES_BACK_LEGEND">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				
+				<field name="height_modulo" type="text" default="350" label="MOD_FREEVOTES_BACK_LAB_HEIGHT" description="MOD_FREEVOTES_BACK_HEIGHT" />
+				
+				<field name="width_wait" type="text" default="50%" label="MOD_FREEVOTES_BACK_LAB_WIDTH_WAIT" description="" />
+			</fieldset>
+
+			<fieldset name="advanced" group="advanced" label="Advanced Options">
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+				<field name="filteringspacer10" type="spacer" hr="true" />
+				<field name="cache" type="list" default="0" label="Caching" description="Select whether to cache the content of this module">
+					<option value="1">Use global</option>
+					<option value="0">No caching</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

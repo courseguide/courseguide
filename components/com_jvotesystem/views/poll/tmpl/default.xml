@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Poll">
+		<message>
+			Poll
+		</message>
+	</layout>
+	<state>
+		<name>Poll</name>
+		<url addpath="/administrator/components/com_jvotesystem/elements">
+			<param name="id" type="poll" default="0" label="SELECTPOLL" description=""  required="true"/>
+		</url>
+	</state>
+	
+	<fields name="request">
+		<fieldset name="request" addfieldpath="/administrator/components/com_jvotesystem/fields">
+			<field name="id" type="poll" section="com_jvotesystem" default="0" label="SELECTPOLL" required="true" />
+		</fieldset>
+	</fields>
+</metadata>

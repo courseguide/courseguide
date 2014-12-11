@@ -1,0 +1,129 @@
+/**
+ * @package Component jVoteSystem for Joomla! 1.5-2.5
+ * @projectsite www.joomess.de/projects/jvotesystem
+ * @authors Johannes Meßmer, Andreas Fischer
+ * @copyright (C) 2010 - 2012 Johannes Meßmer
+ * @license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+**/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font: 11px/18px 'Helvetica Neue',Arial,sans-serif;
+	background-color: transparent;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.button {
+    background-color: #DC3912;
+    border: 2px solid #BBBBBB;
+    border-radius: 10px 0 0 10px;
+    box-shadow: 0 0 4px #777777;
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 4px;
+    padding: 0 10px;
+    text-decoration: none;
+	float: left;
+	outline: medium none;
+	text-align: center;
+	min-width: 25px;
+}
+.button:hover {
+	box-shadow: 0 0 4px #111111;
+}
+.button.error {
+	background-color: #EEEEEE;
+    color: #BBBBBB;
+    cursor: default;
+	box-shadow: 0 0 3px #777777;
+}
+.button.voted {
+	background-color: #109618;
+    color: #FFFFFF;
+}
+.button.error:hover {
+	box-shadow: 0 0 3px #777777;
+}
+.count {
+    border: 1px solid #999999;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 0 1px #CCCCCC;
+    display: inline-block;
+    line-height: 15px;
+    margin: 5px 4px;
+    padding: 1px 6px;
+    position: relative;
+	background-color: #FFFFFF;
+	float: left;
+}
+.count:before {
+    border-color: transparent #999999;
+    border-style: solid;
+    border-width: 5px 4px 5px 0;
+    bottom: auto;
+    content: "";
+    display: block;
+    left: -5px;
+    position: absolute;
+    top: 3px;
+    width: 0;
+}
+.count:after {
+    border-color: transparent #FFFFFF;
+    border-style: solid;
+    border-width: 4px 3px 4px 0;
+    bottom: auto;
+    content: "";
+    display: block;
+    font-size: 12px;
+    left: -3px;
+    position: absolute;
+    top: 4px;
+    width: 0;
+}

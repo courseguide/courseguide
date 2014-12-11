@@ -1,0 +1,84 @@
+/**
+* @package Component jVoteSystem for Joomla! 1.5 - 3.0 
+* @projectsite www.joomess.de/projects/jvotesystem
+* @authors Johannes Meßmer, Andreas Fischer
+* @copyright (C) 2010 - 2012 Johannes Meßmer
+* @license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+**/
+
+/*Tasks*/
+p.task_msg {
+    background-color: #BDE5F8;
+    background-position: 35px center;
+    background-repeat: no-repeat;
+    color: #00529B;
+    cursor: pointer;
+    font-size: 13px;
+    margin: 5px 0;
+    padding: 8px 10px 8px 58px;
+    position: relative;
+}
+p.task_msg .count {
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    left: 4px;
+    position: absolute;
+    text-align: center;
+    top: 2px;
+    width: 25px;
+}
+p.task_msg.t_Answer, p.task_msg.t_Spam_Answer {
+	background-image: url("../images/icon-16-answers.png");
+}
+p.task_msg.t_Comment, p.task_msg.t_Spam_Comment {
+	background-image: url("../images/icon-16-comments.png");
+}
+p.task_msg.t_Poll, p.task_msg.t_Spam_Poll {
+	background-image: url("../images/icon-16-jvotesystem.png");
+}
+p.task_msg.t_Spam_Answer, p.task_msg.t_Spam_Comment, p.task_msg.t_Spam_Poll, p.task_msg.t_needUpdate {
+	background-color: #FFBABA;
+	color: #D8000C;
+}
+p.task_msg.t_unknownUpdate {
+	background-color: #FEEFB3;
+	color: #9F6000;
+}
+.task_element .icon-16 {
+	float: right;	
+	display: block;
+    height: 16px;
+    margin: 0 auto;
+    width: 16px;
+    border: 0 none;
+    padding: 0;
+	margin-right: 6px;
+	cursor: pointer;
+}
+.task_element .icon-remove { background-image: url("../images/icon-16-remove.png") !important; }
+.task_element .icon-allow { background-image: url("../images/icon-16-allow.png") !important; }
+.task_element .icon-protect { background-image: url("../images/icon-16-protect.png") !important; }
+.task_element .task_head {
+    border-color: #AAAAAA -moz-use-text-color;
+    border-image: none;
+    border-style: solid none;
+    border-width: 1px 0;
+    padding: 3px;
+}
+.task_element .task_data {
+	background-color: #E7E7E7;
+    margin: 2px 2px 2px 24px;
+    padding: 2px;
+    position: relative;
+}
+.task_element + .task_element {
+	margin-top: 5px;
+	
+}
+.task_element .jvs_avatar {
+    border: 1px solid #CCCCCC;
+    left: -20px;
+    position: absolute;
+    top: 0;
+}

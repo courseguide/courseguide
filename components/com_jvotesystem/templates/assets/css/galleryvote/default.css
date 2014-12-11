@@ -1,0 +1,689 @@
+/**
+* @package Component jVoteSystem for Joomla! 1.5-2.5 - 2.5
+* @projectsite www.joomess.de/projects/jvotesystem
+* @authors Johannes Meßmer, Andreas Fischer
+* @copyright (C) 2010 - 2012 Johannes Meßmer
+* @license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+**/
+
+/*
+    ColorBox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#jlib_colorbox, #jlibboxOverlay, #jlibboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#jlibboxOverlay{position:fixed; width:100%; height:100%;}
+#jlibboxMiddleLeft, #jlibboxBottomLeft{clear:left;}
+#jlibboxContent{position:relative;}
+#jlibboxLoadedContent{overflow:auto;}
+#jlibboxTitle{margin:0;}
+#jlibboxLoadingOverlay, #jlibboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#jlibboxPrevious, #jlibboxNext, #jlibboxClose, #jlibboxSlideshow{cursor:pointer;}
+.jlibboxPhoto{float:left; margin:auto; border:0; display:block;}
+.jlibboxIframe{width:100%; height:100%; display:block; border:0;}
+#jlib_colorbox, #jlibboxContent, #jlibboxLoadedContent{box-sizing:content-box;}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of jlib_colorbox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#jlibboxOverlay{background:#fff;}
+#jlib_colorbox{}
+    #jlibboxContent{overflow:visible;margin:32px 280px 32px 10px;}
+        .jlibboxIframe{background:#fff;}
+        #jlibboxError{padding:50px; border:1px solid #ccc;}
+        #jlibboxLoadedContent{background: transparent; padding:1px;}
+        #jlibboxLoadingGraphic{background:url(../../images/galleryvote/loading.gif) no-repeat center center;}
+        #jlibboxLoadingOverlay{background:#000;}
+        #jlibboxTitle{position:absolute; top:-22px; left:0; color:#000;}
+        #jlibboxCurrent{position:absolute; top:-22px; right:205px; text-indent:-9999px;}
+        #jlibboxSlideshow, #jlibboxPrevious, #jlibboxNext, #jlibboxClose{text-indent:-9999px; width:20px; height:20px; position:absolute; top:-20px; background:url(../../images/galleryvote/controls.png) no-repeat 0 0;}
+        #jlibboxPrevious{background-position:0px 0px; right:44px;}
+        #jlibboxPrevious:hover{background-position:0px -25px;}
+        #jlibboxNext{background-position:-25px 0px; right:22px;}
+        #jlibboxNext:hover{background-position:-25px -25px;}
+        #jlibboxClose{background-position:-50px 0px; right:0;}
+        #jlibboxClose:hover{background-position:-50px -25px;}
+        .jlibboxSlideshow_on #jlibboxPrevious, .jlibboxSlideshow_off #jlibboxPrevious{right:66px;}
+        .jlibboxSlideshow_on #jlibboxSlideshow{background-position:-75px -25px; right:44px;}
+        .jlibboxSlideshow_on #jlibboxSlideshow:hover{background-position:-100px -25px;}
+        .jlibboxSlideshow_off #jlibboxSlideshow{background-position:-100px 0px; right:44px;}
+        .jlibboxSlideshow_off #jlibboxSlideshow:hover{background-position:-75px -25px;}
+
+.jvs-galleryvote {
+	color: #333333 !important;
+}
+
+.jvs-galleryvote a, .jvs-galleryvote a:hover {
+	background-color: transparent;
+	outline: 0 none;
+}
+.jvs-galleryvote .answer a {
+	background-color: transparent !important;
+}
+.jvs-galleryvote .mainRGB, .jvs-galleryvote a.mainRGB {
+	background-color: #07B7E3 !important;
+}
+
+.jvs-galleryvote .topbox, .jvs-galleryvote .endbox {
+	color: #FFFFFF;
+    padding: 10px;
+}
+.jvs-galleryvote .topbox .question {
+	font-size: 180%;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: none;
+}
+
+.jvs-galleryvote .pagebox {
+	position: relative;
+	overflow: hidden !important;
+}
+.jvs-galleryvote .answer, .jvs-galleryvote .newanswerbox {
+    background-color: #FFFFFF;
+    box-shadow: 0 0 2px 1px #BBBBBB;
+    float: left;
+    margin: 5px;
+    padding: 2px;
+}
+.jvs-galleryvote .answer {
+	min-width: 150px;
+}
+.jvs-galleryvote .answerContainer {
+    position: relative;	
+    height: 250px;
+}
+.jvs-galleryvote .answer .vote_thumb {
+	max-height: 250px;
+	margin: auto;
+}
+
+.jvs-galleryvote .toolbar {
+	position: absolute;
+	height: auto;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #FFFFFF;
+	opacity: 0.7;
+}
+.jvs-galleryvote .toolbar:hover {
+	opacity: 0.9;
+}
+.jvs-galleryvote .answer:hover .toolbar {
+	opacity: 0.9;
+}
+.jvs-galleryvote .toolbar:active {
+	opacity: 1;
+}
+.jvs-galleryvote .toolbar .text {
+	color: #333333 !important;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 16px;
+	padding: 8px 10px;
+}
+.jvs-galleryvote .answer .votingbutton, .jvs-galleryvote .votingbutton, .jvs-galleryvote .answer .sharebutton, .jvs-galleryvote .answer .autorbutton {
+	bottom: 0;
+    color: #FFFFFF !important;
+    cursor: pointer;
+    font-size: 35px;
+    font-weight: bold;
+    height: 24px;
+    line-height: 0.8em;
+    max-width: 20px;
+    padding: 4px 6px;
+    position: absolute;
+    right: 0;
+    text-decoration: none !important;
+    bottom: 0;
+    width: 20px;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+}
+.jvs-galleryvote .answer .votingbutton.novote, .jvs-galleryvote .votingbutton.novote {
+	background-color: grey !important;
+}
+.jvs-galleryvote .answer .sharebutton {
+	background-image: url("../../images/galleryvote/icon-24-share.png") !important;
+    right: 34px;
+}
+.jvs-galleryvote .answer .autorbutton {
+    right: 68px;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    max-width: none;
+}
+.jvs-galleryvote .answer .autorbutton .jvs_avatar.thumb32 {
+    height: 32px;
+    width: 32px;
+}
+.jvs-galleryvote .answer .autorbutton .jvs_avatar.thumb32 img {
+    max-height: 32px;
+}
+.jvs-galleryvote .answer .votingbutton + .autorbutton {
+    right: 34px;
+}
+.jvs-galleryvote .answer .votingbutton + .sharebutton + .autorbutton + .text {
+    padding-right: 105px;
+}
+.jvs-galleryvote .answer .votingbutton + .autorbutton + .text, .jvs-galleryvote .answer .votingbutton + .sharebutton + .text {
+    padding-right: 76px;
+}
+.jvs-galleryvote .answer .votingbutton + .text {
+	padding-right: 42px;
+}
+.jvs-galleryvote .rank {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: bold;
+    left: 0;
+    min-width: 22px;
+    padding: 5px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+}
+.jvs-galleryvote .count_hover {
+    color: #FFFFFF;
+    font-size: 16px;
+    left: 5px;
+    padding: 3px 5px;
+    position: absolute;
+    top: 5px;
+    width: auto;
+}
+.jvs-galleryvote .rank +  .count_hover {
+	left: 48px;
+}
+.jvs-galleryvote .rank + .count_hover:before {
+    border-color: transparent #07B7E3 transparent transparent;
+    border-style: solid;
+    border-width: 8px;
+    content: "";
+    display: block;
+    height: 0;
+    left: -16px;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+    width: 0;
+}
+.jvs-galleryvote .count_hover .votecount {
+	font-weight: bold;
+}
+.jvs-galleryvote .answer .count_hover {
+	display: none;
+}
+.jvs-galleryvote .answer:hover .count_hover {
+	display: block;
+}
+.jvs-galleryvote.boxToolbar {
+	background-color: transparent;
+    bottom: -32px;
+    display: none;
+    height: 30px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    color: #FFFFFF;
+}
+.jvs-galleryvote.boxToolbar .rank {
+	bottom: 0;
+	padding: 2px;
+}
+.jvs-galleryvote.boxToolbar .count_hover {
+	display: block;
+	left: 2px;
+    top: 2px;
+}
+.jvs-galleryvote.boxToolbar .rank + .count_hover {
+	left: 40px;
+}
+.jvs-galleryvote.boxToolbar .votingbutton {
+	padding: 2px 6px;
+}
+/*MENUEBAR*/
+.jvs-galleryvote div.topbox div.bar {
+	float: right;
+    margin: -9.5px -8.5px 0 0;
+    padding: 0;
+}
+.jvs-galleryvote div.topbox img.icon, .jvs-galleryvote div.topbox img.iconSelected {
+	margin: 0 0 0 5px;
+    padding: 0 !important;
+	border: 1px solid #8BD183;
+	float: left;
+}
+.jvs-galleryvote div.topbox a.link:hover img.icon {
+	border: 1px solid #4E9B44;
+}
+.jvs-galleryvote div.topbox a.link:active img.icon {
+	background: none repeat scroll 0 0 #4E9B44;
+}
+.jvs-galleryvote div.topbox a.link:hover img.iconSelected {
+	border: 1px solid #8BD183;
+}
+.jvs-galleryvote div.topbox a.link:active img.iconSelected {
+	background: none ;
+	border: 1px solid #8BD183;
+}
+.jvs-galleryvote div.topbox div.topbar {
+	float:right;
+	margin-top:-4px;
+	margin-right:-4px;
+}
+.jvs-galleryvote .topbox .chart {
+	display:block;
+	height:48px;
+	width:48px;
+	float:right;
+	background-color:transparent !important;
+	border: 1px solid #79BCD7;
+	margin-left:3px;
+	cursor:pointer;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.jvs-galleryvote .topbox .chart:hover {
+	border-color: #AACCEE;
+}
+.jvs-galleryvote .topbox .barchart { background-image:url(../../images/default/icons/icon-48-bar.png) !important; }
+.jvs-galleryvote .topbox .piechart { background-image:url(../../images/default/icons/icon-48-pie.png) !important; }
+.jvs-galleryvote .topbox .chart:active, .jvs-galleryvote .topbox .chart.active {
+	background-color: #79BCD7 !important;
+}
+
+/*Own Votes Box*/
+.jvs-galleryvote .vote-down {
+  	position: absolute;
+  	left: -8px;
+    top: -8px;
+    z-index: 10;
+}
+.jvs-galleryvote .vote-down .reset-bub {
+	display: none;
+}
+.jvs-galleryvote .vote-down.resetvotes .reset-bub {
+	display: block
+}
+.jvs-galleryvote .vote-down em {
+	font-style: normal;
+	background: orange;
+	color: #FFF;
+	padding: 0 0.4em;
+	-moz-border-radius: 0.25em;
+	-webkit-border-radius: 0.25em;
+	border-radius: 0.25em;
+	position: relative;
+	font-size: 12.8px;
+}
+.jvs-galleryvote .vote-down.resetvotes em {
+	cursor: pointer;
+	background: #C62828;
+}
+.jvs-galleryvote .vote-down .reset-bub {
+	position: absolute;
+    right: -5px;
+}
+.jvs-galleryvote .vote-down .reset-bub div {
+	position: relative;
+}
+.jvs-galleryvote .vote-down .reset-bub span {
+	font-style: normal;
+	background: #C62828;
+	color: #FFF;
+	padding: 0 0.4em;
+	-moz-border-radius: 0.25em;
+	-webkit-border-radius: 0.25em;
+	border-radius: 0.25em;
+	font-size: 8pt;
+	position: absolute;
+	text-align: center;
+}
+.jvs-galleryvote .vote-down .point {
+	font-size: 12.8px;
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 1.1em;
+	right: 0.8em;
+	display: block;
+	border-right: 0.45em solid orange; 
+	border-bottom: 0.45em solid #FFF; /* IE fix */
+	border-bottom: 0.45em solid rgba(0,0,0,0); 
+	overflow: hidden; /* IE fix */
+}
+.jvs-galleryvote .vote-down.resetvotes .point {
+	border-right: 0.45em solid #C62828; 
+}
+.jvs-galleryvote.boxToolbar .vote-down {
+	left: 30px;
+    top: -10px;
+}
+/* Bars */
+.jvs-galleryvote div.barbox, .jvs-galleryvote .jspiechart {
+	position: relative;
+	background-color: #FFFFFF;
+    box-shadow: 0 0 2px 1px #BBBBBB;
+    margin: 5px;
+    padding: 2px;
+}
+.jvs-galleryvote div.barbox .small_thumb {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: 2px;
+	top: 2px;
+}
+.jvs-galleryvote div.barbox .small_thumb img {
+	border: 0 none;
+	padding: 0;
+	margin: 0;
+}
+.jvs-galleryvote div.barbox .container_bar {
+	position: relative;
+	margin-left: 50px;
+	min-height: 50px;
+}
+.jvs-galleryvote div.barbox .container_bar .label_holder {
+	display: block;
+    font-size: 16px;
+    line-height: 1em;
+    min-height: 20px;
+    padding: 5px;
+	color: #333333 !important;
+}
+.jvs-galleryvote div.barbox .container_bar .label_holder .bar_label {
+	font-weight: bold;
+}
+.jvs-galleryvote div.barbox .container_bar .bar {
+	min-width: 1%;
+	width: 1%;
+}
+.jvs-galleryvote div.barbox .container_bar .bar a {
+	height: 20px;
+	display: block;
+}
+
+.jvs-galleryvote .endbox {
+    font-size: 16px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    padding: 5px;
+    text-align: center;
+}
+.jvs-galleryvote .endbox .leftMessage {
+	float: none;
+	margin: 0;
+	padding: 0;
+	width: auto;
+}
+
+/*Navigation*/
+
+.jvs-galleryvote div.navi {
+	position:relative;
+	border-collapse: separate;
+	padding: 0;
+	border: 0 none !important;
+	width: 100%;
+	overflow: hidden;
+}
+.jvs-galleryvote .navi a {
+	background: none repeat scroll 0 0 #07B7E3 !important;
+    border: 0 none;
+    color: #FFFFFF;
+    padding: 1px 7px;
+    text-decoration: none !important;
+    display:inline-block;
+    margin:2px 0 2px 5px;
+    cursor: pointer;
+    outline: medium none;
+    line-height: 14px;
+    opacity: 0.7;
+}
+.jvs-galleryvote .commentsnavi a {
+	line-height:12px;
+	margin: 1px 0 1px 3px;
+	padding: 1px 5px;
+	font-size:10px;
+}
+.jvs-galleryvote .navi a:hover, .jvs-galleryvote .navi a.pageSelected {
+	opacity: 1;
+}
+.jvs-galleryvote .navi a.pageNull {
+	cursor: default;
+	opacity: 0.5;
+}
+.jvs-galleryvote .navi div.naviVor{
+	float: left;
+	padding-left: 15px;
+	text-align: left;
+	width: 15%;
+	min-width: 70px;
+}
+.jvs-galleryvote .navi div.naviPages{
+	width: 70%;
+	text-align: center;
+	margin:0 15%;
+}
+.jvs-galleryvote .navi.commentsnavi div.naviPages{
+	width: 50%;
+	text-align: center;
+	margin:0 25%;
+}
+.jvs-galleryvote .navi div.naviWeiter{
+	float: right;
+	padding-right: 15px;
+	text-align: right;
+	width: 15%;
+	min-width: 70px;
+}
+
+/*New Answer*/
+.jvs-galleryvote .newanswerbox {
+	position: relative;
+	float: none;
+	min-height: 40px;
+	color: #333333;
+	font-size: 16px;
+	line-height: 1.2em;
+}
+.jvs-galleryvote .newanswerbox .label_for_newanswer {
+    bottom: 2px;
+    color: #FFFFFF;
+    font-size: 25px;
+    left: 2px;
+    line-height: 40px;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    top: 2px;
+    width: 50px;
+}
+.jvs-galleryvote .newanswerbox form {
+	margin-left: 75px;
+	margin-right: 150px;
+}
+.jvs-galleryvote .newanswerbox form table {
+    width: 100%;
+}
+.jvs-galleryvote .newanswerbox form table, .jvs-galleryvote .newanswerbox form tbody, .jvs-galleryvote .newanswerbox form tr, .jvs-galleryvote .newanswerbox form td {
+	border-collapse: collapse;
+    border: 0 none;
+    padding: 0;
+    margin: 0;
+}
+.jvs-galleryvote .newanswerbox form td {
+	padding: 3px;
+}
+.jvs-galleryvote .newanswerbox input {
+    background: none repeat scroll 0 0 transparent;
+    border: 1px solid #BBBBBB;
+    color: #333333;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.2em;
+    margin: 0;
+    padding: 2px;
+    width: 100%;
+}
+.jvs-galleryvote .newanswerbox input.button {
+    color: #FFFFFF;
+}
+.jvs-galleryvote .newanswerbox .controls {
+	position: absolute;
+	bottom: 2px;
+	right: 2px;
+	width: 146px;
+}
+
+/*Icons*/
+
+.jvs-galleryvote a.icon, .jvs-galleryvote a.icon:hover {
+	display:block;
+	height:16px;
+	width:16px;
+	color: #000 !important;
+	margin: 1px !important;
+	background-color:transparent !important;
+	background-repeat:no-repeat !important;
+	float:right;
+	outline: medium none;
+	cursor: pointer;
+	padding: 0 !important;
+}
+
+.jvs-galleryvote a.trash, .jvs-galleryvote a.trash:hover {
+background-image:url(../../../assets/images/default/icons/icon-16-trash.png) !important;
+}
+.jvs-galleryvote a.report, .jvs-galleryvote a.report:hover {
+background-image:url(../../../assets/images/default/icons/icon-16-spam.png) !important;
+}
+.jvs-galleryvote a.published, .jvs-galleryvote a.published:hover {
+background-image:url(../../../assets/images/default/icons/icon-16-published.png) !important;
+}
+.jvs-galleryvote a.unpublished, .jvs-galleryvote a.unpublished:hover {
+background-image:url(../../../assets/images/default/icons/icon-16-unpublished.png) !important;
+}
+.jvs-galleryvote .answer .answericons {
+	position: absolute;
+    right: 2px;
+    top: 2px;
+    display: none;
+}
+.jvs-galleryvote .answer:hover .answericons {
+	display: block;
+}
+
+/* Comments */
+.jvs-galleryvote.comments {
+    background-color: #F1F1F1;
+    border-left: 3px solid #CCCCCC;
+    bottom: 0;
+    box-shadow: 0 0 6px #CCCCCC;
+    display: none;
+    height: 100%;
+    padding: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 280px;
+    z-index: 9999;
+}
+.jvs-galleryvote.comments .commentbox, .jvs-galleryvote.comments .comment.newcommentbox {
+	margin: 10px;
+}
+.jvs-galleryvote.comments .comment {
+	color: #2C343D;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    text-align: left;
+    position: relative;
+    margin-bottom: 10px;
+}
+.jvs-galleryvote.comments .comment .comment-head {
+	height: 40px;
+    padding: 3px;
+}
+.jvs-galleryvote.comments .comment .comment-head .icons {
+	position: absolute;
+    right: 4px;
+    top: 14px;
+}
+.jvs-galleryvote.comments .comment .comment-head .user {
+    left: 50px;
+    position: absolute;
+    top: 5px;
+}
+.jvs-galleryvote.comments .comment .comment-head .user a {
+    color: #676767 !important;
+    text-decoration: none;
+    font-weight: bold;
+}
+.jvs-galleryvote.comments .comment .comment-head .creation-date {
+	color: #6A6A6A;
+    font-style: italic;
+    position: absolute;
+    left: 50px;
+    top: 22px;
+}
+.jvs-galleryvote.comments .comment .comment-text {
+	background-color: #FFFFFF;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 3px #666666;
+    font-style: italic;
+    padding: 5px;
+    position: relative;
+}
+.jvs-galleryvote.comments .comment .comment-text .point {
+    border-color: #FFFFFF transparent;
+    border-style: solid;
+    border-width: 0 8px 8px;
+    content: "";
+    display: block;
+    left: 16px;
+    position: absolute;
+    top: -8px;
+    width: 0;
+}
+.jvs-galleryvote.comments .comment .comment-text textarea {
+	background: none repeat scroll 0 0 transparent;
+	border: 0 none;
+	color: #2C343D;
+	float: none;
+	font-family: Helvetica,Arial,sans-serif;
+	font-size: 14px;
+	margin: 0;
+	min-height: 33px;
+	overflow: hidden;
+	padding: 0;
+	resize: none;
+	width: 100%;
+	outline: none;
+	box-shadow: 0 0 0;
+	height: auto;
+}
+.jvs-galleryvote.comments .comment form .bbcodeToolbar, .jvs-galleryvote.comments .comment form .bbcodeToolbar + div {
+	display: none;
+}
+.jvs-galleryvote.comments .bbcodeToolbar { 
+	padding: 3px;
+}
+.jvs-galleryvote.comments .bbcodeToolbar img { 
+	margin: 1px;
+}
+.jvs-galleryvote.comments .comment form input {
+	background-color: #6C6C6C;
+    border: 1px solid #AAAAAA;
+    color: #EEEEEE;
+    cursor: pointer;
+    margin-right: 5px;
+    outline: 0 none;
+    padding: 1px 5px;
+}

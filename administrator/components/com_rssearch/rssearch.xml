@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+	<name>com_rssearch</name>
+	<creationDate>March 2011</creationDate>
+	<author>RSJoomla!</author>
+	<authorEmail>support@rsjoomla.com</authorEmail>
+	<authorUrl>www.rsjoomla.com</authorUrl>
+	<copyright>(C) 2011 www.rsjoomla.com</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license> 
+	<version>1.0.0 R4</version>
+	<description>RSSearch! helps you to create search modules for the most popular components.</description>
+	<scriptfile>script.rssearch.php</scriptfile>
+
+	<files folder="site">
+		<folder>assets</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+		<filename>controller.php</filename>
+		<filename>legacy.php</filename>
+		<filename>index.html</filename>
+		<filename>rssearch.php</filename>
+	</files>
+
+	<languages>
+		<language tag="en-GB">language/site/en-GB.com_rssearch.ini</language>
+	</languages>
+
+	<administration>
+		<menu img="components/com_rssearch/assets/images/rssearch.gif">com_rssearch</menu>
+		
+		<files folder="admin">
+			<folder>assets</folder>
+			<folder>models</folder>
+			<folder>views</folder>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>rssearch.php</filename>
+		</files>
+		
+		<languages>
+			<language tag="en-GB">language/admin/en-GB.com_rssearch.ini</language>
+			<language tag="en-GB">language/admin/en-GB.com_rssearch.sys.ini</language>
+		</languages>
+	</administration>
+	
+</extension>

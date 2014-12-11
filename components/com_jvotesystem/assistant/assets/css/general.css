@@ -1,0 +1,360 @@
+/**
+ * @package Component jVoteSystem for Joomla! 1.5-2.5
+ * @projectsite www.joomess.de/projects/jvotesystem
+ * @authors Johannes Meßmer, Andreas Fischer
+ * @copyright (C) 2010 - 2012 Johannes Meßmer
+ * @license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+**/
+
+body {
+	background: transparent !important;
+}
+html {
+	overflow: auto !important;
+}
+
+div.header {
+	background-color: #FBFBFB;
+    background-repeat: no-repeat;
+    border: 1px solid #D1CDCD;
+    border-radius: 5px 5px 5px 5px;
+    color: #0B55C4;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 48px;
+    margin-bottom: 10px;
+    padding-left: 55px;
+}
+div.header span.task {
+	font-weight: normal;
+	font-size: 14px;
+}
+div.header span.title {
+	color: #828181;
+}
+
+/*Params*/
+table.category {
+	width: 100%;
+}
+table.category td.name{
+	background-color: #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    color: #FFFFFF;
+    font-size: 9pt;
+    font-variant: small-caps;
+    font-weight: bold;
+    line-height: 1em;
+    padding: 5px 10px;
+    text-align: center;
+    vertical-align: middle;
+    width: 10px;
+}
+#tabs {
+	min-width: 780px;
+}
+table.params {
+	color: #828181;
+    font-family: comic Sans MS;
+    width: 100%;
+}
+table.params td {
+	
+}
+table.params td.param {
+	font-size: 12pt;
+    font-weight: bold;
+    padding-top: 10px;
+    vertical-align: top;
+	width: 15%;
+	min-width: 120px;
+	background-color: #FBFBFB;
+}
+table.params .small td.param {
+	min-width: 120px;
+	max-width: 220px;
+}
+table.params .medium  td.param {
+	min-width: 240px;
+}
+table.params .large  td.param {
+	min-width: 400px;
+}
+table.params .extralarge  td.param {
+	min-width: 550px;
+}
+table.params tr.paddingbot td.field {
+	padding-bottom: 8px;
+}
+table.params tr.text td.field input, 
+table.params tr.area td.field textarea, 
+table.params tr.number td.field input, 
+table.params tr.date td.field input, 
+table.params tr.option td.field label, 
+table.params tr.select td.field select {
+	border: 2px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    font-size: 10pt;
+    padding: 3px;
+    width: 100%;
+	resize: vertical;
+	margin-bottom: 2px;
+}
+table.params tr.date td.field input {
+	font-size: 11pt;
+    width: 180px;
+    resize: none !important;
+}
+table.params tr.number td.field input {
+	color: #8D8B8B;
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: right;
+    width: 50px;
+    resize: none !important;
+}
+table.params tr.date td.field img.calendar {
+	margin-bottom: -8px;
+    margin-left: 2px;
+    padding: 4px;
+	border: 2px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+}
+table.params tr.option td.field input {
+	border: 0 none;
+	width: auto;
+}
+table.params tr.date td.field input {
+	border: 2px solid #CCCCCC;
+}
+table.params tr.option td.field label {
+	font-weight: bold;
+    margin-left: -25px;
+    padding-left: 25px;
+	margin-right: 2px;
+}
+table.params tr.select td.field select {
+	width: 180px;
+}
+table.params tr.area td.field textarea {
+	min-height: 34px;
+}
+table.params tr.area td.field textarea.large  {
+	min-height: 85px;
+}
+/*Toolbar*/
+div.toolbar-list {
+	font-size: 11px;
+	float: right;
+    padding: 0;
+    text-align: right;
+}
+div.toolbar-list ul {
+    margin: 0;
+    padding: 0;
+}
+div.toolbar-list li {
+    color: #666666;
+    float: left;
+    height: 48px;
+    list-style: none outside none;
+    padding: 1px 1px 3px 4px;
+    text-align: center;
+}
+div.toolbar-list a:hover, div.toolbar-list a:focus, div.toolbar-list a:active {
+    border-color: #EEEEEE #CCCCCC #CCCCCC #EEEEEE;
+    border-left: 1px solid #EEEEEE;
+    border-style: solid;
+    border-width: 1px;
+    color: #0B55C4;
+    text-decoration: none;
+}
+div.toolbar-list a.toolbar {
+	border: 1px solid #FBFBFB;
+	line-height: 1em;
+	cursor: pointer;
+    display: block;
+    float: left;
+    padding: 1px 5px;
+    white-space: nowrap;
+}
+div.toolbar-list span {
+    display: block;
+    float: none;
+    height: 32px;
+    margin: 0 auto;
+    width: 32px;
+}
+/*Message*/
+div.assistant-message {
+	background-color: #C3D2E5;
+    border-bottom: 3px solid #84A7DB;
+    border-top: 3px solid #84A7DB;
+    color: #0055BB;
+    display: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 5px;
+    text-align: center;
+	width: 100%;
+}
+div.assistant-loading {
+	background-image: url("../images/ajax-loader.gif");
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 20px;
+    margin-top: -10px;
+	display: none;
+	width: 100%;
+}
+
+/*Tabs scrollable*/
+.ui-tabs div{
+	max-height: 472px;
+    overflow: auto;
+}
+
+/*Chart*/
+.ui-tabs  .charttab {
+	padding: 0 !important;
+}
+
+/*Overview*/
+table.hidden {
+	display: none;
+}
+table.overview {
+	color: #828181;
+    font-family: comic Sans MS;
+    width: 100%;
+}
+table.overview td.title {
+	font-size: 12pt;
+    font-weight: bold;
+    padding-top: 10px;
+    vertical-align: top;
+	width: 15%;
+	background-color: #FBFBFB;
+	text-align: center;
+}
+table.overview td.small {
+	width: 5%;
+}
+table.overview td.content {
+	font-size: 10pt;
+    margin-bottom: 2px;
+}
+table.overview td.content div.answer {
+	border: 2px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    padding: 3px;
+    width: 100%;
+}
+table.overview td.info {
+	border: 1px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    padding: 2px;
+	font-size: 9pt;
+}
+
+/*Answers*/
+table.params tr td.field a.state-published, table.params tr td.field a.state-unpublished {
+	height: 16px;
+	width: 16px;
+	display: block;
+	margin-left: 20px;
+}
+table.params tr td.field a.state-published {
+	background: url("../images/icon-16-tick.png") no-repeat scroll 0 0 transparent;
+}
+table.params tr td.field a.state-unpublished {
+	background: url("../images/icon-16-publish_x.png") no-repeat scroll 0 0 transparent;
+}
+table.params tr.area.answer.new td.field textarea {
+	height: 25px !important;
+    font-style: italic;
+}
+table.params tr.area.answer.new td.field.state a, table.params tr.area.answer.trash td.field.state a {
+	background: url("../images/icon-32-new.png") no-repeat scroll right center transparent;
+    height: 32px;
+    margin-left: 15px;
+    margin-right: -16px;
+    width: 32px;
+}
+table.params tr.area.answer.new td.field.state a {
+	background: url("../images/icon-32-new.png") no-repeat scroll right center transparent;
+}
+table.params tr.area.answer.trash td.field.state a {
+	background: url("../images/icon-32-trash.png") no-repeat scroll right center transparent;
+}
+table.params tr.area.answer.new.template {
+	display: none;
+}
+
+/*Overlay*/
+#overlay {
+	filter: alpha(opacity=50);
+	-moz-opacity:0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+    background-color: #000000;
+    background-image: url("../images/ajax-loader.gif");
+    background-position: center center;
+    background-repeat: no-repeat;
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 65px;
+    z-index: 99999;
+	
+}
+
+/*Required*/
+#adminForm table.params tr.required.warning td.field input,
+#adminForm table.params tr.required.warning td.field textarea{
+	background-color: #F9DBDB;
+    border-color: red;
+}
+
+/*Icons*/
+.icon-32-resetvotes {
+    background-image: url("../images/icon-32-resetvotes.png");
+}
+.icon-32-jvotesystem {
+    background-image: url("../images/icon-32-jvotesystem.png");
+}
+.icon-32-box-add {
+    background-image: url("../images/icon-32-box-add.png");
+}
+
+/*List*/
+table.list {
+	color: #0B55C4;
+    font-family: comic Sans MS;
+    margin-left: 50px;
+    width: 350px;
+	color: #828181;
+}
+table.list tr {
+	
+}
+table.list td.icon {
+	width: 40px;
+	height: 40px;
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+table.list td.name {
+	font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #D1CDCD;
+    border-radius: 5px 5px 5px 5px;
+	background-color: #FBFBFB;
+	background-image: url("../images/icon-arrow.png");
+    background-position: 250px 50%;
+    background-repeat: no-repeat;
+	padding-left: 15px;
+	cursor: pointer;
+}

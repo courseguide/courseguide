@@ -1,0 +1,97 @@
+/**
+ * Core Design Mini Polls plugin for Joomla! 1.7
+ * @author		Daniel Rataj, <info@greatjoomla.com>
+ * @package		Joomla
+ * @subpackage	Content
+ * @category   	Plugin
+ * @version		1.0.0
+ * @copyright	Copyright (C) 2007 - 2011 Great Joomla!, http://www.greatjoomla.com
+ * @license		http://www.gnu.org/copyleft/gpl.html GNU/GPL 3
+ * 
+ * This file is part of Great Joomla! extension.   
+ * This extension is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This extension is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+
+/* Polls container */
+.cdminipolls {
+	/* empty */
+}
+
+/* Poll title */
+.cdminipolls .cdminipolls_title {
+	/* empty */
+}
+
+/* Custom UI icon = ui-icon-thumb-up */
+.cdminipolls .ui-button .ui-icon-thumb-up {
+	background-image: url(../images/ui-icon-thumb-up.png) !important;
+	background-position: 0 0;
+}
+/* Disabled UI icon */
+.cdminipolls .ui-button-disabled .ui-icon-thumb-up{
+	background-position: 0 -16px;
+}
+
+/* Option container */
+.cdminipolls .cdminipolls_option {
+	margin: 10px 0;
+}
+
+/* Option text */
+.cdminipolls .cdminipolls_option_text {
+	font-style: italic;
+}
+
+/* Vote layer */
+.cdminipolls .cdminipolls_votebutton_layer {
+	display: none;
+}
+
+/* Vote layer - text container */
+.cdminipolls .cdminipolls_votebutton_layer .cdminipolls_votebutton_container {
+	position: absolute;
+	z-index: 1;
+	cursor: pointer;
+	padding: 0 4px;
+	font-size: 80%;
+	top: 0;
+	left: 0;
+	font-weight: normal;
+}
+
+/* Progressbar container */
+.cdminipolls .cdminipolls_progressbar {
+	width: 200px;
+	float: left;
+	position: relative;
+}
+
+/* Count of votes per poll option */
+.cdminipolls .cdminipolls_progressbar .cdminipolls_votecount {
+	position: absolute;
+	font-size: 120%;
+	right: 5px;
+	line-height: 150%;
+}
+
+/* Statistics container */
+.cdminipolls .cdminipolls_statistics {
+	font-size: 90%;
+}
+
+/* Total votes */
+.cdminipolls .cdminipolls_statistics .cdminipolls_statistics_total_votes {
+	/* empty */
+}

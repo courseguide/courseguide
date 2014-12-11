@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content" method="upgrade">
+	<name>Polar Vote</name>
+	<author>StyleWare</author>
+	<creationDate>2014-04-02</creationDate>
+	<copyright>Copyright (c) 2010-2014  styleware.eu All rights reserved.</copyright>
+	<authorEmail>office@styleware.eu</authorEmail>
+	<authorUrl>www.styleware.eu</authorUrl>
+	<version>1.0.0</version>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>This plugin allows you easily to add Polar votes to your site.</description>
+	
+	<files>
+		<filename plugin="polarvote">polarvote.php</filename>
+		
+		<filename>index.html</filename>
+	</files>
+	
+	
+	<config>
+		<fields name="params">	
+		</fields>
+	</config>
+
+	
+</extension>

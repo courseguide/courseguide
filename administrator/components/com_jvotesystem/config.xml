@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <params>
+    <param type="radio" name="autoPublish" label="P_AUTOPUBLISH" default="1" description="P_AUTOPUBLISH_DESC">
+      <option value="1">JYES</option>
+      <option value="0">JNO</option>
+    </param>
+	<param type="radio" name="voteOnOwn" label="P_VOTEONOWN" default="1" description="P_VOTEONOWN_DESC">
+      <option value="1">JYES</option>
+      <option value="0">JNO</option>
+    </param>
+	<param type="radio" name="deleteOwnAnswer" label="P_DELETEOWNANSWER" default="1" description="P_DELETEOWNANSWER_DESC">
+      <option value="1">JYES</option>
+      <option value="0">JNO</option>
+    </param>
+	<param type="text" name="shortCountAnswer" label="P_SHORTCOUNTANSWER" default="500" size="4" description="P_SHORTCOUNTANSWER_DESC" />
+	<param type="radio" name="facebookLike" label="P_FACEBOOKLIKE" default="1" description="P_FACEBOOKLIKE_DESC">
+      <option value="1">JYES</option>
+      <option value="0">JNO</option>
+    </param>
+    <param type="radio" name="resetOwnVotes" label="P_RESETOWNVOTES" default="1" description="P_RESETOWNVOTES_DESC">
+      <option value="1">JYES</option>
+      <option value="0">JNO</option>
+    </param> 
+    <param type="radio" name="showToolbar" label="P_SHOWTOOLBAR" default="1" description="P_SHOWTOOLBAR_DESC">
+      <option value="1">JYES</option>
+      <option value="0">JNO</option>
+    </param>
+	<param type="spacer" default="&lt;span style=&quot;text-decoration: underline;&quot;&gt;&lt;b&gt;Views-Settings:&lt;/b&gt;&lt;/span&gt;" />
+	<param type="radio" name="diagramm" label="P_DIAGRAMM" default="1" description="P_DIAGRAMM_DESC">
+      <option value="1">JYES</option>
+      <option value="0">JNO</option>
+    </param>
+	<param type="list" name="displayName" label="P_DISPLAYNAME" default="name" description="P_DISPLAYNAME">
+      <option value="name">NAME</option>
+      <option value="username">USERNAME</option>
+    </param>
+	<param type="list" name="voteAlign" label="P_VOTEALIGN" default="left" description="P_VOTEALIGN">
+      <option value="left">LEFT</option>
+      <option value="right">RIGHT</option>
+    </param>
+	<param type="text" name="shortNavi" label="P_SHORTNAVI" default="7" description="P_SHORTNAVI_DESC" class="" size="2"/>
+	<param type="radio" name="single_radiobutton" label="P_SINGLE_RADIOBUTTON" default="1" description="P_SINGLE_RADIOBUTTON_DESC">
+	  <option value="1">JYES</option>
+	  <option value="0">JNO</option>
+	</param>
+	<param type="text" name="pollsPerPage" label="P_POLLSPERPAGE" default="10" description="P_POLLSPERPAGE_DESC" class="" size="3"/>
+	<param type="spacer" default="&lt;b&gt;&lt;i&gt;Polls-List&lt;/i&gt;&lt;/b&gt;" />
+	<param type="text" name="pollslist_answersPerPage" label="P_ANSWERSPERPAGE" default="3" description="P_ANSWERSPERPAGE_DESC" class="" size="2"/>
+	<param type="text" name="pollslist_commentsPerPage" label="P_COMMENTSPERPAGE" default="3" description="P_COMMENTSPERPAGE_DESC" class="" size="2"/>
+	<param type="text" name="pollslist_barscount" label="P_BARCOUNT" default="5" description="P_BARCOUNT_DESC" class="" size="2"/>
+	<param type="spacer" default="&lt;b&gt;&lt;i&gt;Poll&lt;/i&gt;&lt;/b&gt;" />
+	<param type="text" name="poll_answersPerPage" label="P_ANSWERSPERPAGE" default="20" description="P_ANSWERSPERPAGE_DESC" class="" size="2"/>
+	<param type="text" name="poll_commentsPerPage" label="P_COMMENTSPERPAGE" default="10" description="P_COMMENTSPERPAGE_DESC" class="" size="2"/>
+	<param type="text" name="poll_barscount" label="P_BARCOUNT" default="10" description="P_BARCOUNT_DESC" class="" size="2"/>
+	<param type="spacer" default="&lt;b&gt;&lt;i&gt;Plugin&lt;/i&gt;&lt;/b&gt;" />
+	<param type="text" name="plugin_answersPerPage" label="P_ANSWERSPERPAGE" default="5" description="P_ANSWERSPERPAGE_DESC" class="" size="2"/>
+	<param type="text" name="plugin_commentsPerPage" label="P_COMMENTSPERPAGE" default="3" description="P_COMMENTSPERPAGE_DESC" class="" size="2"/>
+	<param type="text" name="plugin_barscount" label="P_BARCOUNT" default="8" description="P_BARCOUNT_DESC" class="" size="2"/>
+	<param type="spacer" default="&lt;b&gt;&lt;i&gt;Module&lt;/i&gt;&lt;/b&gt;" />
+	<param type="text" name="module_answersPerPage" label="P_ANSWERSPERPAGE" default="5" description="P_ANSWERSPERPAGE_DESC" class="" size="2"/>
+	<param type="text" name="module_commentsPerPage" label="P_COMMENTSPERPAGE" default="3" description="P_COMMENTSPERPAGE_DESC" class="" size="2"/>
+	<param type="text" name="module_barscount" label="P_BARCOUNT" default="5" description="P_BARCOUNT_DESC" class="" size="2"/>
+	
+	<param type="spacer" default="&lt;span style=&quot;text-decoration: underline;&quot;&gt;&lt;b&gt;Comment-Settings:&lt;/b&gt;&lt;/span&gt;" />
+	<param type="radio" name="autoPublishComment" label="P_AUTOPUBLISHCOMMENT" default="1" description="P_AUTOPUBLISHCOMMENT_DESC">
+      <option value="1">JYES</option>
+      <option value="0">JNO</option>
+    </param>
+	<param type="list" name="orderComment" label="P_ORDERCOMMENT" default="DESC" description="P_ORDERCOMMENT_DESC">
+      <option value="DESC">NEWESTFIRST</option>
+      <option value="ASC">OLDESTFIRST</option>
+    </param>
+	<param type="radio" name="deleteOwnComment" label="P_DELETEOWNCOMMENT" default="1" description="P_DELETEOWNCOMMENT_DESC">
+      <option value="1">JYES</option>
+      <option value="0">JNO</option>
+    </param>
+	<param type="text" name="shortCountComment" label="P_SHORTCOUNTCOMMENT" default="300" size="4" description="P_SHORTCOUNTCOMMENT_DESC" />
+	<param type="spacer" default="&lt;span style=&quot;text-decoration: underline;&quot;&gt;&lt;b&gt;Captcha - &lt;a href=&quot;https://www.google.com/recaptcha&quot; target=&quot;_blank&quot;&gt;reCAPTCHA&lt;/a&gt;:&lt;/b&gt;&lt;/span&gt;" />
+	<param name="recaptcha" type="radio" default="1" label="RECAPTCHA" description="RECAPTCHADESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+    </param>
+	<param name="recaptcha_publickey" type="text" default="" size="60" label="RECAPTCHAPUBLICKEY" description="RECAPTCHAPUBLICKEYDESC" />
+	<param name="recaptcha_privatekey" type="text" default="" size="60" label="RECAPTCHAPRIVATEKEY" description="RECAPTCHAPRIVATEKEYDESC" />
+	<param name="captcha_votes" type="radio" default="1" label="CAPTCHA_VOTES" description="CAPTCHA_VOTES_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="captcha_addanswer" type="radio" default="1" label="CAPTCHA_ADDANSWER" description="CAPTCHA_ADDANSWER_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="captcha_addcomment" type="radio" default="1" label="CAPTCHA_ADDCOMMENT" description="CAPTCHA_ADDCOMMENT_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param type="spacer" label="&lt;span style=&quot;text-decoration: underline;&quot;&gt;&lt;b&gt;Avatar &amp; Profile:&lt;/b&gt;&lt;/span&gt;" />
+		<param type="list" name="com_avatar" label="P_AVATAR" default="joomla" description="P_AVATAR_DESC">
+		  <option value="joomla">Joomla</option>
+		  <option value="jomsocial">JomSocial</option>
+		  <option value="cb">Community Builder</option>
+		  <option value="kunena">Kunena</option>
+		</param>
+		<param type="list" name="com_profile" label="P_PROFILE" default="joomla" description="P_PROFILE_DESC">
+		  <option value="joomla">Joomla</option>
+		  <option value="jomsocial">JomSocial</option>
+		  <option value="cb">Community Builder</option>
+		  <option value="kunena">Kunena</option>
+		</param>
+	<param type="spacer" default="&lt;span style=&quot;text-decoration: underline;&quot;&gt;&lt;b&gt;BBCode-Settings:&lt;/b&gt;&lt;/span&gt;" />
+	<param type="radio" name="activate_bbcode" label="P_ACTIVATE_BBCODE" default="1" description="">
+      <option value="1">JYES</option>
+      <option value="0">JNO</option>
+    </param>
+	<param type="spacer" default="&lt;span style=&quot;text-decoration: underline;&quot;&gt;&lt;b&gt;EMail-Settings:&lt;/b&gt;&lt;/span&gt;" />
+	<param type="radio" name="quickModeration" label="P_QUICKMODERATION" default="1" description="P_QUICKMODERATION_DESC">
+      <option value="1">JYES</option>
+      <option value="0">JNO</option>
+    </param>
+	<param type="text" size="10" name="validityPeriod" label="P_VALIDITYPERIOD" default="14" description="P_VALIDITYPERIOD_DESC" />
+	<param type="spacer" default="&lt;span style=&quot;text-decoration: underline;&quot;&gt;&lt;b&gt;Libraries: (Load)&lt;/b&gt;&lt;/span&gt;" />
+	<param type="radio" name="load_jquery" label="P_LOADJQUERY" default="1" description="P_LOADJQUERY_DESC">
+      <option value="1">JYES</option>
+      <option value="0">JNO</option>
+    </param>
+	<param type="radio" name="load_domwrite" label="P_LOADDOMWRITE" default="1" description="P_LOADDOMWRITE_DESC">
+      <option value="1">JYES</option>
+      <option value="0">JNO</option>
+    </param>
+	<param type="spacer" default="&lt;span style=&quot;text-decoration: underline;&quot;&gt;&lt;b&gt;Google - Adsense:&lt;/b&gt;&lt;/span&gt;" />
+	<param type="radio" name="adsense" label="P_ADSENSE" default="1" description="P_ADSENSE_DESC">
+      <option value="1">JYES</option>
+      <option value="0">JNO</option>
+    </param>
+	<param type="text" size="40" name="adsense_key" label="P_ADSENSEKEY" default="" description="P_ADSENSEKEY_DESC" />
+	<param type="spacer" label="&lt;span style=&quot;text-decoration: underline;&quot;&gt;&lt;b&gt;Debug:&lt;/b&gt;&lt;/span&gt;" />
+		<param type="radio" name="showErrors" label="P_SHOWERRORS" default="0">
+		  <option value="1">JYES</option>
+		  <option value="0">JNO</option>
+		</param>
+		<param type="radio" name="loggingMode" label="P_ACTIVATELOGGING" default="1">
+		  <option value="1">JYES</option>
+		  <option value="0">JNO</option>
+		  <option value="2">ONLYERRORS</option>
+		</param>
+		<param type="spacer" label="&lt;span style=&quot;text-decoration: underline;&quot;&gt;&lt;b&gt;Security:&lt;/b&gt;&lt;/span&gt;" />
+		<param type="radio" name="checkIP" label="P_CHECKIP" default="1">
+		  <option value="1">JYES</option>
+		  <option value="0">JNO</option>
+		</param>
+		<param type="radio" name="checkCookies" label="P_CHECKCOOKIES" default="1">
+		  <option value="1">JYES</option>
+		  <option value="0">JNO</option>
+		</param>
+  </params>
+  
+  <!--Joomla 1.6-->
+  <fields>
+	<fieldset name="global" label="COM_JVOTESYSTEM_SETTINGS_GLOBAL" description="COM_JVOTESYSTEM_SETTINGS_GLOBAL_DESC">
+		<field type="radio" name="autoPublish" label="P_AUTOPUBLISH" default="1" description="P_AUTOPUBLISH_DESC">
+		  <option value="1">JYES</option>
+		  <option value="0">JNO</option>
+		</field>
+		<field type="radio" name="voteOnOwn" label="P_VOTEONOWN" default="1" description="P_VOTEONOWN_DESC">
+		  <option value="1">JYES</option>
+		  <option value="0">JNO</option>
+		</field>
+		<field type="radio" name="deleteOwnAnswer" label="P_DELETEOWNANSWER" default="1" description="P_DELETEOWNANSWER_DESC">
+		  <option value="1">JYES</option>
+		  <option value="0">JNO</option>
+		</field>
+		<field type="text" name="shortCountAnswer" label="P_SHORTCOUNTANSWER" default="500" size="4" description="P_SHORTCOUNTANSWER_DESC" />
+		<field type="radio" name="facebookLike" label="P_FACEBOOKLIKE" default="1" description="P_FACEBOOKLIKE_DESC">
+		  <option value="1">JYES</option>
+		  <option value="0">JNO</option>
+		</field>
+	    <field type="radio" name="resetOwnVotes" label="P_RESETOWNVOTES" default="1" description="P_RESETOWNVOTES_DESC">
+	      <option value="1">JYES</option>
+	      <option value="0">JNO</option>
+	    </field>
+    	<field type="radio" name="showToolbar" label="P_SHOWTOOLBAR" default="1" description="P_SHOWTOOLBAR_DESC">
+      	  <option value="1">JYES</option>
+      	  <option value="0">JNO</option>
+    	</field> 
+	</fieldset>
+	<fieldset name="views" label="COM_JVOTESYSTEM_SETTINGS_VIEWS" description="COM_JVOTESYSTEM_SETTINGS_VIEWS_DESC">
+		<field type="radio" name="diagramm" label="P_DIAGRAMM" default="1" description="P_DIAGRAMM_DESC">
+		  <option value="1">JYES</option>
+		  <option value="0">JNO</option>
+		</field>
+		<field type="list" name="displayName" label="P_DISPLAYNAME" default="name" description="P_DISPLAYNAME">
+		  <option value="name">NAME</option>
+		  <option value="username">USERNAME</option>
+		</field>
+		<field type="list" name="voteAlign" label="P_VOTEALIGN" default="left" description="P_VOTEALIGN">
+		  <option value="left">LEFT</option>
+		  <option value="right">RIGHT</option>
+		</field>
+		<field type="text" name="shortNavi" label="P_SHORTNAVI" default="7" description="P_SHORTNAVI_DESC" class="" size="2"/>
+		<field type="radio" name="single_radiobutton" label="P_SINGLE_RADIOBUTTON" default="1" description="P_SINGLE_RADIOBUTTON_DESC">
+		  <option value="1">JYES</option>
+		  <option value="0">JNO</option>
+		</field>
+		<field type="text" name="pollsPerPage" label="P_POLLSPERPAGE" default="10" description="P_POLLSPERPAGE_DESC" class="" size="3"/>
+		<field type="spacer" name="viewSpacerPollsList" label="&lt;b&gt;&lt;i&gt;Polls-List&lt;/i&gt;&lt;/b&gt;" />
+		<field type="text" name="pollslist_answersPerPage" label="P_ANSWERSPERPAGE" default="3" description="P_ANSWERSPERPAGE_DESC" class="" size="2"/>
+		<field type="text" name="pollslist_commentsPerPage" label="P_COMMENTSPERPAGE" default="3" description="P_COMMENTSPERPAGE_DESC" class="" size="2"/>
+		<field type="text" name="pollslist_barcount" label="P_BARCOUNT" default="5" description="P_BARCOUNT_DESC" class="" size="2"/>
+		<field type="spacer" name="viewSpacerPoll" label="&lt;b&gt;&lt;i&gt;Poll&lt;/i&gt;&lt;/b&gt;" />
+		<field type="text" name="poll_answersPerPage" label="P_ANSWERSPERPAGE" default="20" description="P_ANSWERSPERPAGE_DESC" class="" size="2"/>
+		<field type="text" name="poll_commentsPerPage" label="P_COMMENTSPERPAGE" default="10" description="P_COMMENTSPERPAGE_DESC" class="" size="2"/>
+		<field type="text" name="poll_barcount" label="P_BARCOUNT" default="10" description="P_BARCOUNT_DESC" class="" size="2"/>
+		<field type="spacer" name="viewSpacerPlugin" label="&lt;b&gt;&lt;i&gt;Plugin&lt;/i&gt;&lt;/b&gt;" />
+		<field type="text" name="plugin_answersPerPage" label="P_ANSWERSPERPAGE" default="5" description="P_ANSWERSPERPAGE_DESC" class="" size="2"/>
+		<field type="text" name="plugin_commentsPerPage" label="P_COMMENTSPERPAGE" default="3" description="P_COMMENTSPERPAGE_DESC" class="" size="2"/>
+		<field type="text" name="plugin_barcount" label="P_BARCOUNT" default="8" description="P_BARCOUNT_DESC" class="" size="2"/>
+		<field type="spacer" name="viewSpacerModule" label="&lt;b&gt;&lt;i&gt;Module&lt;/i&gt;&lt;/b&gt;" />
+		<field type="text" name="module_answersPerPage" label="P_ANSWERSPERPAGE" default="5" description="P_ANSWERSPERPAGE_DESC" class="" size="2"/>
+		<field type="text" name="module_commentsPerPage" label="P_COMMENTSPERPAGE" default="3" description="P_COMMENTSPERPAGE_DESC" class="" size="2"/>
+		<field type="text" name="module_barcount" label="P_BARCOUNT" default="5" description="P_BARCOUNT_DESC" class="" size="2"/>
+	</fieldset>
+	<fieldset name="comment" label="COM_JVOTESYSTEM_SETTINGS_COMMENT" description="COM_JVOTESYSTEM_SETTINGS_COMMENT_DESC">
+		<field type="radio" name="autoPublishComment" label="P_AUTOPUBLISHCOMMENT" default="1" description="P_AUTOPUBLISHCOMMENT_DESC">
+		  <option value="1">JYES</option>
+		  <option value="0">JNO</option>
+		</field>
+		<field type="list" name="orderComment" label="P_ORDERCOMMENT" default="DESC" description="P_ORDERCOMMENT_DESC">
+		  <option value="DESC">NEWESTFIRST</option>
+		  <option value="ASC">OLDESTFIRST</option>
+		</field>
+		<field type="radio" name="deleteOwnComment" label="P_DELETEOWNCOMMENT" default="1" description="P_DELETEOWNCOMMENT_DESC">
+		  <option value="1">JYES</option>
+		  <option value="0">JNO</option>
+		</field>
+		<field type="text" name="shortCountComment" label="P_SHORTCOUNTCOMMENT" default="300" size="4" description="P_SHORTCOUNTCOMMENT_DESC" />
+	</fieldset>
+	<fieldset name="plugins" label="COM_JVOTESYSTEM_SETTINGS_PLUGINS" description="COM_JVOTESYSTEM_SETTINGS_PLUGINS_DESC">
+		<field type="spacer" label="&lt;span style=&quot;text-decoration: underline;&quot;&gt;&lt;b&gt;Captcha - &lt;a href=&quot;https://www.google.com/recaptcha&quot; target=&quot;_blank&quot;&gt;reCAPTCHA&lt;/a&gt;:&lt;/b&gt;&lt;/span&gt;" />
+		<field name="recaptcha" type="radio" default="1" label="RECAPTCHA" description="RECAPTCHADESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="recaptcha_publickey" type="text" default="" size="60" label="RECAPTCHAPUBLICKEY" description="RECAPTCHAPUBLICKEYDESC" />
+		<field name="recaptcha_privatekey" type="text" default="" size="60" label="RECAPTCHAPRIVATEKEY" description="RECAPTCHAPRIVATEKEYDESC" />
+		<field name="captcha_votes" type="radio" default="1" label="CAPTCHA_VOTES" description="CAPTCHA_VOTES_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="captcha_addanswer" type="radio" default="1" label="CAPTCHA_ADDANSWER" description="CAPTCHA_ADDANSWER_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="captcha_addcomment" type="radio" default="1" label="CAPTCHA_ADDCOMMENT" description="CAPTCHA_ADDCOMMENT_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field type="spacer" label="&lt;span style=&quot;text-decoration: underline;&quot;&gt;&lt;b&gt;Avatar &amp; Profile:&lt;/b&gt;&lt;/span&gt;" />
+		<field type="list" name="com_avatar" label="P_AVATAR" default="joomla" description="P_AVATAR_DESC">
+		  <option value="joomla">Joomla</option>
+		  <option value="jomsocial">JomSocial</option>
+		  <option value="cb">Community Builder</option>
+		  <option value="kunena">Kunena</option>
+		</field>
+		<field type="list" name="com_profile" label="P_PROFILE" default="joomla" description="P_PROFILE_DESC">
+		  <option value="joomla">Joomla</option>
+		  <option value="jomsocial">JomSocial</option>
+		  <option value="cb">Community Builder</option>
+		  <option value="kunena">Kunena</option>
+		</field>
+		<field type="spacer" label="&lt;span style=&quot;text-decoration: underline;&quot;&gt;&lt;b&gt;Social Networks:&lt;/b&gt;&lt;/span&gt;" />
+		<field name="showSocialbar" type="radio" default="1" label="JVS_PARAM_SHOW_SOCIALBAR" description="JVS_PARAM_SHOW_SOCIALBAR_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="socialbar2Click" type="radio" default="1" label="JVS_PARAM_SOCIALBAR_2CLICK" description="JVS_PARAM_SOCIALBAR_2CLICK_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="socialbarGplus" type="radio" default="1" label="JVS_PARAM_SOCIALBAR_GPLUS">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="socialbarFacebook" type="radio" default="1" label="JVS_PARAM_SOCIALBAR_FACEBOOK">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="socialbarTwitter" type="radio" default="1" label="JVS_PARAM_SOCIALBAR_TWITTER">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="showShareAnswer" type="radio" default="1" label="JVS_PARAM_SHOW_SHARE_ANSWER" description="JVS_PARAM_SHOW_SHARE_ANSWER_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="shareAnswerGplus" type="radio" default="1" label="JVS_PARAM_SHARE_ANSWER_GPLUS">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="shareAnswerFacebook" type="radio" default="1" label="JVS_PARAM_SHARE_ANSWER_FACEBOOK">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field type="spacer" label="&lt;span style=&quot;text-decoration: underline;&quot;&gt;&lt;b&gt;Libraries: (Load)&lt;/b&gt;&lt;/span&gt;" />
+		<field type="radio" name="load_domwrite" label="P_LOADDOMWRITE" default="1" description="P_LOADDOMWRITE_DESC">
+		  <option value="1">JYES</option>
+		  <option value="0">JNO</option>
+		</field>
+		<field type="spacer" label="&lt;span style=&quot;text-decoration: underline;&quot;&gt;&lt;b&gt;Google - Adsense:&lt;/b&gt;&lt;/span&gt;" />
+		<field type="radio" name="adsense" label="P_ADSENSE" default="1" description="P_ADSENSE_DESC">
+		  <option value="1">JYES</option>
+		  <option value="0">JNO</option>
+		</field>
+		<field type="text" size="40" name="adsense_key" label="P_ADSENSEKEY" default="" description="P_ADSENSEKEY_DESC" />
+	</fieldset>
+	<fieldset name="other" label="COM_JVOTESYSTEM_SETTINGS_OTHER" description="COM_JVOTESYSTEM_SETTINGS_OTHER_DESC">
+		<field type="spacer" label="&lt;span style=&quot;text-decoration: underline;&quot;&gt;&lt;b&gt;BBCode-Settings:&lt;/b&gt;&lt;/span&gt;" />
+		<field type="radio" name="activate_bbcode" label="P_ACTIVATE_BBCODE" default="1" description="">
+		  <option value="1">JYES</option>
+		  <option value="0">JNO</option>
+		</field>
+		<field type="spacer" label="&lt;span style=&quot;text-decoration: underline;&quot;&gt;&lt;b&gt;EMail-Settings:&lt;/b&gt;&lt;/span&gt;" />
+		<field type="radio" name="quickModeration" label="P_QUICKMODERATION" default="1" description="P_QUICKMODERATION_DESC">
+		  <option value="1">JYES</option>
+		  <option value="0">JNO</option>
+		</field>
+		<field type="text" size="10" name="validityPeriod" label="P_VALIDITYPERIOD" default="14" description="P_VALIDITYPERIOD_DESC" />
+		<field type="spacer" label="&lt;span style=&quot;text-decoration: underline;&quot;&gt;&lt;b&gt;Debug:&lt;/b&gt;&lt;/span&gt;" />
+		<field type="radio" name="showErrors" label="P_SHOWERRORS" default="0">
+		  <option value="1">JYES</option>
+		  <option value="0">JNO</option>
+		</field>
+		<field type="radio" name="loggingMode" label="P_ACTIVATELOGGING" default="1">
+		  <option value="1">JYES</option>
+		  <option value="0">JNO</option>
+		  <option value="2">ONLYERRORS</option>
+		</field>
+		<field type="spacer" label="&lt;span style=&quot;text-decoration: underline;&quot;&gt;&lt;b&gt;Security:&lt;/b&gt;&lt;/span&gt;" />
+		<field type="radio" name="checkIP" label="P_CHECKIP" default="1">
+		  <option value="1">JYES</option>
+		  <option value="0">JNO</option>
+		</field>
+		<field type="radio" name="checkCookies" label="P_CHECKCOOKIES" default="1">
+		  <option value="1">JYES</option>
+		  <option value="0">JNO</option>
+		</field>
+	</fieldset>
+	<fieldset
+		name="permissions"
+		label="JCONFIG_PERMISSIONS_LABEL"
+		description="JCONFIG_PERMISSIONS_DESC"
+		>
+
+		<field
+			name="rules"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			class="inputbox"
+			validate="rules"
+			filter="rules"
+			component="com_jvotesystem"
+			section="component" />
+	</fieldset>
+  </fields>
+</config>

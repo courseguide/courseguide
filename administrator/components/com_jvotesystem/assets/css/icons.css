@@ -1,0 +1,54 @@
+/**
+* @package Component jVoteSystem for Joomla!  1.5 - 3.0 
+* @projectsite www.joomess.de/projects/jvotesystem
+* @authors Johannes Meßmer, Andreas Fischer
+* @copyright (C) 2010 - 2012 Johannes Meßmer
+* @license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+**/
+
+.icon-48-users { background-image: url("../images/icon-48-users.png"); }
+.icon-48-answers { background-image: url("../images/icon-48-answers.png"); }
+.icon-48-comments { background-image: url("../images/icon-48-comments.png"); }
+.icon-48-boxen { background-image: url("../images/icon-48-boxen.png"); }
+.icon-48-box-add { background-image: url("../images/icon-48-box-add.png"); }
+.icon-48-jvotesystem { background-image: url("../images/icon-48-jvotesystem.png"); }
+.icon-48-generic { background-image: url("../images/icon-48-generic.png"); }
+.icon-48-options { background-image: url("../images/icon-48-options.png"); }
+.icon-48-category, .icon-48-categories { background-image: url("../images/icon-48-category.png"); }
+.icon-48-category-add { background-image: url("../images/icon-48-category-add.png"); }
+.icon-48-logs { background-image: url("../images/icon-48-logs.png"); }
+.icon-48-advisor { background-image: url("../images/icon-48-advisor.png"); }
+.icon-48-apikeys { background-image: url("../images/icon-48-apikeys.png"); }
+
+.icon-32-answers { background-image: url("../images/icon-32-answers.png"); }
+
+a.icon-16-deny { background: url("../images/icon-16-deny.png") no-repeat scroll 0 0 transparent; }
+a.icon-16-denyinactive { background: url("../images/icon-16-denyinactive.png") no-repeat scroll 0 0 transparent; }
+a.icon-16-allow { background: url("../images/icon-16-allow.png") no-repeat scroll 0 0 transparent; }
+a.icon-16-allowinactive { background: url("../images/icon-16-allowinactive.png") no-repeat scroll 0 0 transparent; }
+label.icon-16-allow, label.icon-16-deny, a.icon-16-allow, a.icon-16-deny, a.icon-16-allowinactive, a.icon-16-denyinactive {
+    display: block;
+    height: 16px;
+    margin: 0 auto;
+    width: 16px;
+}
+
+/*Small Icons*/
+.icon-16 {
+	height: 16px;
+	width: 16px;
+	background: none no-repeat scroll center center transparent !important;
+}
+.icon-db { background-image: url("../images/icon-16-db.png") !important; }
+.icon-error { background-image: url("../images/icon-16-error.png") !important; }
+.icon-notice { background-image: url("../images/icon-16-notice.png") !important; }
+.icon-add { background-image: url("../images/icon-16-add.png") !important; }
+.icon-remove { background-image: url("../images/icon-16-remove.png") !important; }
+.icon-edit { background-image: url("../images/icon-16-edit.png") !important; }
+.icon-clean { background-image: url("../images/icon-16-clean.png") !important; }
+.icon-allow { background-image: url("../images/icon-16-allow.png") !important; }
+.icon-deny { background-image: url("../images/icon-16-deny.png") !important; }
+.icon-unknown { background-image: url("../images/icon-16-questionmark.png") !important; }
+.icon-spam { background-image: url("../images/icon-16-spam.png") !important; }
+.icon-trash { background-image: url("../images/icon-16-trash.png") !important; }
+.icon-mail { background-image: url("../images/icon-16-mail.png") !important; }

@@ -1,0 +1,65 @@
+ /*======================================================================*\
+|| #################################################################### ||
+|| # Package - Joomla Template based on YJSimpleGrid Framework          ||
+|| # Copyright (C) 2010  Youjoomla.com. All Rights Reserved.            ||
+|| # license - PHP files are licensed under  GNU/GPL V2                 ||
+|| # license - CSS  - JS - IMAGE files  are Copyrighted material        ||
+|| # bound by Proprietary License of Youjoomla.com                      ||
+|| # for more information visit http://www.youjoomla.com/license.html   ||
+|| # Redistribution and  modification of this software                  ||
+|| # is bounded by its licenses                                         ||
+|| # websites - http://www.youjoomla.com | http://www.yjsimplegrid.com  ||
+|| #################################################################### ||
+\*======================================================================*/
+ 
+@media screen and (max-width: 980px) {
+	.top_menu_poz_navbar,
+	#mmenu_holder{
+		width:280px!important;
+		margin-top:10px;
+	}
+	#default_video{
+		width:100%!important;
+	}
+}
+@media only screen and (min-width: 981px) and (max-width: 1199px) {
+	.top_menu {
+		width:inherit!important;
+	}
+}
+/* top_bg */
+@media only screen and (max-width: 981px){
+#topmenu_holder.dropped{
+	background:none!important;
+}
+}
+
+/*OurServices	*/
+@media only screen and (max-width: 975px) {	
+.Content-OurServices{
+	width:50%;
+	
+}	
+}
+@media only screen and (max-width: 480px) {	
+.Content-OurServices{
+	width:100%;
+	
+	
+}	
+}
+/*meet the team*/
+@media only screen and (max-width: 680px) {
+.yjsquare.yjme.team-sample .yjme_item{
+	width:100%;
+	clear:both;
+}		
+}
+
+@media only screen and (max-width: 480px) {
+.contactUs .button{
+	float:none;
+	clear:both;
+	margin-top:10px;
+}
+}

@@ -1,0 +1,1 @@
+DROP TABLE `#__free_votes_domande`, `#__free_votes_risposte`, `#__free_votes_risposte_user`;

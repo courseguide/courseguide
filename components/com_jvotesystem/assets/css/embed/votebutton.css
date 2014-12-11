@@ -1,0 +1,66 @@
+/**
+ * @package Component jVoteSystem for Joomla! 1.5-2.5
+ * @projectsite www.joomess.de/projects/jvotesystem
+ * @authors Johannes Meßmer, Andreas Fischer
+ * @copyright (C) 2010 - 2012 Johannes Meßmer
+ * @license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+**/
+
+.jvs-votebutton {
+	float: none;
+}
+
+.jvs-votebutton div, .jvs-votebutton span, .jvs-votebutton applet, .jvs-votebutton iframe, .jvs-votebutton a, .jvs-votebutton img, .jvs-votebutton small, .jvs-votebutton strong, .jvs-votebutton b, .jvs-votebutton u, .jvs-votebutton i, .jvs-votebutton center, .jvs-votebutton dl, .jvs-votebutton dt, .jvs-votebutton dd, .jvs-votebutton ol, .jvs-votebutton ul, .jvs-votebutton li, .jvs-votebutton table, .jvs-votebutton caption, .jvs-votebutton tbody, .jvs-votebutton tfoot, .jvs-votebutton thead, .jvs-votebutton tr, .jvs-votebutton th, .jvs-votebutton td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	color: #FFFFFF;
+	background: none repeat scroll 0 0 transparent;
+}
+.jvs-votebutton table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.jvs-votebutton .jvs-tooltip {
+    background-color: #333333;
+    box-shadow: 0 0 4px #EEEEEE;
+    color: #EEEEEE;
+    display: block;
+    font-size: 12px;
+    left: 8px;
+    padding: 4px;
+    position: absolute;
+    top: 35px;
+    z-index: 20;
+	cursor: pointer;
+	border-radius: 4px;
+}
+.jvs-votebutton .jvs-tooltip:before {
+    border-color: #333333 transparent;
+    border-style: solid;
+    border-width: 0 6px 6px;
+    bottom: auto;
+    content: "";
+    display: block;
+    left: 8px;
+    position: absolute;
+    top: -6px;
+    width: 0;
+}
+.jvs-votebutton .jvs-tooltip.tool-error {
+	background-color: #C10000;
+}
+.jvs-votebutton .jvs-tooltip.tool-error:before {
+	border-color: #C10000 transparent;
+}
+
+.jvs-votebutton i {
+	font-style: italic;
+}
+.jvs-votebutton b {
+	font-weight: bold;
+}

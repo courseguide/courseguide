@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+	<name>EXT VK Poll</name>
+	<author>Ext-Joom.com</author>
+	<creationDate>03/09/2013</creationDate>
+	<copyright>Copyright (C) 2011-2013 Ext-Joom.com. All Rights Reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>extjoom@gmail.com</authorEmail>
+	<authorUrl>http://www.ext-joom.com</authorUrl>
+	<version>1.1</version>
+	<description>Using Polls widget you can create a poll for users of your site within 5 minutes by embedding the corresponding module in any place on your page. </description>		
+	<files>	
+		<filename module="mod_ext_vk_poll">mod_ext_vk_poll.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_ext_vk_poll.xml</filename>
+		<filename>mod_ext_vk_poll.php</filename>			
+		<folder>tmpl</folder>
+	</files>	
+	<languages>
+		<language tag="en-GB">en-GB.mod_ext_vk_poll.ini</language>
+		<language tag="en-GB">en-GB.mod_ext_vk_poll.sys.ini</language>
+		<language tag="ru-RU">ru-RU.mod_ext_vk_poll.ini</language>
+		<language tag="ru-RU">ru-RU.mod_ext_vk_poll.sys.ini</language>
+	</languages>	
+			<config>
+				<fields name="params">
+					<fieldset name="basic">
+
+						<field
+							name="ext_id"
+							type="text"
+							default="1" 
+							label="MOD_EXT_VK_POLL_FIELD_EXT_ID_LABEL" 
+							description="MOD_EXT_VK_POLL_FIELD_EXT_ID_DESC"/>						
+						
+						
+						<field 
+							name="script_vk"
+							type="radio"
+							default="0"
+							class="btn-group"
+							label="MOD_EXT_VK_POLL_FIELD_SCRIPT_VK_LABEL"
+							description="MOD_EXT_VK_POLL_FIELD_SCRIPT_VK_DESC">
+								<option value="0">JYES</option>
+								<option value="1">JNO</option>
+						</field>
+						
+						<field
+							name="api_id"
+							type="text"
+							default="3858251" 
+							label="MOD_EXT_VK_POLL_FIELD_API_ID_LABEL" 
+							description="MOD_EXT_VK_POLL_FIELD_API_ID_DESC"/>
+						
+						<field 
+							name="poll_id" 
+							type="text" 
+							default="103147219_13ed1052ccd20cc216"
+							label="MOD_EXT_VK_POLL_FIELD_ID_POLL_LABEL"
+							description="MOD_EXT_VK_POLL_FIELD_ID_POLL_DESC"/>
+						
+						<field 
+							name="width" 
+							type="text" 
+							default="300"
+							label="MOD_EXT_VK_POLL_FIELD_WIDTH_LABEL"
+							description="MOD_EXT_VK_POLL_FIELD_WIDTH_DESC"/>
+						 
+					</fieldset>	
+					
+					<fieldset name="advanced">
+				
+						<field
+							name="layout"
+							type="modulelayout"
+							label="JFIELD_ALT_LAYOUT_LABEL"
+							description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+							
+						<field
+							name="moduleclass_sfx"
+							type="text"
+							label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+							description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+		
+						<field
+							name="cache"
+							type="list"
+							default="0"
+							label="COM_MODULES_FIELD_CACHING_LABEL"
+							description="COM_MODULES_FIELD_CACHING_DESC">
+							<option
+								value="1">JGLOBAL_USE_GLOBAL</option>
+							<option
+								value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+						</field>
+		
+						<field
+							name="cache_time"
+							type="text"
+							default="0"
+							label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+							description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+						
+						<field
+							name="cachemode"
+							type="hidden"
+							default="static">
+							<option
+								value="static"></option>
+						</field>
+						
+					</fieldset>					
+				</fields>
+			</config>			
+</extension>

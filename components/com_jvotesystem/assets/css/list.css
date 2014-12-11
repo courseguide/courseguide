@@ -1,0 +1,83 @@
+/**
+ * @package Component jVoteSystem for Joomla! 1.5-2.5
+ * @projectsite www.joomess.de/projects/jvotesystem
+ * @authors Johannes Meßmer, Andreas Fischer
+ * @copyright (C) 2010 - 2012 Johannes Meßmer
+ * @license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+**/
+
+#jvotesystem table.list {
+	border: 0 solid #000000;
+    border-collapse: collapse;
+    color: #555555;
+    font: 90%/140% arial,helvetica,sans-serif;
+    margin-left: 2px;
+    width: 99%;
+}
+#jvotesystem table.list tr {
+	border: 0 none;
+}
+#jvotesystem table.list > tbody > tr > td, .jvotesystem table.list > tbody > tr > th, .jvotesystem table.list > thead > tr > th {
+	border: 1px dotted #BBBBBB;
+    padding: 5px;
+}
+#jvotesystem table.list > tbody > tr > th, .jvotesystem table.list > tbody > tr > td, .jvotesystem table.list > thead > tr > th {
+    vertical-align: top;
+    text-align: center;
+}
+#jvotesystem table.list select {
+	margin-top: 3px;
+}
+#jvotesystem table.list tr.disabled > td {
+	background-color: #FFDCDC;
+	font-style: italic;
+}
+#jvotesystem table.list a {
+	text-decoration: none;
+	background: none repeat scroll 0 0 transparent !important;
+	color: #095197;
+}
+#jvotesystem table.list  a:hover, #jvotesystem table.list  a:active, #jvotesystem table.list a:focus, #jvotesystem table.list a:hover {
+	text-decoration: underline;
+	color: #04305a;
+}
+#jvotesystem table + table {
+	margin-top: 5px;
+}
+
+#jvotesystem .poll-element {
+	margin: 5px 0;
+    padding: 10px 0;
+}
+#jvotesystem .poll-element + .poll-element {
+	border-top: 1px dotted #888888;
+}
+#jvotesystem div.list_navi {
+	position: relative;
+    text-align: center;
+}
+#jvotesystem div.list_navi a {
+	background: none repeat scroll 0 0 transparent !important;
+    color: #777777;
+    font-style: italic;
+    text-decoration: none;
+}
+#jvotesystem div.list_navi a:hover {
+	color: #444444;
+}
+#jvotesystem div.list_navi a.goLeft {
+	position: absolute;
+	left: 15px;
+	top: 0;
+}
+#jvotesystem div.list_navi a.goRight {
+	position: absolute;
+	right: 15px;
+	top: 0;
+}
+#jvotesystem div.list_navi a.curPage {
+	font-weight: bold;
+}
+#jvotesystem .list.filters input {
+	font-size: 11px;
+}

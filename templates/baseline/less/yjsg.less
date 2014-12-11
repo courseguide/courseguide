@@ -1,0 +1,478 @@
+// from scaffolding.less 
+// Images
+// -------------------------
+
+.img-rounded {
+  .border-radius(6px);
+}
+
+.img-polaroid {
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0,0,0,.2);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.1);
+     -moz-box-shadow: 0 1px 3px rgba(0,0,0,.1);
+          box-shadow: 0 1px 3px rgba(0,0,0,.1);
+}
+
+.img-circle {
+  .border-radius(500px);
+}
+
+// from type.less
+// Emphasis & misc
+// -------------------------
+// Body text
+// -------------------------
+
+/*p {
+  margin: 0 0 @baseLineHeight / 2;
+}*/
+.lead {
+  margin-bottom: @baseLineHeight;
+  font-size: 20px;
+  font-weight: 200;
+  line-height: @baseLineHeight * 1.5;
+}
+small {
+  font-size: 85%; // Ex: 14px base font * 85% = about 12px
+}
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+cite {
+  font-style: normal;
+}
+.muted {
+  color: @grayLight;
+}
+
+
+// Page header
+// -------------------------
+
+.page-header {
+  padding-bottom: (@baseLineHeight / 2) - 1;
+  margin: @baseLineHeight 0 (@baseLineHeight * 1.5);
+  border-bottom: 1px solid @grayLighter;
+}
+
+// Description Lists
+dl {
+  margin-bottom: @baseLineHeight;
+}
+dt,
+dd {
+  line-height: @baseLineHeight;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: @baseLineHeight / 2;
+}
+// Horizontal layout (like forms)
+.dl-horizontal {
+  dt {
+    float: left;
+    width: 120px;
+    clear: left;
+    text-align: right;
+    .text-overflow();
+  }
+  dd {
+    margin-left: 130px;
+  }
+}
+
+// MISC
+// ----
+
+// Horizontal rules
+hr {
+  margin: @baseLineHeight 0;
+  border: 0;
+  border-top: 1px solid @hrBorder;
+  border-bottom: 1px solid @white;
+}
+
+// Abbreviations and acronyms
+abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted @grayLight;
+}
+abbr.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+// Blockquotes
+blockquote {
+  padding: 0 0 0 15px;
+  margin: 0 0 @baseLineHeight;
+  border-left: 5px solid @grayLighter;
+  p {
+    margin-bottom: 0;
+    #font > .shorthand(16px,300,@baseLineHeight * 1.25);
+  }
+  small {
+    display: block;
+    line-height: @baseLineHeight;
+    color: @grayLight;
+    &:before {
+      content: '\2014 \00A0';
+    }
+  }
+
+  // Float right with text-align: right
+  &.pull-right {
+    float: right;
+    padding-right: 15px;
+    padding-left: 0;
+    border-right: 5px solid @grayLighter;
+    border-left: 0;
+    p,
+    small {
+      text-align: right;
+    }
+    small {
+      &:before {
+        content: '';
+      }
+      &:after {
+        content: '\00A0 \2014';
+      }
+    }
+  }
+}
+
+// Quotes
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+}
+
+// Addresses
+address {
+  display: block;
+  margin-bottom: @baseLineHeight;
+  font-style: normal;
+  line-height: @baseLineHeight;
+}
+/* CUSTOM */
+
+//
+// jumbotron
+// --------------------------------------------------
+
+/* Jumbotrons
+-------------------------------------------------- */
+
+/* Base class
+------------------------- */
+.jumbotron {
+  position: relative;
+  padding: 0px 0;
+  color:@linkColor;
+  text-align: center;
+}
+.jumbotron h1 {
+  font-size: 80px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+.jumbotron p {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: 30px;
+   color:@linkColor;
+}
+
+/* Link styles (used on .masthead-links as well) */
+.jumbotron a {
+  color: #fff;
+  color: rgba(255,255,255,.5);
+  -webkit-transition: all .2s ease-in-out;
+     -moz-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+}
+.jumbotron a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255,255,255,.25);
+}
+
+/* Download button */
+.masthead .btn {
+  padding: 14px 24px;
+  font-size: 24px;
+  font-weight: 200;
+  color: #fff; /* redeclare to override the `.jumbotron a` */
+  border: 0;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25);
+     -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25);
+          box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25);
+  -webkit-transition: none;
+     -moz-transition: none;
+          transition: none;
+}
+.masthead .btn:hover {
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25);
+     -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25);
+          box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25);
+}
+.masthead .btn:active {
+  -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.1);
+     -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.1);
+          box-shadow: inset 0 2px 4px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.1);
+}
+
+
+/* Pattern overlay
+------------------------- */
+.jumbotron .container {
+  position: relative;
+  z-index: 2;
+}
+.jumbotron:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  opacity: .4;
+}
+
+/* Masthead (docs home)
+------------------------- */
+.masthead {
+  padding:20px 0;
+  margin-bottom: 0;
+  color: #fff;
+}
+.masthead h1 {
+  font-size: 80px;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+.masthead p {
+  font-size: 40px;
+  font-weight: 200;
+  line-height: 1.25;
+}
+
+/* Textual links in masthead */
+.masthead-links {
+  margin: 0;
+  list-style: none;
+}
+.masthead-links li {
+  display: inline;
+  padding: 0 10px;
+  color: rgba(255,255,255,.25);
+  background:none;
+}
+
+/* news item tools */
+.newsitem_tools img {
+  display: none;
+}
+.dropdown-toggle i{
+	margin-top:4px!important;
+
+}
+.newsitem_tools .dropdown-toggle{
+	display:block!important;
+}
+.newsitem_tools .print-icon a:before,
+.newsitem_tools .email-icon a:before,
+.newsitem_tools .edit-icon a:before {
+  font-family: FontAwesome;
+}
+.actiongroup i.icon-envelope,
+.actiongroup i.icon-print,
+.actiongroup i.icon-edit{
+	display:none;
+}
+.newsitem_tools .print-icon a:hover,
+.newsitem_tools .email-icon a:hover,
+.newsitem_tools .edit-icon a:hover {
+  color:@white!important;
+  text-decoration: none!important;
+  background-color: @dropdownLinkBackgroundHover!important;
+  #gradient > .vertical(@dropdownLinkBackgroundHover, darken(@dropdownLinkBackgroundHover, 5%))!important;
+}
+.newsitem_tools .print-icon a:before{
+	 content: "\f02f";
+}
+.newsitem_tools .email-icon a:before {
+  content: "\f0e0";
+}
+.newsitem_tools .edit-icon a:before {
+  content: "\f085";
+}
+.form-horizontal fieldset{
+	overflow:hidden;
+	border:none;
+}
+.form-horizontal legend{
+	display:block;
+	width:100%;
+	border-bottom: 1px solid #E5E5E5;
+}
+/* print and email icons holder*/
+#midblock .actiongroup li{
+	background-image:none;
+}
+#midblock li[class^="icon-"], li[class*=" icon-"] {
+  display: block;
+}
+#midblock .newsitem_tools ul{
+	padding:0;
+	margin:0;
+}
+#midblock .newsitem_tools ul li{
+	display:block;
+	clear:both;
+	margin:0;
+	padding:0
+}
+#midblock .btn-group ul.dropdown-menu.buttonheading li{
+	display:block;
+	padding:0;
+	margin:0;
+	float:none;
+	
+}
+#midblock .readon span{
+	background:none;
+	border:none;
+}
+
+
+/* bootstrap pagination */
+#midblock .pagination-centered ul li{
+	padding:0!important;
+}
+#midblock div.jb_pagin{
+	display:block;
+	margin:0;
+	padding:20px 0;
+	overflow:hidden;
+	clear:both;
+	float:none;
+}
+#midblock div.jb_pagin ul.pager{
+	margin:0!important;
+	padding:0!important;
+}
+#midblock div.jb_pagin ul.pager li{
+	margin:0;
+	padding:0;
+	background:none;
+
+}
+#midblock div.jb_pagin .next{
+	float:right;
+}
+#midblock div.jb_pagin ul.pager li a,
+#midblock div.pager li a{
+	-webkit-border-radius:3px;
+	-khtml-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+}
+/* lisdt table filters*/
+#midblock .display-limit{
+	margin:3px 10px 10px 0;
+}
+#midblock .filter-search label{
+	float:left;
+	clear:none;
+	display:inline-block;
+	font-size:12px;
+	margin:10px 0 0 0;
+}
+#midblock .display-limit select{
+	width:50px;
+}
+.filters legend{
+	font-size:12px;
+	display:inline;
+	width:auto;
+	border:none;
+	
+}
+/* user pages */
+#midblock .login-fields{
+	display:block;
+	clear:both;
+	overflow:hidden;
+}
+#midblock #remember-lbl,#remember{
+	float:left;
+	display:inline-block;
+}
+#midblock #remember{
+	margin:10px 5px 5px 5px;
+}
+#midblock div.userpages .inputbox[type="text"],
+#midblock div.userpages .inputbox[type="password"],
+#midblock div.userpages .inputbox[type="email"]{
+	width:98%;
+}
+#midblock .userpageswrap  legend{
+	font-size:12px;
+	display:inline;
+	width:auto;
+	border:none;
+}
+#midblock .userpageswrap dt label{
+	padding-top:0;
+	padding-bottom:0;
+	line-height:10px;
+	display:inline-block;
+	font-weight:bold;
+	font-size:12px;
+}
+#midblock #member-profile dt{
+	clear:both;
+}
+#midblock #member-profile dd{
+	clear:both;
+	
+}
+#midblock #member-profile dd .inputbox{
+	float:right;
+	width:85%;
+	clear:both;
+	margin-bottom:5px;
+}
+#midblock #recaptcha_area table,.recaptcha_image_cell{
+	-webkit-border-radius:5px;
+	-khtml-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	border:1px solid #ccc;
+}
+/* table .category left border reset */
+.category.table-bordered{
+	border-left:0;
+}
+/* archived articles filter button */
+.filter-search .button{
+	vertical-align:top;
+}

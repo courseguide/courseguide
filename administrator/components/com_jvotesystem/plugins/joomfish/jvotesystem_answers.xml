@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<joomfish type="contentelement">
+  <name>jVoteSystem:Answers</name>
+  <author>Johannes Messmer</author>
+  <authorEmail>service@joomess.de</authorEmail>
+  <authorUrl>http://www.joomess.de</authorUrl>
+  <version>1.00</version>
+  <description>Answers translations for jVoteSystem</description>
+  <primarykey>id</primarykey>
+  <reference name="content">
+    <table name="jvotesystem_answers">
+		<field type="referenceid" name="id" translate="0">ID</field>
+		<field type="titletext" name="answer" translate="0">Answer</field>
+		<field type="textarea" name="answer" translate="1">Answer</field>
+	</table>
+  </reference>
+  <translationfilters>
+    <keyword>answer</keyword>
+    <published>published</published>
+  </translationfilters>
+</joomfish>

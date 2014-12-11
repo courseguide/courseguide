@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE jomsocial>
+<jomsocial>
+     <component>com_jvotesystem</component>
+     <rules>
+          <rule>
+			  <name>Add Answer in jVoteSystem-Poll</name>
+			  <description>Give points when registered user adds new answer in a jVoteSystem-Poll.</description>
+			  <action_string>com_jvotesystem.answer.add</action_string>
+			  <publish>true</publish>
+			  <points>2</points>
+			  <access_level>1</access_level>       
+          </rule>
+          <rule>
+			  <name>Add Comment in jVoteSystem-Poll</name>
+			  <description>Give points when registered user adds new comment in a jVoteSystem-Poll.</description>
+			  <action_string>com_jvotesystem.comment.add</action_string>
+			  <publish>true</publish>
+			  <points>1</points>
+			  <access_level>1</access_level>
+           </rule>
+		   <rule>
+			  <name>Vote Answer in jVoteSystem-Poll</name>
+			  <description>Give points when registered user votes a answer in a jVoteSystem-Poll.</description>
+			  <action_string>com_jvotesystem.answer.vote</action_string>
+			  <publish>true</publish>
+			  <points>1</points>
+			  <access_level>1</access_level>
+           </rule>
+     </rules>
+</jomsocial>

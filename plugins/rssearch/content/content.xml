@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension method="upgrade" version="2.5" type="plugin" group="rssearch">
+	<name>plg_rssearch_content</name>
+	<author>RSJoomla!</author>
+	<creationDate>21.02.2011</creationDate>
+	<copyright>Copyright (C) 2010 www.rsjoomla.com. All rights reserved.</copyright>
+	<license>GNU General Public License</license>
+	<authorEmail>support@rsjoomla.com</authorEmail>
+	<authorUrl>www.rsjoomla.com</authorUrl>
+	<version>1.0</version>
+	<description>RSF_CONT_XML_DESC</description>
+	
+	<files>
+		<filename plugin="content">content.php</filename>
+		<filename>index.html</filename>
+	</files>
+	
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_rssearch_content.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_rssearch_content.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="orderby" type="list" default="title" label="RSF_CONT_XML_ORDER_BY_LABEL" description="RSF_CONT_XML_ORDER_BY_DESC">
+					<option value="title">RSF_CONT_XML_ORDER_BY_OPTION_TITLE</option>
+					<option value="hits">RSF_CONT_XML_ORDER_BY_OPTION_HITS</option>
+					<option value="ordering">RSF_CONT_XML_ORDER_BY_OPTION_ORDERING</option>
+					<option value="created">RSF_CONT_XML_ORDER_BY_OPTION_CREATED</option>
+				</field>
+				<field name="asc_desc" type="list" default="ASC" label="RSF_CONT_XML_ASC_DESC_LABEL" description="RSF_CONT_XML_ASC_DESC_DESC">
+					<option value="ASC">RSF_CONT_XML_ASC_DESC_OPTION_ASC</option>
+					<option value="DESC">RSF_CONT_XML_ASC_DESC_OPTION_DESC</option>
+				</field>
+				<field name="searchfields" type="list" default="" multiple="multiple" label="RSF_CONT_XML_SEARCH_FIELDS_LABEL" description="RSF_CONT_XML_SEARCH_FIELDS_DESC">
+					<option value="content">RSF_CONT_CONTENT</option>
+					<option value="categories">RSF_CONT_CATEGORIES</option>
+				</field>
+				<field name="categories" type="category" extension="com_content" multiple="multiple" default="" label="RSF_CONT_XML_CATEGORIES_LIST_LABEL" description="RSF_CONT_XML_CATEGORIES_LIST_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+	
+</extension>
