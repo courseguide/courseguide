@@ -33,7 +33,7 @@ $lang->load( 'plg_user_profile', JPATH_ADMINISTRATOR );
 				<?php if (count($fields)):?>
 				<fieldset>
 					<?php if (isset($fieldset->label)):// If the fieldset has a label set, display it as the legend.?>
-					<legend><?php echo JText::_($fieldset->label); ?></legend>
+					<legend></legend><!--<?php echo JText::_($fieldset->label); ?>-->
 					<?php endif;?>
 					<?php foreach ($fields as $field):// Iterate through the fields in the set and display them.?>
 					<?php if ($field->hidden):// If the field is hidden, just display the input.?>
@@ -44,15 +44,22 @@ $lang->load( 'plg_user_profile', JPATH_ADMINISTRATOR );
 					</div>
 					<?php else:?>
 					<div class="control-group">
+<table width = 500>
+<tr >
+<td width = 200 alight = 'left' >
 						<div class="control-label">
 							<?php echo $field->label; ?>
 							<?php if (!$field->required && $field->type != 'Spacer'): ?>
-							<span class="optional"><?php echo JText::_('COM_USERS_OPTIONAL'); ?></span>
+<!--<span class="optional"><?php echo JText::_('COM_USERS_OPTIONAL'); ?></span>-->
 							<?php endif; ?>
 						</div>
+</td><td width = 200>
 						<div class="controls">
 							<?php echo $field->input; ?>
 						</div>
+</td>
+</tr>
+</table>
 					</div>
 					<?php endif;?>
 					<?php endforeach;?>

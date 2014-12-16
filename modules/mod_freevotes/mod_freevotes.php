@@ -134,7 +134,7 @@ if($params->get('aggiungi_risposte', '1')==1){
 	</form>";
 }
 
-echo"<p style='float:left; clear:left; margin-top:10px;'><span style='font-size:10px;'>Powered by <a href='http://www.the-html-tool.com/' target='_blank'>The Html Tool</a></span></p>";
+echo"<p style='float:right; clear:left; margin-top:10px;'><span style='font-size:10px;'>Click on the score star to vote</span></p>";
 
 //fine stampo a video
 echo '<script type="text/javascript">var id_user="'.$id_user.'", voti_txt="'.$voti_txt.'", label='.$label.', legend='.$legend.', type_graph="'.$type_graph.'";</script>';
