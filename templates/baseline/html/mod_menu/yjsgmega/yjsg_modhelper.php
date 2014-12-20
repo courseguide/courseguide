@@ -102,9 +102,9 @@ if (!JPluginHelper::getPlugin('system', 'YJMegaMenu')) {
 				$item_link ='<span class="yjm_has_none"><span class="yjm_title">'.$yj_menu_title.'</span></span>';
 			}
 		}
-		//Image only no text
+		//Ivana - removed the image that was loaded here prviously : <img src="'.$item->menu_image.'" alt="
 		if($item->params->get('menu_text') == '0') {
-			$item_link = '<span class="no_text"><span class="yjm_title"><img src="'.$item->menu_image.'" alt="'.$item->title.'" class="imsolo_mega" /></span></span>';
+			$item_link = '<span class="no_text"><span class="yjm_title" class="imsolo_mega" >'.$item->title.'</span></span>';
 		}
 /////title image and sub for module type links
 		if($yj_sub_title !=='' && $yj_menu_show_title == 1){

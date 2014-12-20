@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
 * @version 1.0.0
 * @package RSSearch! 1.0.0
@@ -16,7 +16,7 @@ defined( '_JEXEC' ) or die('Restricted access'); ?>
 			
 			<?php if ($this->type && isset($result->type)) { ?>
 			<div class="rssearch_type">
-				(<?php echo $result->type; ?>)
+				<!--(<?php echo $result->type; ?>)-->
 			</div>
 			<?php } ?>
 			
@@ -26,8 +26,10 @@ defined( '_JEXEC' ) or die('Restricted access'); ?>
 				</a>
 			</h2>
 			
+			<!-- Ivana - hide the variables from article content like jcomments on-->
 			<div class="rssearch_content">
-				<?php echo $this->HighlightSearch($this->search, $this->cutText($result->text, $this->nr_words)); ?>
+
+				<?php echo substr_replace(substr_replace($this->HighlightSearch($this->search, $this->cutText($result->text, $this->nr_words)), "", 0, 27), "", -15, 15); ?>
 			</div>
 			
 			<div class="clearfix">&nbsp;</div>

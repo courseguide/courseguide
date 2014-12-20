@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
  /**
  * @version		$Id: default_form.php 11845 2009-05-27 23:28:59Z robs
@@ -21,7 +21,7 @@ $this->form->loadFile( dirname(__FILE__) . DIRECTORY_SEPARATOR . "contact.xml");
 <div class="contact-form">
 	<form id="contact-form" action="<?php echo JRoute::_('index.php'); ?>" method="post" class="form-validate form-horizontal">
 		<fieldset>
-			<legend><?php echo JText::_('COM_CONTACT_FORM_LABEL'); ?></legend>
+			<!--Ivana : <legend><?php echo JText::_('COM_CONTACT_FORM_LABEL'); ?></legend>-->
 			<div class="control-group">
 				<div class="control-label"><?php echo $this->form->getLabel('contact_name'); ?></div>
 				<div class="controls"><?php echo $this->form->getInput('contact_name'); ?></div>

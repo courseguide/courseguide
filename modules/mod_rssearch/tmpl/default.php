@@ -102,7 +102,7 @@ window.addEvent('domready', function() {
 		<input type="hidden" name="option" value="com_rssearch" />
 		
 		<div class="input-prepend">
-			<input type="text" id="rsf_inp<?php echo $module->id;?>" name="search" <?php if ($show_loop == 'yes') {?>class="rss_loop"<?php } ?> onkeyup="searchSuggest<?php echo $module->id;?>();" autocomplete="off" style="width:<?php echo $field_width;?>px;" />
+			<input type="text" value="Enter a course ID or name..." onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" id="rsf_inp<?php echo $module->id;?>" name="search" <?php if ($show_loop == 'yes') {?>class="rss_loop"<?php } ?> onkeyup="searchSuggest<?php echo $module->id;?>();" autocomplete="off" style="width:<?php echo $field_width;?>px;" />	
 			<?php if($show_btn == 'yes') { ?> <button type="submit" id="cmdSearch" class="btn"><?php echo JText::_('RSF_MODULE_SEARCH_BTN');?></button><?php }?>
 		</div>
 		<div id="search_suggest<?php echo $module->id;?>" class="rsfsuggestions" style="width:<?php echo $box_width;?>px"></div>

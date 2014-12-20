@@ -42,6 +42,6 @@ function getYJLINKS($default_font_family,$yj_copyrightear,$yj_templatename,$show
 		endif;
 		echo '</div>';
 	}
-	echo'<div class="yjsgcp">Copyright &copy; '.$yj_copyrightear.' <a href="http://courseguide.info/joomla123" title="Joomla Templates Club">courseguide.info </a> <br>All rights reserved.  </div>';
+	echo'<div class="yjsgcp">Copyright &copy; '.$yj_copyrightear.' <a href="http://courseguide.info" title="Courseguide">courseguide.info </a> <br>All rights reserved.  </div>';
 }
 ?>
